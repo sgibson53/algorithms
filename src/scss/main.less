@@ -1,0 +1,285 @@
+@import './reset.less';
+
+// universals
+sup { vertical-align: top; position: relative; top: -0.34em; font-size: .7em;}
+
+.tex sub, .latex sub, .latex sup {
+  text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+  position: relative;
+  vertical-align: bottom;
+  bottom: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+.epsilon {
+    position: relative;
+    vertical-align: bottom;
+    bottom: -0.5ex;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+  font-size: 1em;
+}
+
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: top;
+  top: -0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.paragraph {
+    width: 80%;
+    margin: auto;
+    line-height: 110%;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.first-paragraph {
+    text-indent: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold-sub-header {
+    font-weight: bold;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.bulleted-paragraph {
+    text-align: justify;
+    width: 80%;
+    margin: 10px auto;
+    margin-left: 11%;
+    list-style-type: disc;
+
+    li {
+        margin: 10px auto;
+
+        .inner-bullet {
+            display: block;
+            margin-left: 10px;
+        }
+    }
+}
+// /universals
+
+.contents-tab {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    background: rgba(0,0,0,.7);
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    border-radius: 15px 0 0 15px;
+}
+
+#cover-img {
+    background-repeat: no-repeat;
+    background-image: url('../assets/cover-image.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 1200px;
+    height: 1350px;
+    margin: 0 auto 20px auto;
+}
+
+.title-container {
+    position: relative;
+    width: 1200px;
+    height: 1350px;
+    border-top: 12px solid black;
+    margin: 20px auto;
+
+    .author-list {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+
+        .author {
+            margin-top: 5px;
+        }
+    }
+
+    .title {
+        position: absolute;
+        font-size: 36px;
+        top: 30%;
+        left: 30%;
+        width: 70%;
+        padding: 15px 5px;
+        border-top: 1px solid black;
+        font-weight: bold;
+        .sub-title {
+            font-size: 24px;
+            padding: 10px 0 0 0;
+            font-style: italic;
+        }
+    }
+
+    .intro-bottom-info {
+        position: absolute;
+        left: 20%;
+        bottom: 50px;
+        line-height: 20px;
+    }
+}
+
+.copy-right-info {
+    position: relative;
+    width: 1200px;
+    height: 1350px;
+    margin: 20px auto;
+
+    .info {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        font-size: 90%;
+
+        .info-section {
+            margin: 8px;
+        }
+
+        .left-indent {
+            margin: 0 0 0 5%;
+        }
+        
+        .one {
+            margin-top: 16px;
+            margin-bottom: 2px;
+        }
+
+        .two {
+            margin-top: 2px;
+        }
+
+        .three {
+            margin-left: 60%;
+        }
+
+        .four {
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.contents {
+    position: relative;
+    width: 1200px;
+    margin: 20px auto;
+
+    .appendix-title {
+        width: 100%;
+        height: 300px;
+        font-size: 36;
+        
+    }
+
+    .preface {
+        display: block;
+        margin: 0 0 20px 200px;
+        font-weight: bold;
+        counter-reset: sectionTitles;
+    }
+
+    .chapter {
+
+        border-top: 3px solid black;
+        padding: 5px 0;
+        
+
+        .chapter-title {
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .chapter-interior {
+            border-top: 1px solid black;
+            padding: 5px 0;
+            width: 85%;
+            margin-left: 15%;
+
+            .intro {
+                margin-left: 10px;
+                font-weight: bold;
+            }
+
+            .chapter-section-title {
+                font-weight: bold;
+
+            }
+
+            .chapter-section {
+                
+
+                .chapter-section-title {
+                    counter-reset: sectionSubTitles;
+                    margin-top: 10px;
+
+                    .section-number {
+                        margin-right: 20px;
+                        &:before {
+                            counter-increment: sectionTitles;
+                            content: counter(sectionTitles) ' '
+                        }
+                    }
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+                
+
+                .chapter-section-sub-title {
+                    margin: 3px 0 3px 33px;
+
+                    &:before {
+                        counter-increment: sectionSubTitles;
+                        content: counter(sectionTitles) '.' counter(sectionSubTitles) ' '
+                    }
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+            
+        }
+
+    }
+}
