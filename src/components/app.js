@@ -446,7 +446,7 @@ or mathematical rigor.
                             We have been working with the MIT Press for over two decades now, and what a terrific relationship it has been! We thank Ellen Faran, Bob Prior, Ada Brunstein, and Mary Reilly for their help and support.
                         </div>
                         <div className="paragraph">
-                            We were geographically distributed while producing the third edition, working in the Dartmouth College Department of Computer Science, the MIT Computer Science and Artificial Intelligence Laboratory, and the Columbia University De- partment of Industrial Engineering and Operations Research. We thank our re- spective universities and colleagues for providing such supportive and stimulating environments.
+                            We were geographically distributed while producing the third edition, working in the Dartmouth College Department of Computer Science, the MIT Computer Science and Artificial Intelligence Laboratory, and the Columbia University De-partment of Industrial Engineering and Operations Research. We thank our re- spective universities and colleagues for providing such supportive and stimulating environments.
                         </div>
                         <div className="paragraph">
                             Julie Sussman, P.P.A., once again bailed us out as the technical copyeditor. Time and again, we were amazed at the errors that eluded us, but that Julie caught. She also helped us improve our presentation in several places. If there is a Hall of Fame for technical copyeditors, Julie is a sure-fire, first-ballot inductee. She is nothing short of phenomenal. Thank you, thank you, thank you, Julie! Priya Natarajan also found some errors that we were able to correct before this book went to press. Any errors that remain (and undoubtedly, some do) are the responsibility of the authors (and probably were inserted after Julie read the material).
@@ -480,6 +480,12 @@ or mathematical rigor.
                         </div>
 
                         <div id="preface-date" className="italic">February 2009</div>
+
+                        <div className="citations">
+                            <div className="citation first-paragraph">
+                                <sup>1</sup>We investigated several drawing programs that run under Mac OS X, but all had significant short- comings compared with MacDraw Pro. We briefly attempted to produce the illustrations for this book with a different, well known drawing program. We found that it took at least five times as long to produce each illustration as it took with MacDraw Pro, and the resulting illustrations did not look as good. Hence the decision to revert to MacDraw Pro running on older Macintoshes.
+                            </div>
+                        </div>
 
                     </div>
                     
