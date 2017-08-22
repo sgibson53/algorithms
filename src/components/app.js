@@ -427,6 +427,7 @@ or mathematical rigor.
                         </ul>
 
                         <div className="bold-sub-header">Web site</div>
+
                         <div className="paragraph first-paragraph">
                             You can use our Web site, http://mitpress.mit.edu/algorithms/, to obtain supple- mentary information and to communicate with us. The Web site links to a list of known errors, solutions to selected exercises and problems, and (of course) a list explaining the corny professor jokes, as well as other content that we might add. The Web site also tells you how to report errors or make suggestions.
                         </div>
@@ -434,13 +435,51 @@ or mathematical rigor.
                         <div className="bold-sub-header">How we produced this book</div>
 
                         <div className="paragraph first-paragraph">
-                            Like the second edition, the third edition was produced in <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>". We used the Times font with mathematics typeset using the MathTime Pro 2 fonts. We thank Michael Spivak from Publish or Perish, Inc., Lance Carnes from Personal TeX, Inc., and Tim Tregubov from Dartmouth College for technical support. As in the previous two editions, we compiled the index using Windex, a C program that we wrote, and the bibliography was produced with BIB<span className="tex">T<sub>e</sub>X</span>. The PDF files for this book were created on a MacBook running OS 10.5.
+                            Like the second edition, the third edition was produced in <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>. We used the Times font with mathematics typeset using the MathTime Pro 2 fonts. We thank Michael Spivak from Publish or Perish, Inc., Lance Carnes from Personal TeX, Inc., and Tim Tregubov from Dartmouth College for technical support. As in the previous two editions, we compiled the index using Windex, a C program that we wrote, and the bibliography was produced with BIB<span className="tex">T<sub>e</sub>X</span>. The PDF files for this book were created on a MacBook running OS 10.5.
                         </div>
                         <div className="paragraph">
-                            We drew the illustrations for the third edition using MacDraw Pro, with some of the mathematical expressions in illustrations laid in with the psfrag package for <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>". Unfortunately, MacDraw Pro is legacy software, having not been marketed for over a decade now. Happily, we still have a couple of Macintoshes that can run the Classic environment under OS 10.4, and hence they can run Mac- Draw Pro—mostly. Even under the Classic environment, we find MacDraw Pro to be far easier to use than any other drawing software for the types of illustrations that accompany computer-science text, and it produces beautiful output.<sup>1</sup> Who knows how long our pre-Intel Macs will continue to run, so if anyone from Apple is listening: <span className="italic">Please create an OS X-compatible version of MacDraw Pro!</span>
+                            We drew the illustrations for the third edition using MacDraw Pro, with some of the mathematical expressions in illustrations laid in with the psfrag package for <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>". Unfortunately, MacDraw Pro is legacy software, having not been marketed for over a decade now. Happily, we still have a couple of Macintoshes that can run the Classic environment under OS 10.4, and hence they can run MacDraw Pro — mostly. Even under the Classic environment, we find MacDraw Pro to be far easier to use than any other drawing software for the types of illustrations that accompany computer-science text, and it produces beautiful output.<sup>1</sup> Who knows how long our pre-Intel Macs will continue to run, so if anyone from Apple is listening: <span className="italic">Please create an OS X-compatible version of MacDraw Pro!</span>
                         </div>
                         
+                        <div className="bold-sub-header">Acknowledgments for the third edition</div>
+                        <div className="paragraph first-paragraph">
+                            We have been working with the MIT Press for over two decades now, and what a terrific relationship it has been! We thank Ellen Faran, Bob Prior, Ada Brunstein, and Mary Reilly for their help and support.
+                        </div>
+                        <div className="paragraph">
+                            We were geographically distributed while producing the third edition, working in the Dartmouth College Department of Computer Science, the MIT Computer Science and Artificial Intelligence Laboratory, and the Columbia University De- partment of Industrial Engineering and Operations Research. We thank our re- spective universities and colleagues for providing such supportive and stimulating environments.
+                        </div>
+                        <div className="paragraph">
+                            Julie Sussman, P.P.A., once again bailed us out as the technical copyeditor. Time and again, we were amazed at the errors that eluded us, but that Julie caught. She also helped us improve our presentation in several places. If there is a Hall of Fame for technical copyeditors, Julie is a sure-fire, first-ballot inductee. She is nothing short of phenomenal. Thank you, thank you, thank you, Julie! Priya Natarajan also found some errors that we were able to correct before this book went to press. Any errors that remain (and undoubtedly, some do) are the responsibility of the authors (and probably were inserted after Julie read the material).
+                        </div>
+                        <div className="paragraph">
+                            The treatment for van Emde Boas trees derives from Erik Demaine’s notes, which were in turn influenced by Michael Bender. We also incorporated ideas from Javed Aslam, Bradley Kuszmaul, and Hui Zha into this edition.
+                        </div>
+                        <div className="paragraph">
+                            The chapter on multithreading was based on notes originally written jointly with Harald Prokop. The material was influenced by several others working on the Cilk project at MIT, including Bradley Kuszmaul and Matteo Frigo. The design of the multithreaded pseudocode took its inspiration from the MIT Cilk extensions to C and by Cilk Arts’s Cilk++ extensions to C++.
+                        </div>
+                        <div className="paragraph">
+                            We also thank the many readers of the first and second editions who reported errors or submitted suggestions for how to improve this book. We corrected all the bona fide errors that were reported, and we incorporated as many suggestions as we could. We rejoice that the number of such contributors has grown so great that we must regret that it has become impractical to list them all.
+                        </div>
+                        <div className="paragraph">
+                            Finally, we thank our wives—Nicole Cormen, Wendy Leiserson, Gail Rivest, and Rebecca Ivry—and our children—Ricky, Will, Debby, and Katie Leiserson; Alex and Christopher Rivest; and Molly, Noah, and Benjamin Stein—for their love and support while we prepared this book. The patience and encouragement of our families made this project possible. We affectionately dedicate this book to them.
+                        </div>
 
+                        <div id="preface-authors">
+                            <div className="authors">
+                                <div>THOMAS H. CORMEN</div>
+                                <div>CHARLES E. LEISERSON</div>
+                                <div>RONALD L. RIVEST</div>
+                                <div>CLIFFORD STEIN</div>
+                            </div>
+                            <div className="locations">
+                                <div className="italic">Lebanon, New Hampshire</div>
+                                <div className="italic">Cambridge, Massachusetts</div>
+                                <div className="italic">Cambridge, Massachusetts</div>
+                                <div className="italic">New York, New York</div>
+                            </div>
+                        </div>
+
+                        <div id="preface-date" className="italic">February 2009</div>
 
                     </div>
                     
