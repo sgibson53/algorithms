@@ -135,7 +135,7 @@ export default class App extends React.Component {
 or mathematical rigor.
                         </div>
                         <div className="paragraph">
-                            Each chapter presents an algorithm, a design technique, an application area, or a related topic. Algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The book contains 244 figures—many with multiple parts—illustrating how the algorithms work. Since we emphasize <span className="italic">efficiency</span> as a design criterion, we include careful analyses of the running times of all our algorithms.
+                            Each chapter presents an algorithm, a design technique, an application area, or a related topic. Algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The book contains 244 figures—many with multiple parts—illustrating how the algorithms work. Since we emphasize <i>efficiency</i> as a design criterion, we include careful analyses of the running times of all our algorithms.
                         </div>
                         <div className="paragraph">
                             The text is intended primarily for use in undergraduate or graduate courses in algorithms or data structures. Because it discusses engineering issues in algorithm design, as well as mathematical aspects, it is equally well suited for self-study by technical professionals.
@@ -173,7 +173,7 @@ or mathematical rigor.
                         <div className="paragraph">
                             What are the prerequisites for reading this book?
                         </div>
-                        <ul className="bulleted-paragraph">
+                        <ul className="bulleted-list">
                             <li>
                                 <span className="inner-bullet">
                                     You should have some programming experience. In particular, you should understand recursive procedures and simple data structures such as arrays and linked lists.
@@ -229,7 +229,7 @@ or mathematical rigor.
                         <div className="paragraph">
                             Here is a summary of the most significant changes for the third edition:
                         </div>
-                        <ul className="bulleted-paragraph">
+                        <ul className="bulleted-list">
                             <li>
                                 <span className="inner-bullet">
                                     We added new chapters on van Emde Boas trees and multithreaded algorithms, and we have broken out material on matrix basics into its own appendix chapter.
@@ -277,7 +277,7 @@ or mathematical rigor.
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    Based on many requests, we changed the syntax (as it were) of our pseudocode. We now use “D” to indicate assignment and “==” to test for equality, just as C, C++, Java, and Python do. Likewise, we have eliminated the keywords <span className="bold">do</span> and <span className="bold">then</span> and adopted “//” as our comment-to-end-of-line symbol. We also now use dot-notation to indicate object attributes. Our pseudocode remains procedural, rather than object-oriented. In other words, rather than running methods on objects, we simply call procedures, passing objects as parameters.
+                                    Based on many requests, we changed the syntax (as it were) of our pseudocode. We now use “D” to indicate assignment and “==” to test for equality, just as C, C++, Java, and Python do. Likewise, we have eliminated the keywords <b>do</b> and <b>then</b> and adopted “//” as our comment-to-end-of-line symbol. We also now use dot-notation to indicate object attributes. Our pseudocode remains procedural, rather than object-oriented. In other words, rather than running methods on objects, we simply call procedures, passing objects as parameters.
                                 </span>
                             </li>
                             <li>
@@ -304,7 +304,7 @@ or mathematical rigor.
                             Like the second edition, the third edition was produced in <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>. We used the Times font with mathematics typeset using the MathTime Pro 2 fonts. We thank Michael Spivak from Publish or Perish, Inc., Lance Carnes from Personal TeX, Inc., and Tim Tregubov from Dartmouth College for technical support. As in the previous two editions, we compiled the index using Windex, a C program that we wrote, and the bibliography was produced with BIB<span className="tex">T<sub>e</sub>X</span>. The PDF files for this book were created on a MacBook running OS 10.5.
                         </div>
                         <div className="paragraph">
-                            We drew the illustrations for the third edition using MacDraw Pro, with some of the mathematical expressions in illustrations laid in with the psfrag package for <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>. Unfortunately, MacDraw Pro is legacy software, having not been marketed for over a decade now. Happily, we still have a couple of Macintoshes that can run the Classic environment under OS 10.4, and hence they can run MacDraw Pro — mostly. Even under the Classic environment, we find MacDraw Pro to be far easier to use than any other drawing software for the types of illustrations that accompany computer-science text, and it produces beautiful output.<sup>1</sup> Who knows how long our pre-Intel Macs will continue to run, so if anyone from Apple is listening: <span className="italic">Please create an OS X-compatible version of MacDraw Pro!</span>
+                            We drew the illustrations for the third edition using MacDraw Pro, with some of the mathematical expressions in illustrations laid in with the psfrag package for <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span> 2<sub className="italic epsilon">&epsilon;</sub>. Unfortunately, MacDraw Pro is legacy software, having not been marketed for over a decade now. Happily, we still have a couple of Macintoshes that can run the Classic environment under OS 10.4, and hence they can run MacDraw Pro — mostly. Even under the Classic environment, we find MacDraw Pro to be far easier to use than any other drawing software for the types of illustrations that accompany computer-science text, and it produces beautiful output.<sup>1</sup> Who knows how long our pre-Intel Macs will continue to run, so if anyone from Apple is listening: <i>Please create an OS X-compatible version of MacDraw Pro!</i>
                         </div>
                         
                         <div className="bold-sub-header">Acknowledgments for the third edition</div>
@@ -348,7 +348,7 @@ or mathematical rigor.
                         <div id="preface-date" className="italic">February 2009</div>
 
                         <div className="citations">
-                            <div className="citation first-paragraph">
+                            <div className="citation">
                                 <sup>1</sup>We investigated several drawing programs that run under Mac OS X, but all had significant shortcomings compared with MacDraw Pro. We briefly attempted to produce the illustrations for this book with a different, well known drawing program. We found that it took at least five times as long to produce each illustration as it took with MacDraw Pro, and the resulting illustrations did not look as good. Hence the decision to revert to MacDraw Pro running on older Macintoshes.
                             </div>
                         </div>
@@ -372,7 +372,7 @@ or mathematical rigor.
                                 Chapter 1 provides an overview of algorithms and their place in modern computing systems. This chapter defines what an algorithm is and lists some examples. It also makes a case that we should consider algorithms as a technology, alongside technologies such as fast hardware, graphical user interfaces, object-oriented systems, and networks.
                             </div>
                             <div className="paragraph">
-                                In Chapter 2, we see our first algorithms, which solve the problem of sorting a sequence of <span className="italic">n</span> numbers. They are written in a pseudocode which, although not directly translatable to any conventional programming language, conveys the structure of the algorithm clearly enough that you should be able to implement it in the language of your choice. The sorting algorithms we examine are insertion sort, which uses an incremental approach, and merge sort, which uses a recursive technique known as “divide-and-conquer.” Although the time each requires increases with the value of <span className="italic">n</span>, the rate of increase differs between the two algorithms. We determine these running times in Chapter 2, and we develop a useful notation to express them.
+                                In Chapter 2, we see our first algorithms, which solve the problem of sorting a sequence of <i>n</i> numbers. They are written in a pseudocode which, although not directly translatable to any conventional programming language, conveys the structure of the algorithm clearly enough that you should be able to implement it in the language of your choice. The sorting algorithms we examine are insertion sort, which uses an incremental approach, and merge sort, which uses a recursive technique known as “divide-and-conquer.” Although the time each requires increases with the value of <i>n</i>, the rate of increase differs between the two algorithms. We determine these running times in Chapter 2, and we develop a useful notation to express them.
                             </div>
                             <div className="paragraph">
                                 Chapter 3 precisely defines this notation, which we call asymptotic notation. It starts by defining several asymptotic notations, which we use for bounding algorithm running times from above and/or below. The rest of Chapter 3 is primarily a presentation of mathematical notation, more to ensure that your use of notation matches that in this book than to teach you new mathematical concepts.
@@ -404,40 +404,146 @@ or mathematical rigor.
                                 Algorithms
                             </div>
 
-                            <div className="paragraph first-paragraph chapter-paragraph">
-                                Informally, an <span className="bold italic">algorithm</span> is any well-defined computational procedure that takes some value, or set of values, as <span className="bold italic">input</span> and produces some value, or set of values, as <span className="bold italic">output</span>. An algorithm is thus a sequence of computational steps that transform the input into the output.
+                            <div className="first-paragraph">
+                                Informally, an <b><i>algorithm</i></b> is any well-defined computational procedure that takes some value, or set of values, as <b><i>input</i></b> and produces some value, or set of values, as <b><i>output</i></b>. An algorithm is thus a sequence of computational steps that transform the input into the output.
                             </div>
-                            <div className="paragraph chapter-paragraph">
-                                We can also view an algorithm as a tool for solving a well-specified <span className="bold italic">computational problem</span>. The statement of the problem specifies in general terms the desired input/output relationship. The algorithm describes a specific computational procedure for achieving that input/output relationship.
+                            <div className="paragraph">
+                                We can also view an algorithm as a tool for solving a well-specified <b><i>computational problem</i></b>. The statement of the problem specifies in general terms the desired input/output relationship. The algorithm describes a specific computational procedure for achieving that input/output relationship.
                             </div>
-                            <div className="paragraph chapter-paragraph">
-                                For example, we might need to sort a sequence of numbers into nondecreasing order. This problem arises frequently in practice and provides fertile ground for introducing many standard design techniques and analysis tools. Here is how we formally define the <span className="bold italic">sorting problem</span>:
+                            <div className="paragraph">
+                                For example, we might need to sort a sequence of numbers into nondecreasing order. This problem arises frequently in practice and provides fertile ground for introducing many standard design techniques and analysis tools. Here is how we formally define the <b><i>sorting problem</i></b>:
                             </div>
 
                             <div className="input">
-                                A sequence of <span className="italic">n</span> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub className="italic">n</sub>〉.
+                                A sequence of <i>n</i> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub className="italic">n</sub>〉.
                             </div> 
                             <div className="output">
                                 A permutation (re-ordering) 〈a&prime;<sub>1</sub>, a&prime;<sub>2</sub>, ..., a&prime;<sub>n</sub>〉 of the input sequence such that a&prime;<sub>1</sub> &le; a&prime;<sub>2</sub> &le; &middot;&middot;&middot; &le; a&prime;<sub className="italic">n</sub>
                             </div>
-                            <div className="paragraph chapter-paragraph">
+                            <div className="paragraph">
                                 For example, given the input sequence (31, 41, 59, 26, 41, 58), a sorting algorithm returns as output the sequence (26, 31, 41, 41, 58, 59). Such an input sequence is called an <b>instance</b> of the sorting problem. In general, an <b>instance of a problem</b> consists of the input (satisfying whatever constraints are imposed in the problem statement) needed to compute a solution to the problem.
                             </div>
-                            <div className="paragraph chapter-paragraph">
+                            <div className="paragraph">
                                 Because many programs use it as an intermediate step, sorting is a fundamental operation in computer science. As a result, we have a large number of good sorting algorithms at our disposal. Which algorithm is best for a given application depends on—among other factors—the number of items to be sorted, the extent to which the items are already somewhat sorted, possible restrictions on the item values, the architecture of the computer, and the kind of storage devices to be used: main memory, disks, or even tapes.
                             </div>
-                            <div className="paragraph chapter-paragraph">
+                            <div className="paragraph">
                                 An algorithm is said to be correct if, for every input instance, it halts with the <b><i>correct</i></b> output. We say that a correct algorithm <b><i>solves</i></b> the given computational problem. An incorrect algorithm might not halt at all on some input instances, or it might halt with an incorrect answer. Contrary to what you might expect, incorrect algorithms can sometimes be useful, if we can control their error rate. We shall see an example of an algorithm with a controllable error rate in Chapter 31 when we study algorithms for finding large prime numbers. Ordinarily, however, we shall be concerned only with correct algorithms.
                             </div>
-                            <div className="paragraph chapter-paragraph">
+                            <div className="paragraph">
                                 An algorithm can be specified in English, as a computer program, or even as a hardware design. The only requirement is that the specification must provide a precise description of the computational procedure to be followed.
                             </div>
 
                             <div className="chapter-sub-header">What kinds of problems are solved by algorithms?</div>
 
-                            <div className="paragraph first-paragraph chapter-paragraph">
+                            <div className="first-paragraph">
                                 Sorting is by no means the only computational problem for which algorithms have been developed. (You probably suspected as much when you saw the size of this book.) Practical applications of algorithms are ubiquitous and include the following examples:
                             </div>
+
+                            <ul className="bulleted-list">
+                                <li>
+                                    <span className="inner-bullet">
+                                        The Human Genome Project has made great progress toward the goals of identifying all the 100,000 genes in human DNA, determining the sequences of the 3 billion chemical base pairs that make up human DNA, storing this information in databases, and developing tools for data analysis. Each of these steps requires sophisticated algorithms. Although the solutions to the various problems involved are beyond the scope of this book, many methods to solve these biological problems use ideas from several of the chapters in this book, thereby enabling scientists to accomplish tasks while using resources efficiently. The savings are in time, both human and machine, and in money, as more information can be extracted from laboratory techniques.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        The Internet enables people all around the world to quickly access and retrieve large amounts of information. With the aid of clever algorithms, sites on the Internet are able to manage and manipulate this large volume of data. Examples of problems that make essential use of algorithms include finding good routes on which the data will travel (techniques for solving such problems appear in Chapter 24), and using a search engine to quickly find pages on which particular information resides (related techniques are in Chapters 11 and 32).
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        Electronic commerce enables goods and services to be negotiated and exchanged electronically, and it depends on the privacy of personal information such as credit card numbers, passwords, and bank statements. The core technologies used in electronic commerce include public-key cryptography and digital signatures (covered in Chapter 31), which are based on numerical algorithms and number theory.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        Manufacturing and other commercial enterprises often need to allocate scarce resources in the most beneficial way. An oil company may wish to know where to place its wells in order to maximize its expected profit. A political candidate may want to determine where to spend money buying campaign advertising in order to maximize the chances of winning an election. An airline may wish to assign crews to flights in the least expensive way possible, making sure that each flight is covered and that government regulations regarding crew scheduling are met. An Internet service provider may wish to determine where to place additional resources in order to serve its customers more effectively. All of these are examples of problems that can be solved using linear programming, which we shall study in Chapter 29.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div className="paragraph">
+                                Although some of the details of these examples are beyond the scope of this book, we do give underlying techniques that apply to these problems and problem areas. We also show how to solve many specific problems, including the following:
+                            </div>
+
+                            <ul className="bulleted-list">
+                                <li>
+                                    <span className="inner-bullet">
+                                        We are given a road map on which the distance between each pair of adjacent intersections is marked, and we wish to determine the shortest route from one intersection to another. The number of possible routes can be huge, even if we disallow routes that cross over themselves. How do we choose which of all possible routes is the shortest? Here, we model the road map (which is itself a model of the actual roads) as a graph (which we will meet in Part VI and Appendix B), and we wish to find the shortest path from one vertex to another in the graph. We shall see how to solve this problem efficiently in Chapter 24.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        We are given two ordered sequences of symbols, <i>X</i> = 〈x<sub>1</sub>, x<sub>2</sub>, ..., a<sub><i>m</i></sub>〉 and <i>Y</i> = 〈y<sub>1</sub>, y<sub>2</sub>, ..., a<sub><i>n</i></sub>〉, and we wish to find a longest common subsequence of <i>X</i> and <i>Y</i>. A subsequence of <i>X</i> is just <i>X</i> with some (or possibly all or none) of its elements removed. For example, one subsequence of 〈<i>A, B, C, D, E, F, G</i>〉 would be 〈<i>B, C, E, G</i>〉. The length of a longest common subsequence of <i>X</i> and <i>Y</i> gives one measure of how similar these two sequences are. For example, if the two sequences are base pairs in DNA strands, then we might consider them similar if they have a long common subsequence. If <i>X</i> has <i>m</i> symbols and <i>Y</i> has <i>n</i> symbols, then <i>X</i> and <i>Y</i> have <i>2<sup>m</sup></i> and <i>2<sup>n</sup></i> possible subsequences, respectively. Selecting all possible subsequences of <i>X</i> and <i>Y</i> and matching them up could take a prohibitively long time unless <i>m</i> and <i>n</i> are very small. We shall see in Chapter 15 how to use a general technique known as dynamic programming to solve this problem much more efficiently.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        We are given a mechanical design in terms of a library of parts, where each part may include instances of other parts, and we need to list the parts in order so that each part appears before any part that uses it. If the design comprises <i>n</i> parts, then there are <i>n!</i> possible orders, where <i>n!</i> denotes the factorial function. Because the factorial function grows faster than even an exponential function, we cannot feasibly generate each possible order and then verify that, within that order, each part appears before the parts using it (unless we have only a few parts). This problem is an instance of topological sorting, and we shall see in Chapter 22 how to solve this problem efficiently.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        We are given <i>n</i> points in the plane, and we wish to find the convex hull of these points. The convex hull is the smallest convex polygon containing the points. Intuitively, we can think of each point as being represented by a nail sticking out from a board. The convex hull would be represented by a tight rubber band that surrounds all the nails. Each nail around which the rubber band makes a turn is a vertex of the convex hull. (See Figure 33.6 on page 1029 for an example.) Any of the <i>2<sup>n</sup></i> subsets of the points might be the vertices of the convex hull. Knowing which points are vertices of the convex hull is not quite enough, either, since we also need to know the order in which they appear. There are many choices, therefore, for the vertices of the convex hull. Chapter 33 gives two good methods for finding the convex hull.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div className="paragraph">
+                                These lists are far from exhaustive (as you again have probably surmised from this book’s heft), but exhibit two characteristics that are common to many interesting algorithmic problems:
+                            </div>
+
+                            <ol className="numbered-list" type="1">
+                                <li>
+                                    <span className="inner-bullet">
+                                        They have many candidate solutions, the overwhelming majority of which do not solve the problem at hand. Finding one that does, or one that is “best,” can present quite a challenge.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        They have practical applications. Of the problems in the above list, finding the shortest path provides the easiest examples. A transportation firm, such as a trucking or railroad company, has a financial interest in finding shortest paths through a road or rail network because taking shorter paths results in lower labor and fuel costs. Or a routing node on the Internet may need to find the shortest path through the network in order to route a message quickly. Or a person wishing to drive from New York to Boston may want to find driving directions from an appropriate Web site, or she may use her GPS while driving.
+                                    </span>
+                                </li>
+                            </ol>
+
+                            <div className="paragraph">
+                                Not every problem solved by algorithms has an easily identified set of candidate solutions. For example, suppose we are given a set of numerical values representing samples of a signal, and we want to compute the discrete Fourier transform of these samples. The discrete Fourier transform converts the time domain to the frequency domain, producing a set of numerical coefficients, so that we can determine the strength of various frequencies in the sampled signal. In addition to lying at the heart of signal processing, discrete Fourier transforms have applications in data compression and multiplying large polynomials and integers. Chapter 30 gives an efficient algorithm, the fast Fourier transform (commonly called the FFT), for this problem, and the chapter also sketches out the design of a hardware circuit to compute the FFT.
+                            </div>
+
+                            <div className="bold-sub-header">Data structures</div>
+
+                            <div className="first-paragraph">
+                                This book also contains several data structures. A <b>data structure</b> is a way to store and organize data in order to facilitate access and modifications. No single data structure works well for all purposes, and so it is important to know the strengths and limitations of several of them.
+                            </div>
+
+                            <div className="bold-sub-header">Technique</div>
+
+                            <div className="first-paragraph">
+                                Although you can use this book as a “cookbook” for algorithms, you may someday encounter a problem for which you cannot readily find a published algorithm (many of the exercises and problems in this book, for example). This book will teach you techniques of algorithm design and analysis so that you can develop algorithms on your own, show that they give the correct answer, and understand their efficiency. Different chapters address different aspects of algorithmic problem solving. Some chapters address specific problems, such as finding medians and order statistics in Chapter 9, computing minimum spanning trees in Chapter 23, and determining a maximum flow in a network in Chapter 26. Other chapters address techniques, such as divide-and-conquer in Chapter 4, dynamic programming in Chapter 15, and amortized analysis in Chapter 17.
+                            </div>
+
+                            <div className="bold-sub-header">Hard problems</div>
+
+                            <div className="first-paragraph">
+                                Most of this book is about efficient algorithms. Our usual measure of efficiency is speed, i.e., how long an algorithm takes to produce its result. There are some problems, however, for which no efficient solution is known. Chapter 34 studies an interesting subset of these problems, which are known as NP-complete.
+                            </div>
+                            <div className="paragraph">
+                                Why are NP-complete problems interesting? First, although no efficient algorithm for an NP-complete problem has ever been found, nobody has ever proven that an efficient algorithm for one cannot exist. In other words, no one knows whether or not efficient algorithms exist for NP-complete problems. Second, the set of NP-complete problems has the remarkable property that if an efficient algorithm exists for any one of them, then efficient algorithms exist for all of them. This relationship among the NP-complete problems makes the lack of efficient solutions all the more tantalizing. Third, several NP-complete problems are similar, but not identical, to problems for which we do know of efficient algorithms. Computer scientists are intrigued by how a small change to the problem statement can cause a big change to the efficiency of the best known algorithm.
+                            </div>
+                            <div className="paragraph">
+                                You should know about NP-complete problems because some of them arise surprisingly often in real applications. If you are called upon to produce an efficient algorithm for an NP-complete problem, you are likely to spend a lot of time in a fruitless search. If you can show that the problem is NP-complete, you can instead spend your time developing an efficient algorithm that gives a good, but not the best possible, solution.
+                            </div>
+                            <div className="paragraph">
+                                As a concrete example, consider a delivery company with a central depot. Each day, it loads up each delivery truck at the depot and sends it around to deliver goods to several addresses. At the end of the day, each truck must end up back at the depot so that it is ready to be loaded for the next day. To reduce costs, the company wants to select an order of delivery stops that yields the lowest overall distance traveled by each truck. This problem is the well-known “traveling-salesman problem,” and it is NP-complete. It has no known efficient algorithm. Under certain assumptions, however, we know of efficient algorithms that give an overall distance which is not too far above the smallest possible. Chapter 35 discusses such “approximation algorithms.”
+                            </div>
+
+                            <div className="bold-sub-header">Parallelism</div>
+
+                            <div className="first-paragraph">
+                                For many years, we could count on processor clock speeds increasing at a steady rate. Physical limitations present a fundamental roadblock to ever-increasing clock speeds, however: because power density increases superlinearly with clock speed, chips run the risk of melting once their clock speeds become high enough. In order to perform more computations per second, therefore, chips are being designed to contain not just one but several processing “cores.” We can liken these multicore computers to several sequential computers on a single chip; in other words, they are a type of “parallel computer.” In order to elicit the best performance from multicore computers, we need to design algorithms with parallelism in mind. Chapter 27 presents a model for “multithreaded” algorithms, which take advantage of multiple cores. This model has advantages from a theoretical standpoint, and it forms the basis of several successful computer programs, including a championship chess program.
+                            </div>
+
+                            <div className="bold-sub-header">Exercises</div>
                         </div>
                     </div>
 

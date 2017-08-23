@@ -1,9 +1,15 @@
 @import './reset.less';
 
+@images: "../assets";
+
 @page-width: 1000px;
 @page-height: 1130px;
-
+@page-top-border: 12px;
 @chapter-title-font-size: 30px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 // universals
 .input {
@@ -26,26 +32,11 @@
     }
 }
 
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
 .section-title-page {
     position: relative;
     width: @page-width;
     height: @page-height;
-    border-top: 12px solid black;
+    border-top: @page-top-border solid black;
     margin: 20px auto;
 
     .section-title {
@@ -68,20 +59,24 @@ sub {
 .citations {
     border-top: 1px solid black;
     padding: 20px 0;
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: auto auto auto 10%;
+
+    .citation {
+        .first-paragraph;
+        width: 90%;
+        margin: auto;
+    }
 }
 
 sup { vertical-align: top; position: relative; top: -0.34em; font-size: .7em;}
+sub { vertical-align: bottom; position: relative; bottom: -0.5ex; font-size: .7em}
 
 .tex sub, .latex sub, .latex sup {
   text-transform: uppercase;
 }
 
 .tex sub, .latex sub {
-  position: relative;
-  vertical-align: bottom;
-  bottom: -0.5ex;
   margin-left: -0.1667em;
   margin-right: -0.125em;
 }
@@ -112,15 +107,16 @@ a {
 }
 
 .paragraph {
-    width: 80%;
-    margin: auto;
-    line-height: 110%;
+    margin: 0 0 0 10%;
+    width: 90%;
+    line-height: 1.2em;
     text-indent: 1.5em;
     text-align: justify;
     padding: 2px 0;
 }
 
 .first-paragraph {
+    .paragraph;
     text-indent: 0;
 }
 
@@ -138,12 +134,12 @@ a {
     width: 80%;
 }
 
-.bulleted-paragraph {
+.numbered-list {
     text-align: justify;
-    width: 80%;
-    margin: 10px auto;
-    margin-left: 11%;
-    list-style-type: disc;
+    width: 88.5%;
+    padding: 0;
+    margin: 10px auto 10px 11.5%;
+    line-height: 1.2em;
 
     li {
         margin: 10px auto;
@@ -154,6 +150,12 @@ a {
         }
     }
 }
+
+.bulleted-list {
+    .numbered-list;
+    list-style-type: disc;
+}
+
 // /universals
 
 .contents-tab {
@@ -173,7 +175,7 @@ a {
 
 #cover-img {
     background-repeat: no-repeat;
-    background-image: url('../assets/cover-image.png');
+    background-image: url('@{images}/cover-image.png');
     background-position: 50% 50%;
     background-size: contain;
     width: 1000px;
@@ -185,7 +187,7 @@ a {
     position: relative;
     width: 1000px;
     height: 1350px;
-    border-top: 12px solid black;
+    border-top: @page-top-border solid black;
     margin: 20px auto;
 
     .author-list {
@@ -351,12 +353,12 @@ a {
 
 .appendix-preface {
     position: relative;
-    width: 1000px;
+    width: @page-width;
     margin: 20px auto;
 
     #preface-authors {
-        width: 80%;
-        margin: 20px auto;
+        width: 90%;
+        margin: 20px auto 20px 10%;
         display: flex;
         justify-content: space-between;
         line-height: 1.2em;
@@ -368,8 +370,8 @@ a {
     }
 
     #preface-date {
-        width: 80%;
-        margin: 30px auto;
+        width: 90%;
+        margin: 30px auto 30px 10%;
     }
 }
 
@@ -400,7 +402,7 @@ a {
 
         .chapter-title-container {
             width: @page-width;
-            border-top: 15px solid black;
+            border-top: @page-top-border solid black;
             margin: 50px auto;
 
             .title {
@@ -443,6 +445,14 @@ a {
             }
 
             .chapter-paragraph {
+                .paragraph;
+                margin: 0 0 0 10%;
+                width: 90%;
+            }
+
+            .chapter-first-paragraph {
+                .paragraph;
+                .first-paragraph;
                 margin: 0 0 0 10%;
                 width: 90%;
             }

@@ -22728,8 +22728,8 @@ var App = function (_React$Component) {
                         { className: 'paragraph' },
                         'Each chapter presents an algorithm, a design technique, an application area, or a related topic. Algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The book contains 244 figures\u2014many with multiple parts\u2014illustrating how the algorithms work. Since we emphasize ',
                         _react2.default.createElement(
-                            'span',
-                            { className: 'italic' },
+                            'i',
+                            null,
                             'efficiency'
                         ),
                         ' as a design criterion, we include careful analyses of the running times of all our algorithms.'
@@ -22796,7 +22796,7 @@ var App = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'ul',
-                        { className: 'bulleted-paragraph' },
+                        { className: 'bulleted-list' },
                         _react2.default.createElement(
                             'li',
                             null,
@@ -22888,7 +22888,7 @@ var App = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'ul',
-                        { className: 'bulleted-paragraph' },
+                        { className: 'bulleted-list' },
                         _react2.default.createElement(
                             'li',
                             null,
@@ -22978,14 +22978,14 @@ var App = function (_React$Component) {
                                 { className: 'inner-bullet' },
                                 'Based on many requests, we changed the syntax (as it were) of our pseudocode. We now use \u201CD\u201D to indicate assignment and \u201C==\u201D to test for equality, just as C, C++, Java, and Python do. Likewise, we have eliminated the keywords ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold' },
+                                    'b',
+                                    null,
                                     'do'
                                 ),
                                 ' and ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold' },
+                                    'b',
+                                    null,
                                     'then'
                                 ),
                                 ' and adopted \u201C//\u201D as our comment-to-end-of-line symbol. We also now use dot-notation to indicate object attributes. Our pseudocode remains procedural, rather than object-oriented. In other words, rather than running methods on objects, we simply call procedures, passing objects as parameters.'
@@ -23101,8 +23101,8 @@ var App = function (_React$Component) {
                         ),
                         ' Who knows how long our pre-Intel Macs will continue to run, so if anyone from Apple is listening: ',
                         _react2.default.createElement(
-                            'span',
-                            { className: 'italic' },
+                            'i',
+                            null,
                             'Please create an OS X-compatible version of MacDraw Pro!'
                         )
                     ),
@@ -23208,7 +23208,7 @@ var App = function (_React$Component) {
                         { className: 'citations' },
                         _react2.default.createElement(
                             'div',
-                            { className: 'citation first-paragraph' },
+                            { className: 'citation' },
                             _react2.default.createElement(
                                 'sup',
                                 null,
@@ -23249,14 +23249,14 @@ var App = function (_React$Component) {
                                 { className: 'paragraph' },
                                 'In Chapter 2, we see our first algorithms, which solve the problem of sorting a sequence of ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'italic' },
+                                    'i',
+                                    null,
                                     'n'
                                 ),
                                 ' numbers. They are written in a pseudocode which, although not directly translatable to any conventional programming language, conveys the structure of the algorithm clearly enough that you should be able to implement it in the language of your choice. The sorting algorithms we examine are insertion sort, which uses an incremental approach, and merge sort, which uses a recursive technique known as \u201Cdivide-and-conquer.\u201D Although the time each requires increases with the value of ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'italic' },
+                                    'i',
+                                    null,
                                     'n'
                                 ),
                                 ', the rate of increase differs between the two algorithms. We determine these running times in Chapter 2, and we develop a useful notation to express them.'
@@ -23310,46 +23310,66 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph first-paragraph chapter-paragraph' },
+                                { className: 'first-paragraph' },
                                 'Informally, an ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold italic' },
-                                    'algorithm'
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'algorithm'
+                                    )
                                 ),
                                 ' is any well-defined computational procedure that takes some value, or set of values, as ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold italic' },
-                                    'input'
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'input'
+                                    )
                                 ),
                                 ' and produces some value, or set of values, as ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold italic' },
-                                    'output'
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'output'
+                                    )
                                 ),
                                 '. An algorithm is thus a sequence of computational steps that transform the input into the output.'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'We can also view an algorithm as a tool for solving a well-specified ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold italic' },
-                                    'computational problem'
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'computational problem'
+                                    )
                                 ),
                                 '. The statement of the problem specifies in general terms the desired input/output relationship. The algorithm describes a specific computational procedure for achieving that input/output relationship.'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'For example, we might need to sort a sequence of numbers into nondecreasing order. This problem arises frequently in practice and provides fertile ground for introducing many standard design techniques and analysis tools. Here is how we formally define the ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'bold italic' },
-                                    'sorting problem'
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'sorting problem'
+                                    )
                                 ),
                                 ':'
                             ),
@@ -23358,8 +23378,8 @@ var App = function (_React$Component) {
                                 { className: 'input' },
                                 'A sequence of ',
                                 _react2.default.createElement(
-                                    'span',
-                                    { className: 'italic' },
+                                    'i',
+                                    null,
                                     'n'
                                 ),
                                 ' numbers \u3008a',
@@ -23424,7 +23444,7 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'For example, given the input sequence (31, 41, 59, 26, 41, 58), a sorting algorithm returns as output the sequence (26, 31, 41, 41, 58, 59). Such an input sequence is called an ',
                                 _react2.default.createElement(
                                     'b',
@@ -23441,12 +23461,12 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'Because many programs use it as an intermediate step, sorting is a fundamental operation in computer science. As a result, we have a large number of good sorting algorithms at our disposal. Which algorithm is best for a given application depends on\u2014among other factors\u2014the number of items to be sorted, the extent to which the items are already somewhat sorted, possible restrictions on the item values, the architecture of the computer, and the kind of storage devices to be used: main memory, disks, or even tapes.'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'An algorithm is said to be correct if, for every input instance, it halts with the ',
                                 _react2.default.createElement(
                                     'b',
@@ -23471,7 +23491,7 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph chapter-paragraph' },
+                                { className: 'paragraph' },
                                 'An algorithm can be specified in English, as a computer program, or even as a hardware design. The only requirement is that the specification must provide a precise description of the computational procedure to be followed.'
                             ),
                             _react2.default.createElement(
@@ -23481,8 +23501,412 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'paragraph first-paragraph chapter-paragraph' },
+                                { className: 'first-paragraph' },
                                 'Sorting is by no means the only computational problem for which algorithms have been developed. (You probably suspected as much when you saw the size of this book.) Practical applications of algorithms are ubiquitous and include the following examples:'
+                            ),
+                            _react2.default.createElement(
+                                'ul',
+                                { className: 'bulleted-list' },
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'The Human Genome Project has made great progress toward the goals of identifying all the 100,000 genes in human DNA, determining the sequences of the 3 billion chemical base pairs that make up human DNA, storing this information in databases, and developing tools for data analysis. Each of these steps requires sophisticated algorithms. Although the solutions to the various problems involved are beyond the scope of this book, many methods to solve these biological problems use ideas from several of the chapters in this book, thereby enabling scientists to accomplish tasks while using resources efficiently. The savings are in time, both human and machine, and in money, as more information can be extracted from laboratory techniques.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'The Internet enables people all around the world to quickly access and retrieve large amounts of information. With the aid of clever algorithms, sites on the Internet are able to manage and manipulate this large volume of data. Examples of problems that make essential use of algorithms include finding good routes on which the data will travel (techniques for solving such problems appear in Chapter 24), and using a search engine to quickly find pages on which particular information resides (related techniques are in Chapters 11 and 32).'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'Electronic commerce enables goods and services to be negotiated and exchanged electronically, and it depends on the privacy of personal information such as credit card numbers, passwords, and bank statements. The core technologies used in electronic commerce include public-key cryptography and digital signatures (covered in Chapter 31), which are based on numerical algorithms and number theory.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'Manufacturing and other commercial enterprises often need to allocate scarce resources in the most beneficial way. An oil company may wish to know where to place its wells in order to maximize its expected profit. A political candidate may want to determine where to spend money buying campaign advertising in order to maximize the chances of winning an election. An airline may wish to assign crews to flights in the least expensive way possible, making sure that each flight is covered and that government regulations regarding crew scheduling are met. An Internet service provider may wish to determine where to place additional resources in order to serve its customers more effectively. All of these are examples of problems that can be solved using linear programming, which we shall study in Chapter 29.'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Although some of the details of these examples are beyond the scope of this book, we do give underlying techniques that apply to these problems and problem areas. We also show how to solve many specific problems, including the following:'
+                            ),
+                            _react2.default.createElement(
+                                'ul',
+                                { className: 'bulleted-list' },
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'We are given a road map on which the distance between each pair of adjacent intersections is marked, and we wish to determine the shortest route from one intersection to another. The number of possible routes can be huge, even if we disallow routes that cross over themselves. How do we choose which of all possible routes is the shortest? Here, we model the road map (which is itself a model of the actual roads) as a graph (which we will meet in Part VI and Appendix B), and we wish to find the shortest path from one vertex to another in the graph. We shall see how to solve this problem efficiently in Chapter 24.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'We are given two ordered sequences of symbols, ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' = \u3008x',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            '1'
+                                        ),
+                                        ', x',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            '2'
+                                        ),
+                                        ', ..., a',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            _react2.default.createElement(
+                                                'i',
+                                                null,
+                                                'm'
+                                            )
+                                        ),
+                                        '\u3009 and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        ' = \u3008y',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            '1'
+                                        ),
+                                        ', y',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            '2'
+                                        ),
+                                        ', ..., a',
+                                        _react2.default.createElement(
+                                            'sub',
+                                            null,
+                                            _react2.default.createElement(
+                                                'i',
+                                                null,
+                                                'n'
+                                            )
+                                        ),
+                                        '\u3009, and we wish to find a longest common subsequence of ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        '. A subsequence of ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' is just ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' with some (or possibly all or none) of its elements removed. For example, one subsequence of \u3008',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'A, B, C, D, E, F, G'
+                                        ),
+                                        '\u3009 would be \u3008',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'B, C, E, G'
+                                        ),
+                                        '\u3009. The length of a longest common subsequence of ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        ' gives one measure of how similar these two sequences are. For example, if the two sequences are base pairs in DNA strands, then we might consider them similar if they have a long common subsequence. If ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' has ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'm'
+                                        ),
+                                        ' symbols and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        ' has ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        ),
+                                        ' symbols, then ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        ' have ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            '2',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                'm'
+                                            )
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            '2',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                'n'
+                                            )
+                                        ),
+                                        ' possible subsequences, respectively. Selecting all possible subsequences of ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'X'
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'Y'
+                                        ),
+                                        ' and matching them up could take a prohibitively long time unless ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'm'
+                                        ),
+                                        ' and ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        ),
+                                        ' are very small. We shall see in Chapter 15 how to use a general technique known as dynamic programming to solve this problem much more efficiently.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'We are given a mechanical design in terms of a library of parts, where each part may include instances of other parts, and we need to list the parts in order so that each part appears before any part that uses it. If the design comprises ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        ),
+                                        ' parts, then there are ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n!'
+                                        ),
+                                        ' possible orders, where ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n!'
+                                        ),
+                                        ' denotes the factorial function. Because the factorial function grows faster than even an exponential function, we cannot feasibly generate each possible order and then verify that, within that order, each part appears before the parts using it (unless we have only a few parts). This problem is an instance of topological sorting, and we shall see in Chapter 22 how to solve this problem efficiently.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'We are given ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        ),
+                                        ' points in the plane, and we wish to find the convex hull of these points. The convex hull is the smallest convex polygon containing the points. Intuitively, we can think of each point as being represented by a nail sticking out from a board. The convex hull would be represented by a tight rubber band that surrounds all the nails. Each nail around which the rubber band makes a turn is a vertex of the convex hull. (See Figure 33.6 on page 1029 for an example.) Any of the ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            '2',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                'n'
+                                            )
+                                        ),
+                                        ' subsets of the points might be the vertices of the convex hull. Knowing which points are vertices of the convex hull is not quite enough, either, since we also need to know the order in which they appear. There are many choices, therefore, for the vertices of the convex hull. Chapter 33 gives two good methods for finding the convex hull.'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'These lists are far from exhaustive (as you again have probably surmised from this book\u2019s heft), but exhibit two characteristics that are common to many interesting algorithmic problems:'
+                            ),
+                            _react2.default.createElement(
+                                'ol',
+                                { className: 'numbered-list', type: '1' },
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'They have many candidate solutions, the overwhelming majority of which do not solve the problem at hand. Finding one that does, or one that is \u201Cbest,\u201D can present quite a challenge.'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'They have practical applications. Of the problems in the above list, finding the shortest path provides the easiest examples. A transportation firm, such as a trucking or railroad company, has a financial interest in finding shortest paths through a road or rail network because taking shorter paths results in lower labor and fuel costs. Or a routing node on the Internet may need to find the shortest path through the network in order to route a message quickly. Or a person wishing to drive from New York to Boston may want to find driving directions from an appropriate Web site, or she may use her GPS while driving.'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Not every problem solved by algorithms has an easily identified set of candidate solutions. For example, suppose we are given a set of numerical values representing samples of a signal, and we want to compute the discrete Fourier transform of these samples. The discrete Fourier transform converts the time domain to the frequency domain, producing a set of numerical coefficients, so that we can determine the strength of various frequencies in the sampled signal. In addition to lying at the heart of signal processing, discrete Fourier transforms have applications in data compression and multiplying large polynomials and integers. Chapter 30 gives an efficient algorithm, the fast Fourier transform (commonly called the FFT), for this problem, and the chapter also sketches out the design of a hardware circuit to compute the FFT.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Data structures'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'This book also contains several data structures. A ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'data structure'
+                                ),
+                                ' is a way to store and organize data in order to facilitate access and modifications. No single data structure works well for all purposes, and so it is important to know the strengths and limitations of several of them.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Technique'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'Although you can use this book as a \u201Ccookbook\u201D for algorithms, you may someday encounter a problem for which you cannot readily find a published algorithm (many of the exercises and problems in this book, for example). This book will teach you techniques of algorithm design and analysis so that you can develop algorithms on your own, show that they give the correct answer, and understand their efficiency. Different chapters address different aspects of algorithmic problem solving. Some chapters address specific problems, such as finding medians and order statistics in Chapter 9, computing minimum spanning trees in Chapter 23, and determining a maximum flow in a network in Chapter 26. Other chapters address techniques, such as divide-and-conquer in Chapter 4, dynamic programming in Chapter 15, and amortized analysis in Chapter 17.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Hard problems'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'Most of this book is about efficient algorithms. Our usual measure of efficiency is speed, i.e., how long an algorithm takes to produce its result. There are some problems, however, for which no efficient solution is known. Chapter 34 studies an interesting subset of these problems, which are known as NP-complete.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Why are NP-complete problems interesting? First, although no efficient algorithm for an NP-complete problem has ever been found, nobody has ever proven that an efficient algorithm for one cannot exist. In other words, no one knows whether or not efficient algorithms exist for NP-complete problems. Second, the set of NP-complete problems has the remarkable property that if an efficient algorithm exists for any one of them, then efficient algorithms exist for all of them. This relationship among the NP-complete problems makes the lack of efficient solutions all the more tantalizing. Third, several NP-complete problems are similar, but not identical, to problems for which we do know of efficient algorithms. Computer scientists are intrigued by how a small change to the problem statement can cause a big change to the efficiency of the best known algorithm.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'You should know about NP-complete problems because some of them arise surprisingly often in real applications. If you are called upon to produce an efficient algorithm for an NP-complete problem, you are likely to spend a lot of time in a fruitless search. If you can show that the problem is NP-complete, you can instead spend your time developing an efficient algorithm that gives a good, but not the best possible, solution.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'As a concrete example, consider a delivery company with a central depot. Each day, it loads up each delivery truck at the depot and sends it around to deliver goods to several addresses. At the end of the day, each truck must end up back at the depot so that it is ready to be loaded for the next day. To reduce costs, the company wants to select an order of delivery stops that yields the lowest overall distance traveled by each truck. This problem is the well-known \u201Ctraveling-salesman problem,\u201D and it is NP-complete. It has no known efficient algorithm. Under certain assumptions, however, we know of efficient algorithms that give an overall distance which is not too far above the smallest possible. Chapter 35 discusses such \u201Capproximation algorithms.\u201D'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Parallelism'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'For many years, we could count on processor clock speeds increasing at a steady rate. Physical limitations present a fundamental roadblock to ever-increasing clock speeds, however: because power density increases superlinearly with clock speed, chips run the risk of melting once their clock speeds become high enough. In order to perform more computations per second, therefore, chips are being designed to contain not just one but several processing \u201Ccores.\u201D We can liken these multicore computers to several sequential computers on a single chip; in other words, they are a type of \u201Cparallel computer.\u201D In order to elicit the best performance from multicore computers, we need to design algorithms with parallelism in mind. Chapter 27 presents a model for \u201Cmultithreaded\u201D algorithms, which take advantage of multiple cores. This model has advantages from a theoretical standpoint, and it forms the basis of several successful computer programs, including a championship chess program.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Exercises'
                             )
                         )
                     )
@@ -23536,7 +23960,7 @@ exports = module.exports = __webpack_require__(187)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\n.section-title-page {\n  position: relative;\n  width: 1000px;\n  height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 36;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 80%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  width: 80%;\n  margin: auto;\n  line-height: 110%;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph {\n  text-indent: 0;\n}\n.italic {\n  font-style: italic;\n}\n.bold {\n  font-weight: bold;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.bulleted-paragraph {\n  text-align: justify;\n  width: 80%;\n  margin: 10px auto;\n  margin-left: 11%;\n  list-style-type: disc;\n}\n.bulleted-paragraph li {\n  margin: 10px auto;\n}\n.bulleted-paragraph li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 30px;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 1000px;\n  height: 1130px;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 20px;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: 24px;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: 90%;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 80%;\n  margin: 20px auto;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 80%;\n  margin: 30px auto;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 1000px;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 32px;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 1000px;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 1000px;\n  border-top: 15px solid black;\n  margin: 50px auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 30px;\n  margin: 20px auto;\n  height: 250px;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .chapter-title-container .title-paragraph {\n  margin-left: 10%;\n  padding: 20px 0;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 1000px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 1000px;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 20px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nul,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.section-title-page {\n  position: relative;\n  width: 1000px;\n  height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 36;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 90%;\n  margin: auto auto auto 10%;\n}\n.citations .citation {\n  margin: 0 0 0 10%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  width: 90%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\nsub {\n  vertical-align: bottom;\n  position: relative;\n  bottom: -0.5ex;\n  font-size: 0.7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n}\n.italic {\n  font-style: italic;\n}\n.bold {\n  font-weight: bold;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.numbered-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n}\n.numbered-list li {\n  margin: 10px auto;\n}\n.numbered-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.bulleted-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n  list-style-type: disc;\n}\n.bulleted-list li {\n  margin: 10px auto;\n}\n.bulleted-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 30px;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 1000px;\n  height: 1130px;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 20px;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: 24px;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: 90%;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 90%;\n  margin: 20px auto 20px 10%;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 90%;\n  margin: 30px auto 30px 10%;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 1000px;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 32px;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 1000px;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 1000px;\n  border-top: 12px solid black;\n  margin: 50px auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 30px;\n  margin: 20px auto;\n  height: 250px;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .chapter-title-container .title-paragraph {\n  margin-left: 10%;\n  padding: 20px 0;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 1000px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 1000px;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 20px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-first-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n", ""]);
 
 // exports
 
