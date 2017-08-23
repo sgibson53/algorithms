@@ -1,0 +1,569 @@
+{
+    "table_of_contents": [
+        {
+            "section_title": "Foundations",
+            "chapters": [
+                {
+                    "chapter_title": "The Role of Algorithms in Computing",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Algorithms",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Algorithms as a technology",
+                            "starred": false
+                        }
+                        
+                    ]
+                },
+                {
+                    "chapter_title": "Getting Started",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title":"Insertion sort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Analyzing algorithms",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Designing algorithms",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Growth of Functions",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title":"Asymptotic notation",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Standard notations and common functions",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Divide-and-Conquer",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title":"The maximum-subarray problem",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Strassen's algorithm for matrix multiplication",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"The substitution method for solving recurrences",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"The recursion-tree method for solving recurrences",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"The master method for solving recurrences",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Proof of the master theorem",
+                            "starred": true
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Probabilistic Analysis and Randomized Algorithms",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title":"The hiring problem",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Indicator random variables",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Randomized algorithms",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title":"Probabilistic analysis and further uses of indicator random variables",
+                            "starred": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Sorting and Order Statistics",
+            "chapters": [
+                {
+                    "chapter_title": "Heapsort",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Heaps",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Maintaining the heap property",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Building a heap",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The heapsort algorithm",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Priority queues",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Quicksort",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Description of quicksort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Performance of quicksort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "A randomized version of quicksort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Analysis of quicksort",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Sorting in Linear Time",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Lower bounds for sorting",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Counting sort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Radix sort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Bucket sort",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Medians and Order Statistics",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Minimum and maximum",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Selection in expected linear time",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Selection in worst-case linear time",
+                            "starred": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Data Structures",
+            "chapters": [
+                {
+                    "chapter_title": "Elementary Data Structures",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Stacks and queues",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Linked lists",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Implementing pointers and objects",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Representing rooted trees",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Hash Tables",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Direct-address tables",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Hash tables",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Hash functions",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Open addressing",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Perfect hashing",
+                            "starred": true
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Binary Search Trees",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "What is a binary search tree?",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Querying a binary search tree",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Insertion and deletion",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Randomly built binary search trees",
+                            "starred": true
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Red-Black Trees",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Properties of red-black trees?",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Rotations",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Insertion",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Deletion",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Augmenting Data Structures",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Dynamic order statistics",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "How to augment a data structure",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Interval trees",
+                            "starred": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Advanced Design and Analysis Techniques",
+            "chapters": [
+                {
+                    "chapter_title": "Dynamic Programming",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Rod cutting",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Matrix-chain multiplication",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Elements of dynamic programming",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Longest common subsequence",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Optimal binary search trees",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Greedy Algorithms",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "An Activity-Selection Problem",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Elements of the Greedy Strategy",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Huffman Codes",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Matroids and greedy methods",
+                            "starred": true
+                        },
+                        {
+                            "sub_chapter_title": "A task-scheduling problem as a matroid",
+                            "starred": true
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Greedy Algorithms",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Aggregate analysis",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The accounting method",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The potential method",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Dynamic tables",
+                            "starred": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Advanced Data Structures",
+            "chapters": [
+                {
+                    "chapter_title": "B-Trees",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Definition of B-trees",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Basic operations on B-trees",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Deleting a key from a B-tree",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Fibonacci Heaps",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Structure of Fibonacci heaps",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Mergeable-heap operations",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Decreasing a key and deleting a node",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Bounding the maximum degree",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "van Emde Boas Trees",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Preliminary approaches",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "A recursive structure",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The van Emde Boas tree",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Data Structures for Disjoint Sets",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Disjoint-set operations",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Linked-list representation of disjoint sets",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Disjoint-set forests",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Analysis of union by rank with path compression",
+                            "starred": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Graph Algorithms",
+            "chapters": [
+                {
+                    "chapter_title": "Elementary Graph Algorithms",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Representations of graphs",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Breadth-first search",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Depth-first search",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Topological sort",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Strongly connected components",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Minimum Spanning Trees",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Growing a minimum spanning tree",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The algorithms of Kruskal and Prim",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Single-Source Shortest Paths",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "The Bellman-Ford algorithm",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Single-source shortest paths in directed acyclic graphs",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Dijkstra’s algorithm",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Difference constraints and shortest paths",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Proofs of shortest-paths properties",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "All-Pairs Shortest Paths",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Shortest paths and matrix multiplication",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The Floyd-Warshall algorithm",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Johnson’s algorithm for sparse graphs",
+                            "starred": false
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Maximum Flow",
+                    "sub_chapters": [
+                        {
+                            "sub_chapter_title": "Flow networks",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "The Ford-Fulkerson method",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Maximum bipartite matching",
+                            "starred": false
+                        },
+                        {
+                            "sub_chapter_title": "Push-relabel algorithms",
+                            "starred": true
+                        },
+                        {
+                            "sub_chapter_title": "The relabel-to-front algorithm",
+                            "starred": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

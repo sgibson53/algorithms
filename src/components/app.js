@@ -2,21 +2,87 @@ import '../scss/main.less';
 
 import React from 'react';
 
+import global from '../core/global';
+import data from '../assets/textbook.json';
+
 export default class App extends React.Component {
 
-    render() {
-        return <div>
+    constructor(props) {
+        super(props);
 
-                <a href="#contents" className="contents-tab">Table of Contents</a>
+        this.state = {
+            data: data
+        }
+    }
 
-                <div id="cover-img"></div>
-                <div className="title-container">
-                    <div className="title">Introduction to Algorithms
-                        <div className="sub-title">
-                            Third Edition
+    tableOfContents() {
+        var self = this;
+
+        return <div className="table-of-contents" id="table-of-contents">
+                    <div className="appendix-title">Contents</div>
+                    <a href='#preface' className="preface">Preface</a>
+                    {self.build_TOC_Sections()}
+                </div>
+
+    }
+
+    build_TOC_Sections() {
+        var self = this;
+
+        return this.state.data.table_of_contents.map((section, i) => {
+            return <div className="chapter" key={i}>
+                        <div className="chapter-title">{romanize(i+1)}  {section.section_title}</div>
+                        <div className="chapter-interior">
+                            <a href="#" className="intro">Introduction</a>
+                            <div className="chapter-section">
+                                {self.build_TOC_Chapters(section)}
+                            </div>
                         </div>
                     </div>
+        });
+    }
+
+    build_TOC_Chapters(section) {
+        var self = this;
+
+        return section.chapters.map((chapter, i) => {
+            return <div className="chapter-section" key={i}>
+                        <a href="#" className="chapter-section-title"><span className="section-number"></span>{chapter.chapter_title}</a>
+                        {self.build_TOC_SubChapters(chapter)}
+                    </div>
+        });
+    }
+
+    build_TOC_SubChapters(chapter) {
+        return chapter.sub_chapters.map((sub_chapter, i) => {
+            return <a href="#" className="chapter-section-sub-title" key={i}>{sub_chapter.sub_chapter_title}</a>
+        });
+    }
+
+    sectionTitlePage(title, index) {
+        return <div className="section-title-page">
+                    <div className="section-title italic">{romanize(index+1)} {title}</div>
                 </div>
+    }
+
+
+
+    render() {
+        var self = this;
+        var intro_page = <div className="title-container">
+                            <div className="title">Introduction to Algorithms
+                                <div className="sub-title">
+                                    Third Edition
+                                </div>
+                            </div>
+                        </div>
+
+        return <div>
+
+                <a href="#table-of-contents" className="contents-tab">Table of Contents</a>
+
+                <div id="cover-img"></div>
+                {intro_page}
                 <div className="title-container">
                     <div className="author-list">
                         <div className="author">Thomas H. Cormen</div>
@@ -58,214 +124,14 @@ export default class App extends React.Component {
                     </div>
                 </div>
 
-                <div className="contents" id="contents">
-                    <div className="appendix-title">Contents</div>
-                    <a href='#preface' className="preface">Preface</a>
-                    <div className="chapter">
-                        <div className="chapter-title">I  Foundations</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>The Role of Algorithms in Computing</a>
-                                <a href="#" className="chapter-section-sub-title">Algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">Algorithms as a technology</a>
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Getting Started</a>
-                                <a href="#" className="chapter-section-sub-title">Insertion sort</a>
-                                <a href="#" className="chapter-section-sub-title">Analyzing algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">Designing algorithms</a>
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Growth of Functions</a>
-                                <a href="#" className="chapter-section-sub-title">Asymptotic notation</a>
-                                <a href="#" className="chapter-section-sub-title">Standard notations and common functions</a>
+                {self.tableOfContents()}
 
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Divide-and-Conquer</a>
-                                <a href="#" className="chapter-section-sub-title">The maximum-subarray problem</a>
-                                <a href="#" className="chapter-section-sub-title">Strassen’s algorithm for matrix multiplication</a>
-                                <a href="#" className="chapter-section-sub-title">The substitution method for solving recurrences</a>
-                                <a href="#" className="chapter-section-sub-title">The recursion-tree method for solving recurrences</a>
-                                <a href="#" className="chapter-section-sub-title">The master method for solving recurrences</a>
-                                <a href="#" className="chapter-section-sub-title">Proof of the master theorem</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Probabilistic Analysis and Randomized Algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">The hiring problem</a>
-                                <a href="#" className="chapter-section-sub-title">Indicator random variables</a>
-                                <a href="#" className="chapter-section-sub-title">Randomized algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">Probabilistic analysis and further uses of indicator random variables</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="chapter">
-                        <div className="chapter-title">II Sorting and Order Statistics</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Heapsort</a>
-                                <a href="#" className="chapter-section-sub-title">Heaps</a>
-                                <a href="#" className="chapter-section-sub-title">Maintaining the heap property</a>
-                                <a href="#" className="chapter-section-sub-title">Building a heap</a>
-                                <a href="#" className="chapter-section-sub-title">The heapsort algorithm</a>
-                                <a href="#" className="chapter-section-sub-title">Priority queues</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Quicksort</a>
-                                <a href="#" className="chapter-section-sub-title">Description of quicksort</a>
-                                <a href="#" className="chapter-section-sub-title">Performance of quicksort</a>
-                                <a href="#" className="chapter-section-sub-title">A randomized version of quicksort</a>
-                                <a href="#" className="chapter-section-sub-title">Analysis of quicksort</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Sorting in Linear Time</a>
-                                <a href="#" className="chapter-section-sub-title">Lower bounds for sorting</a>
-                                <a href="#" className="chapter-section-sub-title">Counting sort</a>
-                                <a href="#" className="chapter-section-sub-title">Radix sort</a>
-                                <a href="#" className="chapter-section-sub-title">Bucket sort</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Medians and Order Statistics</a>
-                                <a href="#" className="chapter-section-sub-title">Minimum and maximum</a>
-                                <a href="#" className="chapter-section-sub-title">Selection in expected linear time</a>
-                                <a href="#" className="chapter-section-sub-title">Selection in worst-case linear time</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="chapter">
-                        <div className="chapter-title">III Data Structures</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Elementary Data Structures</a>
-                                <a href="#" className="chapter-section-sub-title">Stacks and queues</a>
-                                <a href="#" className="chapter-section-sub-title">Linked lists</a>
-                                <a href="#" className="chapter-section-sub-title">Implementing pointers and objects</a>
-                                <a href="#" className="chapter-section-sub-title">Representing rooted trees</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Hash Tables</a>
-                                <a href="#" className="chapter-section-sub-title">Direct-address tables</a>
-                                <a href="#" className="chapter-section-sub-title">Hash tables</a>
-                                <a href="#" className="chapter-section-sub-title">Hash functions</a>
-                                <a href="#" className="chapter-section-sub-title">Open addressing</a>
-                                <a href="#" className="chapter-section-sub-title">Perfect hashing</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Binary Search Trees</a>
-                                <a href="#" className="chapter-section-sub-title">What is a binary search tree?</a>
-                                <a href="#" className="chapter-section-sub-title">Querying a binary search tree</a>
-                                <a href="#" className="chapter-section-sub-title">Insertion and deletion</a>
-                                <a href="#" className="chapter-section-sub-title">Randomly built binary search trees</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Red-Black Trees</a>
-                                <a href="#" className="chapter-section-sub-title">Properties of red-black trees</a>
-                                <a href="#" className="chapter-section-sub-title">Rotations</a>
-                                <a href="#" className="chapter-section-sub-title">Insertion</a>
-                                <a href="#" className="chapter-section-sub-title">Deletion</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Amortized Analysis</a>
-                                <a href="#" className="chapter-section-sub-title">Aggregate analysis</a>
-                                <a href="#" className="chapter-section-sub-title">The accounting method</a>
-                                <a href="#" className="chapter-section-sub-title">The potential method</a>
-                                <a href="#" className="chapter-section-sub-title">Dynamic tables</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="chapter">
-                        <div className="chapter-title">IV Advanced Design and Analysis Techniques</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Dynamic Programming</a>
-                                <a href="#" className="chapter-section-sub-title">Rod cutting</a>
-                                <a href="#" className="chapter-section-sub-title">Matrix-chain multiplication</a>
-                                <a href="#" className="chapter-section-sub-title">Elements of dynamic programming</a>
-                                <a href="#" className="chapter-section-sub-title">Longest common subsequence</a>
-                                <a href="#" className="chapter-section-sub-title">Optimal binary search trees</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Greedy Algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">An activity-selection problem</a>
-                                <a href="#" className="chapter-section-sub-title">Elements of the greedy strategy</a>
-                                <a href="#" className="chapter-section-sub-title">Huffman codes</a>
-                                <a href="#" className="chapter-section-sub-title">Matroids and greedy methods</a>
-                                <a href="#" className="chapter-section-sub-title">A task-scheduling problem as a matroid</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Amortized Analysis</a>
-                                <a href="#" className="chapter-section-sub-title">Aggregate analysis</a>
-                                <a href="#" className="chapter-section-sub-title">The accounting method</a>
-                                <a href="#" className="chapter-section-sub-title">The potential method</a>
-                                <a href="#" className="chapter-section-sub-title">Dynamic tables</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="chapter">
-                        <div className="chapter-title">V Advanced Data Structures</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>B-Trees</a>
-                                <a href="#" className="chapter-section-sub-title">Definition of B-trees</a>
-                                <a href="#" className="chapter-section-sub-title">Basic operations on B-trees</a>
-                                <a href="#" className="chapter-section-sub-title">Deleting a key from a B-tree</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Fibonacci Heaps</a>
-                                <a href="#" className="chapter-section-sub-title">Structure of Fibonacci heaps</a>
-                                <a href="#" className="chapter-section-sub-title">Mergeable-heap operations</a>
-                                <a href="#" className="chapter-section-sub-title">Decreasing a key and deleting a node</a>
-                                <a href="#" className="chapter-section-sub-title">Bounding the maximum degree</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>van Emde Boas Trees</a>
-                                <a href="#" className="chapter-section-sub-title">Preliminary approaches</a>
-                                <a href="#" className="chapter-section-sub-title">A recursive structure</a>
-                                <a href="#" className="chapter-section-sub-title">The van Emde Boas tree</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Data Structures for Disjoint Sets</a>
-                                <a href="#" className="chapter-section-sub-title">Disjoint-set operations</a>
-                                <a href="#" className="chapter-section-sub-title">Linked-list representation of disjoint sets</a>
-                                <a href="#" className="chapter-section-sub-title">Disjoint-set forests</a>
-                                <a href="#" className="chapter-section-sub-title">Analysis of union by rank with path compression</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="chapter">
-                        <div className="chapter-title">VI Graph Algorithms</div>
-                        <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
-                            <div className="chapter-section">
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Elementary Graph Algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">Representations of graphs</a>
-                                <a href="#" className="chapter-section-sub-title">Breadth-first search</a>
-                                <a href="#" className="chapter-section-sub-title">Depth-first search</a>
-                                <a href="#" className="chapter-section-sub-title">Topological sort</a>
-                                <a href="#" className="chapter-section-sub-title">Strongly connected components</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Minimum Spanning Trees</a>
-                                <a href="#" className="chapter-section-sub-title">Growing a minimum spanning tree</a>
-                                <a href="#" className="chapter-section-sub-title">The algorithms of Kruskal and Prim</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Single-Source Shortest Paths</a>
-                                <a href="#" className="chapter-section-sub-title">The Bellman-Ford algorithm</a>
-                                <a href="#" className="chapter-section-sub-title">Single-source shortest paths in directed acyclic graphs</a>
-                                <a href="#" className="chapter-section-sub-title">Dijkstra’s algorithm</a>
-                                <a href="#" className="chapter-section-sub-title">Difference constraints and shortest paths</a>
-                                <a href="#" className="chapter-section-sub-title">Proofs of shortest-paths properties</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>All-Pairs Shortest Paths</a>
-                                <a href="#" className="chapter-section-sub-title">Shortest paths and matrix multiplication</a>
-                                <a href="#" className="chapter-section-sub-title">The Floyd-Warshall algorithm</a>
-                                <a href="#" className="chapter-section-sub-title">Johnson’s algorithm for sparse graphs</a>
-
-                                <a href="#" className="chapter-section-title"><span className="section-number"></span>Maximum Flow</a>
-                                <a href="#" className="chapter-section-sub-title">Flow networks</a>
-                                <a href="#" className="chapter-section-sub-title">The Ford-Fulkerson method</a>
-                                <a href="#" className="chapter-section-sub-title">Maximum bipartite matching</a>
-                                <a href="#" className="chapter-section-sub-title">Push-relabel algorithms</a>
-                                <a href="#" className="chapter-section-sub-title">The relabel-to-front algorithm</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="appendix appendix-preface">
+                <div className="appendix appendix-preface">
                         <div className="appendix-title" id="preface">Preface</div>
                         <div className="paragraph first-paragraph">
-                            Before there were computers, there were algorithms. But now that there are com- puters, there are even more algorithms, and algorithms lie at the heart of computing.
+                            Before there were computers, there were algorithms. But now that there are computers, there are even more algorithms, and algorithms lie at the heart of computing.
                         </div>
-                        <div className="paragraph">This book provides a comprehensive introduction to the modern study of com- puter algorithms. It presents many algorithms and covers them in considerable depth, yet makes their design and analysis accessible to all levels of readers. We have tried to keep explanations elementary without sacrificing depth of coverage
+                        <div className="paragraph">This book provides a comprehensive introduction to the modern study of computer algorithms. It presents many algorithms and covers them in considerable depth, yet makes their design and analysis accessible to all levels of readers. We have tried to keep explanations elementary without sacrificing depth of coverage
 or mathematical rigor.
                         </div>
                         <div className="paragraph">
@@ -287,13 +153,13 @@ or mathematical rigor.
                             You should find it easy to organize your course around just the chapters you need. We have made chapters relatively self-contained, so that you need not worry about an unexpected and unnecessary dependence of one chapter on another. Each chapter presents the easier material first and the more difficult material later, with section boundaries marking natural stopping points. In an undergraduate course, you might use only the earlier sections from a chapter; in a graduate course, you might cover the entire chapter.
                         </div>
                         <div className="paragraph">
-                            We have included 957 exercises and 158 problems. Each section ends with exer- cises, and each chapter ends with problems. The exercises are generally short ques- tions that test basic mastery of the material. Some are simple self-check thought exercises, whereas others are more substantial and are suitable as assigned home- work. The problems are more elaborate case studies that often introduce new ma- terial; they often consist of several questions that lead the student through the steps required to arrive at a solution.
+                            We have included 957 exercises and 158 problems. Each section ends with exercises, and each chapter ends with problems. The exercises are generally short questions that test basic mastery of the material. Some are simple self-check thought exercises, whereas others are more substantial and are suitable as assigned homework. The problems are more elaborate case studies that often introduce new material; they often consist of several questions that lead the student through the steps required to arrive at a solution.
                         </div>
                         <div className="paragraph">
-                            Departing from our practice in previous editions of this book, we have made publicly available solutions to some, but by no means all, of the problems and ex- ercises. Our Web site, http://mitpress.mit.edu/algorithms/, links to these solutions. You will want to check this site to make sure that it does not contain the solution to an exercise or problem that you plan to assign. We expect the set of solutions that we post to grow slowly over time, so you will need to check it each time you teach the course.
+                            Departing from our practice in previous editions of this book, we have made publicly available solutions to some, but by no means all, of the problems and exercises. Our Web site, http://mitpress.mit.edu/algorithms/, links to these solutions. You will want to check this site to make sure that it does not contain the solution to an exercise or problem that you plan to assign. We expect the set of solutions that we post to grow slowly over time, so you will need to check it each time you teach the course.
                         </div>
                         <div className="paragraph">
-                            We have starred (&#9733;) the sections and exercises that are more suitable for graduate students than for undergraduates. A starred section is not necessarily more diffi- cult than an unstarred one, but it may require an understanding of more advanced mathematics. Likewise, starred exercises may require an advanced background or more than average creativity.
+                            We have starred (&#9733;) the sections and exercises that are more suitable for graduate students than for undergraduates. A starred section is not necessarily more difficult than an unstarred one, but it may require an understanding of more advanced mathematics. Likewise, starred exercises may require an advanced background or more than average creativity.
                         </div>
 
                         <div className="bold-sub-header">To the student</div>
@@ -310,7 +176,7 @@ or mathematical rigor.
                         <ul className="bulleted-paragraph">
                             <li>
                                 <span className="inner-bullet">
-                                    You should have some programming experience. In particular, you should un- derstand recursive procedures and simple data structures such as arrays and linked lists.
+                                    You should have some programming experience. In particular, you should understand recursive procedures and simple data structures such as arrays and linked lists.
                                 </span>
                             </li>
                             <li>
@@ -326,13 +192,13 @@ or mathematical rigor.
                         <div className="bold-sub-header">To the professional</div>
 
                         <div className="paragraph first-paragraph">
-                            The wide range of topics in this book makes it an excellent handbook on algo- rithms. Because each chapter is relatively self-contained, you can focus in on the topics that most interest you.
+                            The wide range of topics in this book makes it an excellent handbook on algorithms. Because each chapter is relatively self-contained, you can focus in on the topics that most interest you.
                         </div>
                         <div className="paragraph">
                             Most of the algorithms we discuss have great practical utility. We therefore address implementation concerns and other engineering issues. We often provide practical alternatives to the few algorithms that are primarily of theoretical interest.
                         </div>
                         <div className="paragraph">
-                            If you wish to implement any of the algorithms, you should find the transla- tion of our pseudocode into your favorite programming language to be a fairly straightforward task. We have designed the pseudocode to present each algorithm clearly and succinctly. Consequently, we do not address error-handling and other software-engineering issues that require specific assumptions about your program- ming environment. We attempt to present each algorithm simply and directly with- out allowing the idiosyncrasies of a particular programming language to obscure its essence.
+                            If you wish to implement any of the algorithms, you should find the translation of our pseudocode into your favorite programming language to be a fairly straightforward task. We have designed the pseudocode to present each algorithm clearly and succinctly. Consequently, we do not address error-handling and other software-engineering issues that require specific assumptions about your programming environment. We attempt to present each algorithm simply and directly without allowing the idiosyncrasies of a particular programming language to obscure its essence.
                         </div>
                         <div className="paragraph">
                             We understand that if you are using this book outside of a course, then you might be unable to check your solutions to problems and exercises against solutions provided by an instructor. Our Web site, http://mitpress.mit.edu/algorithms/, links to solutions for some of the problems and exercises so that you can check your work. Please do not send your solutions to us.
@@ -341,7 +207,7 @@ or mathematical rigor.
                         <div className="bold-sub-header">To our colleagues</div>
 
                         <div className="paragraph first-paragraph">
-                            We have supplied an extensive bibliography and pointers to the current literature. Each chapter ends with a set of chapter notes that give historical details and ref- erences. The chapter notes do not provide a complete reference to the whole field xvi Preface of algorithms, however. Though it may be hard to believe for a book of this size, space constraints prevented us from including many interesting algorithms.
+                            We have supplied an extensive bibliography and pointers to the current literature. Each chapter ends with a set of chapter notes that give historical details and references. The chapter notes do not provide a complete reference to the whole field xvi Preface of algorithms, however. Though it may be hard to believe for a book of this size, space constraints prevented us from including many interesting algorithms.
                         </div>
                         <div className="paragraph">
                             Despite myriad requests from students for solutions to problems and exercises, we have chosen as a matter of policy not to supply references for problems and exercises, to remove the temptation for students to look up a solution rather than to find it themselves.
@@ -352,13 +218,13 @@ or mathematical rigor.
                         </div>
 
                         <div className="paragraph first-paragraph">
-                            What has changed between the second and third editions of this book? The mag- nitude of the changes is on a par with the changes between the first and second editions. As we said about the second-edition changes, depending on how you look at it, the book changed either not much or quite a bit.
+                            What has changed between the second and third editions of this book? The magnitude of the changes is on a par with the changes between the first and second editions. As we said about the second-edition changes, depending on how you look at it, the book changed either not much or quite a bit.
                         </div>
                         <div className="paragraph">
-                            A quick look at the table of contents shows that most of the second-edition chap- ters and sections appear in the third edition. We removed two chapters and one section, but we have added three new chapters and two new sections apart from these new chapters.
+                            A quick look at the table of contents shows that most of the second-edition chapters and sections appear in the third edition. We removed two chapters and one section, but we have added three new chapters and two new sections apart from these new chapters.
                         </div>
                         <div className="paragraph">
-                            We kept the hybrid organization from the first two editions. Rather than organiz- ing chapters by only problem domains or according only to techniques, this book has elements of both. It contains technique-based chapters on divide-and-conquer, dynamic programming, greedy algorithms, amortized analysis, NP-Completeness, and approximation algorithms. But it also has entire parts on sorting, on data structures for dynamic sets, and on algorithms for graph problems. We find that although you need to know how to apply techniques for designing and analyzing al- gorithms, problems seldom announce to you which techniques are most amenable to solving them.
+                            We kept the hybrid organization from the first two editions. Rather than organizing chapters by only problem domains or according only to techniques, this book has elements of both. It contains technique-based chapters on divide-and-conquer, dynamic programming, greedy algorithms, amortized analysis, NP-Completeness, and approximation algorithms. But it also has entire parts on sorting, on data structures for dynamic sets, and on algorithms for graph problems. We find that although you need to know how to apply techniques for designing and analyzing algorithms, problems seldom announce to you which techniques are most amenable to solving them.
                         </div>
                         <div className="paragraph">
                             Here is a summary of the most significant changes for the third edition:
@@ -371,17 +237,17 @@ or mathematical rigor.
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    We revised the chapter on recurrences to more broadly cover the divide-and- conquer technique, and its first two sections apply divide-and-conquer to solve two problems. The second section of this chapter presents Strassen’s algorithm for matrix multiplication, which we have moved from the chapter on matrix operations.
+                                    We revised the chapter on recurrences to more broadly cover the divide-and-conquer technique, and its first two sections apply divide-and-conquer to solve two problems. The second section of this chapter presents Strassen’s algorithm for matrix multiplication, which we have moved from the chapter on matrix operations.
                                 </span>
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    We removed two chapters that were rarely taught: binomial heaps and sorting networks. One key idea in the sorting networks chapter, the 0-1 principle, ap- pears in this edition within Problem 8-7 as the 0-1 sorting lemma for compare- exchange algorithms. The treatment of Fibonacci heaps no longer relies on binomial heaps as a precursor.
+                                    We removed two chapters that were rarely taught: binomial heaps and sorting networks. One key idea in the sorting networks chapter, the 0-1 principle, appears in this edition within Problem 8-7 as the 0-1 sorting lemma for compareexchange algorithms. The treatment of Fibonacci heaps no longer relies on binomial heaps as a precursor.
                                 </span>
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    We revised our treatment of dynamic programming and greedy algorithms. Dy- namic programming now leads off with a more interesting problem, rod cutting, than the assembly-line scheduling problem from the second edition. Further- more, we emphasize memoization a bit more than we did in the second edition, and we introduce the notion of the subproblem graph as a way to understand the running time of a dynamic-programming algorithm. In our opening exam- ple of greedy algorithms, the activity-selection problem, we get to the greedy algorithm more directly than we did in the second edition.
+                                    We revised our treatment of dynamic programming and greedy algorithms. Dynamic programming now leads off with a more interesting problem, rod cutting, than the assembly-line scheduling problem from the second edition. Furthermore, we emphasize memoization a bit more than we did in the second edition, and we introduce the notion of the subproblem graph as a way to understand the running time of a dynamic-programming algorithm. In our opening example of greedy algorithms, the activity-selection problem, we get to the greedy algorithm more directly than we did in the second edition.
                                 </span>
                             </li>
                             <li>
@@ -391,7 +257,7 @@ or mathematical rigor.
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    The material on flow networks now bases flows entirely on edges. This ap- proach is more intuitive than the net flow used in the first two editions.
+                                    The material on flow networks now bases flows entirely on edges. This approach is more intuitive than the net flow used in the first two editions.
                                 </span>
                             </li>
                             <li>
@@ -401,7 +267,7 @@ or mathematical rigor.
                             </li>
                             <li>
                                 <span className="inner-bullet">
-                                    We have modified our treatment of the Knuth-Morris-Pratt string-matching al- gorithm.
+                                    We have modified our treatment of the Knuth-Morris-Pratt string-matching algorithm.
                                 </span>
                             </li>
                             <li>
@@ -429,7 +295,7 @@ or mathematical rigor.
                         <div className="bold-sub-header">Web site</div>
 
                         <div className="paragraph first-paragraph">
-                            You can use our Web site, http://mitpress.mit.edu/algorithms/, to obtain supple- mentary information and to communicate with us. The Web site links to a list of known errors, solutions to selected exercises and problems, and (of course) a list explaining the corny professor jokes, as well as other content that we might add. The Web site also tells you how to report errors or make suggestions.
+                            You can use our Web site, http://mitpress.mit.edu/algorithms/, to obtain supplementary information and to communicate with us. The Web site links to a list of known errors, solutions to selected exercises and problems, and (of course) a list explaining the corny professor jokes, as well as other content that we might add. The Web site also tells you how to report errors or make suggestions.
                         </div>
 
                         <div className="bold-sub-header">How we produced this book</div>
@@ -446,7 +312,7 @@ or mathematical rigor.
                             We have been working with the MIT Press for over two decades now, and what a terrific relationship it has been! We thank Ellen Faran, Bob Prior, Ada Brunstein, and Mary Reilly for their help and support.
                         </div>
                         <div className="paragraph">
-                            We were geographically distributed while producing the third edition, working in the Dartmouth College Department of Computer Science, the MIT Computer Science and Artificial Intelligence Laboratory, and the Columbia University De-partment of Industrial Engineering and Operations Research. We thank our re- spective universities and colleagues for providing such supportive and stimulating environments.
+                            We were geographically distributed while producing the third edition, working in the Dartmouth College Department of Computer Science, the MIT Computer Science and Artificial Intelligence Laboratory, and the Columbia University Department of Industrial Engineering and Operations Research. We thank our respective universities and colleagues for providing such supportive and stimulating environments.
                         </div>
                         <div className="paragraph">
                             Julie Sussman, P.P.A., once again bailed us out as the technical copyeditor. Time and again, we were amazed at the errors that eluded us, but that Julie caught. She also helped us improve our presentation in several places. If there is a Hall of Fame for technical copyeditors, Julie is a sure-fire, first-ballot inductee. She is nothing short of phenomenal. Thank you, thank you, thank you, Julie! Priya Natarajan also found some errors that we were able to correct before this book went to press. Any errors that remain (and undoubtedly, some do) are the responsibility of the authors (and probably were inserted after Julie read the material).
@@ -483,12 +349,98 @@ or mathematical rigor.
 
                         <div className="citations">
                             <div className="citation first-paragraph">
-                                <sup>1</sup>We investigated several drawing programs that run under Mac OS X, but all had significant short- comings compared with MacDraw Pro. We briefly attempted to produce the illustrations for this book with a different, well known drawing program. We found that it took at least five times as long to produce each illustration as it took with MacDraw Pro, and the resulting illustrations did not look as good. Hence the decision to revert to MacDraw Pro running on older Macintoshes.
+                                <sup>1</sup>We investigated several drawing programs that run under Mac OS X, but all had significant shortcomings compared with MacDraw Pro. We briefly attempted to produce the illustrations for this book with a different, well known drawing program. We found that it took at least five times as long to produce each illustration as it took with MacDraw Pro, and the resulting illustrations did not look as good. Hence the decision to revert to MacDraw Pro running on older Macintoshes.
                             </div>
                         </div>
 
                     </div>
-                    
+
+                {intro_page}
+
+                <div className="sections">
+
+                    {self.sectionTitlePage(self.state.data.table_of_contents[0].section_title, 0)}
+
+                    <div className="section-intro">
+                        <div className="title" id="section-intro-1">Introduction</div>
+                        <div className="section-intro-content">
+
+                            <div className="paragraph first-paragraph">
+                                This part will start you thinking about designing and analyzing algorithms. It is intended to be a gentle introduction to how we specify algorithms, some of the design strategies we will use throughout this book, and many of the fundamental ideas used in algorithm analysis. Later parts of this book will build upon this base.
+                            </div>
+                            <div className="paragraph">
+                                Chapter 1 provides an overview of algorithms and their place in modern computing systems. This chapter defines what an algorithm is and lists some examples. It also makes a case that we should consider algorithms as a technology, alongside technologies such as fast hardware, graphical user interfaces, object-oriented systems, and networks.
+                            </div>
+                            <div className="paragraph">
+                                In Chapter 2, we see our first algorithms, which solve the problem of sorting a sequence of <span className="italic">n</span> numbers. They are written in a pseudocode which, although not directly translatable to any conventional programming language, conveys the structure of the algorithm clearly enough that you should be able to implement it in the language of your choice. The sorting algorithms we examine are insertion sort, which uses an incremental approach, and merge sort, which uses a recursive technique known as “divide-and-conquer.” Although the time each requires increases with the value of <span className="italic">n</span>, the rate of increase differs between the two algorithms. We determine these running times in Chapter 2, and we develop a useful notation to express them.
+                            </div>
+                            <div className="paragraph">
+                                Chapter 3 precisely defines this notation, which we call asymptotic notation. It starts by defining several asymptotic notations, which we use for bounding algorithm running times from above and/or below. The rest of Chapter 3 is primarily a presentation of mathematical notation, more to ensure that your use of notation matches that in this book than to teach you new mathematical concepts.
+                            </div>
+                            <div className="paragraph">
+                                Chapter 4 delves further into the divide-and-conquer method introduced in Chapter 2. It provides additional examples of divide-and-conquer algorithms, including Strassen’s surprising method for multiplying two square matrices. Chapter 4 contains methods for solving recurrences, which are useful for describing the running times of recursive algorithms. One powerful technique is the “master method,” which we often use to solve recurrences that arise from divide-and-conquer algorithms. Although much of Chapter 4 is devoted to proving the correctness of the master method, you may skip this proof yet still employ the master method.
+                            </div>
+                            <div className="paragraph">
+                                Chapter 5 introduces probabilistic analysis and randomized algorithms. We typically use probabilistic analysis to determine the running time of an algorithm in cases in which, due to the presence of an inherent probability distribution, the running time may differ on different inputs of the same size. In some cases, we assume that the inputs conform to a known probability distribution, so that we are averaging the running time over all possible inputs. In other cases, the probability distribution comes not from the inputs but from random choices made during the course of the algorithm. An algorithm whose behavior is determined not only by its input but by the values produced by a random-number generator is a randomized algorithm. We can use randomized algorithms to enforce a probability distribution on the inputs—thereby ensuring that no particular input always causes poor performance—or even to bound the error rate of algorithms that are allowed to produce incorrect results on a limited basis.
+                            </div>
+                            <div className="paragraph">
+                                Appendices A–D contain other mathematical material that you will find helpful as you read this book. You are likely to have seen much of the material in the appendix chapters before having read this book (although the specific definitions and notational conventions we use may differ in some cases from what you have seen in the past), and so you should think of the Appendices as reference material. On the other hand, you probably have not already seen most of the material in Part I. All the chapters in Part I and the Appendices are written with a tutorial flavor.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="chapter">
+                        <div className="chapter-title-container">
+                            <div className="title bold">
+                                The Role of Algorithms in Computing
+                            </div>
+                            <div className="title-paragraph">
+                                What are algorithms? Why is the study of algorithms worthwhile? What is the role of algorithms relative to other technologies used in computers? In this chapter, we will answer these questions.
+                            </div>
+                        </div>
+                        <div className="sub-chapter">
+                            <div className="sub-chapter-title bold">
+                                Algorithms
+                            </div>
+
+                            <div className="paragraph first-paragraph chapter-paragraph">
+                                Informally, an <span className="bold italic">algorithm</span> is any well-defined computational procedure that takes some value, or set of values, as <span className="bold italic">input</span> and produces some value, or set of values, as <span className="bold italic">output</span>. An algorithm is thus a sequence of computational steps that transform the input into the output.
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                We can also view an algorithm as a tool for solving a well-specified <span className="bold italic">computational problem</span>. The statement of the problem specifies in general terms the desired input/output relationship. The algorithm describes a specific computational procedure for achieving that input/output relationship.
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                For example, we might need to sort a sequence of numbers into nondecreasing order. This problem arises frequently in practice and provides fertile ground for introducing many standard design techniques and analysis tools. Here is how we formally define the <span className="bold italic">sorting problem</span>:
+                            </div>
+
+                            <div className="input">
+                                A sequence of <span className="italic">n</span> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub className="italic">n</sub>〉.
+                            </div> 
+                            <div className="output">
+                                A permutation (re-ordering) 〈a&prime;<sub>1</sub>, a&prime;<sub>2</sub>, ..., a&prime;<sub>n</sub>〉 of the input sequence such that a&prime;<sub>1</sub> &le; a&prime;<sub>2</sub> &le; &middot;&middot;&middot; &le; a&prime;<sub className="italic">n</sub>
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                For example, given the input sequence (31, 41, 59, 26, 41, 58), a sorting algorithm returns as output the sequence (26, 31, 41, 41, 58, 59). Such an input sequence is called an <b>instance</b> of the sorting problem. In general, an <b>instance of a problem</b> consists of the input (satisfying whatever constraints are imposed in the problem statement) needed to compute a solution to the problem.
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                Because many programs use it as an intermediate step, sorting is a fundamental operation in computer science. As a result, we have a large number of good sorting algorithms at our disposal. Which algorithm is best for a given application depends on—among other factors—the number of items to be sorted, the extent to which the items are already somewhat sorted, possible restrictions on the item values, the architecture of the computer, and the kind of storage devices to be used: main memory, disks, or even tapes.
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                An algorithm is said to be correct if, for every input instance, it halts with the <b><i>correct</i></b> output. We say that a correct algorithm <b><i>solves</i></b> the given computational problem. An incorrect algorithm might not halt at all on some input instances, or it might halt with an incorrect answer. Contrary to what you might expect, incorrect algorithms can sometimes be useful, if we can control their error rate. We shall see an example of an algorithm with a controllable error rate in Chapter 31 when we study algorithms for finding large prime numbers. Ordinarily, however, we shall be concerned only with correct algorithms.
+                            </div>
+                            <div className="paragraph chapter-paragraph">
+                                An algorithm can be specified in English, as a computer program, or even as a hardware design. The only requirement is that the specification must provide a precise description of the computational procedure to be followed.
+                            </div>
+
+                            <div className="chapter-sub-header">What kinds of problems are solved by algorithms?</div>
+
+                            <div className="paragraph first-paragraph chapter-paragraph">
+                                Sorting is by no means the only computational problem for which algorithms have been developed. (You probably suspected as much when you saw the size of this book.) Practical applications of algorithms are ubiquitous and include the following examples:
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
     }

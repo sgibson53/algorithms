@@ -1,6 +1,64 @@
 @import './reset.less';
 
+@page-width: 1000px;
+@page-height: 1130px;
+
+@chapter-title-font-size: 30px;
+
 // universals
+.input {
+    margin: 10px 0 0 10%;
+
+    &:before {
+        content: "Input:";
+        font-weight: bold;
+        margin-right: 5px;
+    }
+}
+
+.output {
+    margin: 10px 0 10px 10%;
+
+    &:before {
+        content: "Output:";
+        font-weight: bold;
+        margin-right: 5px;
+    }
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+.section-title-page {
+    position: relative;
+    width: @page-width;
+    height: @page-height;
+    border-top: 12px solid black;
+    margin: 20px auto;
+
+    .section-title {
+        position: absolute;
+        font-size: 36px;
+        top: 30%;
+        width: 100%;
+        padding: 15px 0;
+        border-top: 1px solid black;
+        font-weight: bold;
+    }
+}
+
 .appendix-title {
     width: 100%;
     height: 300px;
@@ -59,6 +117,7 @@ a {
     line-height: 110%;
     text-indent: 1.5em;
     text-align: justify;
+    padding: 2px 0;
 }
 
 .first-paragraph {
@@ -208,34 +267,11 @@ a {
     }
 }
 
-.contents {
+.table-of-contents {
     position: relative;
     width: 1000px;
     margin: 20px auto;
-
-    .appendix-preface {
-
-        #preface-authors {
-            width: 80%;
-            margin: 20px auto;
-            display: flex;
-            justify-content: space-between;
-            line-height: 1.2em;
-
-            .authors, .locations {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-
-        #preface-date {
-            width: 80%;
-            margin: 30px auto;
-        }
-    }
-
     
-
     .preface {
         display: block;
         margin: 0 0 20px 200px;
@@ -310,5 +346,113 @@ a {
             
         }
 
+    }
+}
+
+.appendix-preface {
+    position: relative;
+    width: 1000px;
+    margin: 20px auto;
+
+    #preface-authors {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.2em;
+
+        .authors, .locations {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #preface-date {
+        width: 80%;
+        margin: 30px auto;
+    }
+}
+
+.sections {
+    
+    .section-intro {
+        margin-top: @page-height*.3;
+        width: @page-width;
+        margin: auto;
+        counter-reset: chapters;
+        
+        .title {
+            font-size: 32px;
+            width: 100%;
+            padding: 15px 0;
+            border-top: 1px solid black;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+
+    .chapter {
+        text-align: justify;
+        counter-reset: subChapters;
+        position: relative;
+        width: @page-width;
+        margin: auto;
+
+        .chapter-title-container {
+            width: @page-width;
+            border-top: 15px solid black;
+            margin: 50px auto;
+
+            .title {
+                font-size: @chapter-title-font-size;
+                margin: 20px auto;
+                height: 250px;
+                
+                &:before {
+                    counter-increment: chapters;
+                    content: counter(chapters);
+                    width: 10%;
+                    display: inline-block;
+                }
+                
+            }
+
+            .title-paragraph {
+                margin-left:10%;
+                padding: 20px 0;
+            }
+        }
+
+        .sub-chapter {
+            position: relative;
+            width: @page-width;
+            .sub-chapter-title {
+                width: @page-width;
+                border-top: 1px solid black;
+                padding: 10px 0;
+                margin: auto;
+                margin-bottom: 30px;
+                font-size: 20px;
+
+                &:before {
+                    counter-increment: subChapters;
+                    content: counter(chapters)'.'counter(subChapters);
+                    width: 5%;
+                    display: inline-block;
+                }
+            }
+
+            .chapter-paragraph {
+                margin: 0 0 0 10%;
+                width: 90%;
+            }
+
+            .chapter-sub-header {
+                font-weight: bold;
+                margin: 20px 0;
+                margin-left: 10%;
+                width: 90%;
+            }
+        }
     }
 }
