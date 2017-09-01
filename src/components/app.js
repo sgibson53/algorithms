@@ -1,6 +1,10 @@
 import '../scss/main.less';
 
 import React from 'react';
+import MathJax from 'react-mathjax';
+
+console.log(MathJax)
+
 
 import global from '../core/global';
 import data from '../assets/textbook.json';
@@ -14,6 +18,7 @@ export default class App extends React.Component {
             data: data
         }
     }
+
 
     tableOfContents() {
         var self = this;
@@ -77,7 +82,7 @@ export default class App extends React.Component {
                             </div>
                         </div>
 
-        return <div>
+        return <div id="wrapper">
 
                 <a href="#table-of-contents" className="contents-tab">Table of Contents</a>
 
@@ -392,16 +397,16 @@ or mathematical rigor.
 
                     <div className="chapter">
                         <div className="chapter-title-container">
-                            <div className="title bold">
-                                The Role of Algorithms in Computing
+                            <div className="title">
+                                <b>The Role of Algorithms in Computing</b>
                             </div>
                             <div className="title-paragraph">
                                 What are algorithms? Why is the study of algorithms worthwhile? What is the role of algorithms relative to other technologies used in computers? In this chapter, we will answer these questions.
                             </div>
                         </div>
                         <div className="sub-chapter">
-                            <div className="sub-chapter-title bold">
-                                Algorithms
+                            <div className="sub-chapter-title">
+                                <b>Algorithms</b>
                             </div>
 
                             <div className="first-paragraph">
@@ -543,7 +548,243 @@ or mathematical rigor.
                                 For many years, we could count on processor clock speeds increasing at a steady rate. Physical limitations present a fundamental roadblock to ever-increasing clock speeds, however: because power density increases superlinearly with clock speed, chips run the risk of melting once their clock speeds become high enough. In order to perform more computations per second, therefore, chips are being designed to contain not just one but several processing “cores.” We can liken these multicore computers to several sequential computers on a single chip; in other words, they are a type of “parallel computer.” In order to elicit the best performance from multicore computers, we need to design algorithms with parallelism in mind. Chapter 27 presents a model for “multithreaded” algorithms, which take advantage of multiple cores. This model has advantages from a theoretical standpoint, and it forms the basis of several successful computer programs, including a championship chess program.
                             </div>
 
-                            <div className="bold-sub-header">Exercises</div>
+                            <div className="exercises">
+                                <div className="bold-sub-header">Exercises</div>
+                                <div className="first-paragraph exercise">
+                                    Give a real-world example that requires sorting or a real-world example that requires computing a convex hull.
+                                </div>
+                                <div className="first-paragraph exercise">
+                                    Other than speed, what other measures of efficiency might one use in a real-world setting?
+                                </div>
+                                <div className="first-paragraph exercise">
+                                    Select a data structure that you have seen previously, and discuss its strengths and limitations.
+                                </div>
+                                <div className="first-paragraph exercise">
+                                    How are the shortest-path and traveling-salesman problems given above similar? How are they different?
+                                </div>
+                                <div className="first-paragraph exercise">
+                                    Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is “approximately” the best is good enough.
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div className="sub-chapter">
+                            <div className="sub-chapter-title">
+                                <b>Algorithms as a technology</b>
+                            </div>
+
+                            <div className="first-paragraph">
+                                Suppose computers were infinitely fast and computer memory was free. Would you have any reason to study algorithms? The answer is yes, if for no other reason than that you would still like to demonstrate that your solution method terminates and does so with the correct answer.
+                            </div>
+                            <div className="paragraph">
+                                If computers were infinitely fast, any correct method for solving a problem would do. You would probably want your implementation to be within the bounds of good software engineering practice (for example, your implementation should be well designed and documented), but you would most often use whichever method was the easiest to implement.
+                            </div>
+                            <div className="paragraph">
+                                Of course, computers may be fast, but they are not infinitely fast. And memory may be inexpensive, but it is not free. Computing time is therefore a bounded resource, and so is space in memory. You should use these resources wisely, and algorithms that are efficient in terms of time or space will help you do so.
+                            </div>
+
+                            <div className="bold-sub-header">
+                                Efficiency
+                            </div>
+
+                            <div className="first-paragraph">
+                                Different algorithms devised to solve the same problem often differ dramatically in their efficiency. These differences can be much more significant than differences due to hardware and software.
+                            </div>
+                            <div className="paragraph">
+                                As an example, in Chapter 2, we will see two algorithms for sorting. The first, known as <b><i>insertion sort</i></b>, takes time roughly equal to <i>c</i><sub>1</sub><i>n</i><sup>2</sup> to sort <i>n</i> items, where <i>c</i><sub>1</sub> is a constant that does not depend on <i>n</i>. That is, it takes time roughly proportional to <i>n</i><sup>2</sup>. The second, <b><i>merge sort</i></b>, takes time roughly equal to <i>c</i><sub>2</sub><i>n</i> lg <i>n</i>, where lg <i>n</i> stands for log<sub>2</sub> <i>n</i> and <i>c</i><sub>2</sub> is another constant that also does not depend on <i>n</i>. Insertion sort typically has a smaller constant factor than merge sort, so that <i>c</i><sub>1</sub> &#60; <i>c</i><sub>2</sub>. We shall see that the constant factors can have far less of an impact on the running time than the dependence on the input size <i>n</i>. Let’s write insertion sort’s running time as <i>c</i><sub>1</sub><i>n</i> &bull; <i>n</i> and merge sort’s running time as <i>c</i><sub>2</sub><i>n</i> lg <i>n</i>. Then we see that where insertion sort has a factor of <i>n</i> in its running time, merge sort has a factor of lg <i>n</i>, which is much smaller. (For example, when <i>n</i> = 1000, lg <i>n</i> is approximately 10, and when <i>n</i> equals one million, lg <i>n</i> is approximately only 20.) Although insertion sort usually runs faster than merge sort for small input sizes, once the input size <i>n</i> becomes large enough, merge sort’s advantage of lg <i>n</i> vs. <i>n</i> will more than compensate for the difference in constant factors. No matter how much smaller <i>c</i><sub>1</sub> is than <i>c</i><sub>2</sub>, there will always be a crossover point beyond which merge sort is faster.
+                            </div>
+                            <div className="first-paragraph">
+                                <MathJax.Context options={{'displayAlign': 'left', 
+CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } } }}>
+                                    <MathJax.Node>{'{2\\cdot(10^7)^2 \\mathrm{ \\;instructions} \\over 10^{10} \\mathrm{ \\;instructions/second}}=20,000 \\mathrm{ \\;seconds\\;(more \\;than \\;5.5 \\;hours)} \\;,'}</MathJax.Node>
+                                </MathJax.Context>
+                            </div>
+                            <div className="first-paragraph">
+                                while computer B takes
+                            </div>
+                            <div className="first-paragraph">
+                                <MathJax.Context options={{'displayAlign': 'left'}}>
+                                    <MathJax.Node>{'{50\\cdot10^7\\;\\mathrm{lg}\\;10^7\\mathrm{ \\;instructions} \\over 10^7 \\mathrm{ \\;instructions/second}}\\approx1163 \\mathrm{ \\;seconds\\;(less \\;than \\;20 \\;minutes)}'}</MathJax.Node>
+                                </MathJax.Context>
+                            </div>
+                            <div className="first-paragraph">
+                                By using an algorithm whose running time grows more slowly, even with a poor compiler, computer B runs more than 17 times faster than computer A! The advantage of merge sort is even more pronounced when we sort 100 million numbers: where insertion sort takes more than 23 days, merge sort takes under four hours. In general, as the problem size increases, so does the relative advantage of merge sort.
+                            </div>
+
+                            <div className="bold-sub-header">
+                                Algorithms and other technologies
+                            </div>
+
+                            <div className="first-paragraph">
+                                The example above shows that we should consider algorithms, like computer hardware, as a <b><i>technology</i></b>. Total system performance depends on choosing efficient algorithms as much as on choosing fast hardware. Just as rapid advances are being made in other computer technologies, they are being made in algorithms as well.
+                            </div>
+                            <div className="paragraph">
+                                You might wonder whether algorithms are truly that important on contemporary computers in light of other advanced technologies, such as
+                            </div>
+
+                            <ul className="bulleted-list">
+                                <li>
+                                    <span className="inner-bullet">
+                                        advanced computer architectures and fabrication technologies,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        easy-to-use, intuitive, graphical user interfaces (GUIs),
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        object-oriented systems,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        integrated Web technologies, and
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="inner-bullet">
+                                        fast networking, both wired and wireless.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div className="first-paragraph">
+                                The answer is yes. Although some applications do not explicitly require algorithmic content at the application level (such as some simple, Web-based applications), many do. For example, consider a Web-based service that determines how to travel from one location to another. Its implementation would rely on fast hardware, a graphical user interface, wide-area networking, and also possibly on object orientation. However, it would also require algorithms for certain operations, such as finding routes (probably using a shortest-path algorithm), rendering maps, and interpolating addresses.
+                            </div>
+                            <div className="paragraph">
+                                Moreover, even an application that does not require algorithmic content at the application level relies heavily upon algorithms. Does the application rely on fast hardware? The hardware design used algorithms. Does the application rely on graphical user interfaces? The design of any GUI relies on algorithms. Does the application rely on networking? Routing in networks relies heavily on algorithms. Was the application written in a language other than machine code? Then it was processed by a compiler, interpreter, or assembler, all of which make extensive use of algorithms. Algorithms are at the core of most technologies used in contemporary computers.
+                            </div>
+                            <div className="paragraph">
+                                Furthermore, with the ever-increasing capacities of computers, we use them to solve larger problems than ever before. As we saw in the above comparison between insertion sort and merge sort, it is at larger problem sizes that the differences in efficiency between algorithms become particularly prominent.
+                            </div>
+                            <div className="paragraph">
+                                Having a solid base of algorithmic knowledge and technique is one characteristic that separates the truly skilled programmers from the novices. With modern computing technology, you can accomplish some tasks without knowing much about algorithms, but with a good background in algorithms, you can do much, much more.
+                            </div>
+
+                            <div className="exercises">
+                                <div className="bold-sub-header">Exercises</div>
+                                <div className="exercise">
+                                    Give an example of an application that requires algorithmic content at the application level, and discuss the function of the algorithms involved.
+                                </div>
+                                <div className="exercise">
+                                    Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size <i>n</i>, insertion sort runs in 8<i>n<sup>2</sup></i> steps, while merge sort runs in 64<i>n</i> lg <i>n</i> steps. For which values of <i>n</i> does insertion sort beat merge sort?
+                                </div>
+                                <div className="exercise">
+                                    Select a data structure that you have seen previously, and discuss its strengths and limitations.
+                                </div>
+                                <div className="exercise">
+                                    How are the shortest-path and traveling-salesman problems given above similar? How are they different?
+                                </div>
+                                <div className="exercise">
+                                    Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is “approximately” the best is good enough.
+                                </div>
+                            </div>
+
+                            <div className="problems">
+                                <div className="title">Problems</div>
+                                <div className="problem-title">Comparison of running times</div>
+                                <div className="problem">For each function <i>f(n)</i> and time t in the following table, determine the largest size <i>n</i> of a problem that can be solved in time <i>t</i>, assuming that the algorithm to solve the problem takes <i>f(n)</i> microseconds.</div>
+                                <div className="table1">
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell">1 second</div>
+                                    <div className="table1-cell">1 minute</div>
+                                    <div className="table1-cell">1 hour</div>
+                                    <div className="table1-cell">1 day</div>
+                                    <div className="table1-cell">1 month</div>
+                                    <div className="table1-cell">1 year</div>
+                                    <div className="table1-cell">1 century</div>
+
+                                    <div className="table1-cell">lg <i>n</i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell">
+                                        <MathJax.Context options={{'displayAlign': 'center'}}>
+                                    <MathJax.Node>{'{\\sqrt{n}}'}</MathJax.Node>
+                                </MathJax.Context>
+                                    </div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>n</i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>n</i> lg <i>n</i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>n<sup>2</sup></i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>n<sup>3</sup></i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>2<sup>n</sup></i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+
+                                    <div className="table1-cell"><i>n!</i></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                    <div className="table1-cell"></div>
+                                </div>
+
+                                
+                            </div>
+                            <div className="chapter-notes">
+                                <div className="chapter-notes-title">Chapter Notes</div>
+                                <div className="first-paragraph">
+                                    There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Pur- dom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the <i>Handbook of Theoretical Computer Science</i>, Volume A [342] and the CRC <i>Algorithms and Theory of Computation Handbook</i> [25]. Overviews of the algorithms used in computational biology can be found in textbooks by Gusfield [156], Pevzner [275], Setubal and Meidanis [310], and Waterman [350].
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 

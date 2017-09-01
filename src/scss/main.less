@@ -1,17 +1,33 @@
 @import './reset.less';
 
 @images: "../assets";
-
 @page-width: 1000px;
 @page-height: 1130px;
 @page-top-border: 12px;
-@chapter-title-font-size: 30px;
+@chapter-title-font-size: 1.8em;
+
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
+// Vendor Prefixes
+.flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.transform-translate(@X: 0, @Y: 0) {
+    -webkit-transform: translate(@X, @Y);
+    -ms-transform: translate(@X, @Y);
+    transform: translate(@X, @Y);
+}
+
 // universals
+
 .input {
     margin: 10px 0 0 10%;
 
@@ -34,14 +50,15 @@
 
 .section-title-page {
     position: relative;
-    width: @page-width;
     height: @page-height;
+    width: 100%;
+    max-width: 1000px;
     border-top: @page-top-border solid black;
     margin: 20px auto;
 
     .section-title {
         position: absolute;
-        font-size: 36px;
+        font-size: 2em;
         top: 30%;
         width: 100%;
         padding: 15px 0;
@@ -53,7 +70,7 @@
 .appendix-title {
     width: 100%;
     height: 300px;
-    font-size: 36;
+    font-size: 2em;
 }
 
 .citations {
@@ -120,21 +137,13 @@ a {
     text-indent: 0;
 }
 
-.italic {
-    font-style: italic;
-}
-
-.bold {
-    font-weight: bold;
-}
-
 .bold-sub-header {
     font-weight: bold;
     margin: 20px auto;
     width: 80%;
 }
 
-.numbered-list {
+.list() {
     text-align: justify;
     width: 88.5%;
     padding: 0;
@@ -151,12 +160,23 @@ a {
     }
 }
 
+.numbered-list {
+    .list();
+}
+
 .bulleted-list {
-    .numbered-list;
+    .list();
     list-style-type: disc;
 }
 
 // /universals
+
+#wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
 
 .contents-tab {
     position: absolute;
@@ -164,7 +184,7 @@ a {
     right: 0;
     width: 250px;
     height: 60px;
-    font-size: 30px;
+    font-size: 1.8em;
     background: rgba(0,0,0,.7);
     color: white;
     text-align: center;
@@ -178,21 +198,23 @@ a {
     background-image: url('@{images}/cover-image.png');
     background-position: 50% 50%;
     background-size: contain;
-    width: 1000px;
-    height: 1130px;
+    width: 100%;
+    height: 87vw;
+    max-height: 1130;
     margin: 0 auto 20px auto;
 }
 
 .title-container {
     position: relative;
-    width: 1000px;
-    height: 1350px;
+    width: 100%;
+    height: 87vw;
+    max-height: 1130px;
     border-top: @page-top-border solid black;
     margin: 20px auto;
 
     .author-list {
-        font-size: 20px;
-        display: flex;
+        font-size: 1.1em;
+        .flexbox();
         flex-direction: column;
         margin-top: 15px;
 
@@ -203,7 +225,7 @@ a {
 
     .title {
         position: absolute;
-        font-size: 36px;
+        font-size: 2em;
         top: 30%;
         left: 30%;
         width: 70%;
@@ -211,7 +233,7 @@ a {
         border-top: 1px solid black;
         font-weight: bold;
         .sub-title {
-            font-size: 24px;
+            font-size: .8em;
             padding: 10px 0 0 0;
             font-style: italic;
         }
@@ -227,20 +249,21 @@ a {
 
 .copy-right-info {
     position: relative;
-    width: 1000px;
-    height: 1350px;
+    width: 100%;
+    height: 87vw;
+    max-height: 1130;
     margin: 20px auto;
 
     .info {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
+        .transform-translate(-50%, -50%);
+        .flexbox();
         flex-direction: column;
         justify-content: space-between;
         width: 70%;
-        font-size: 90%;
+        font-size: .9em;
 
         .info-section {
             margin: 8px;
@@ -271,7 +294,7 @@ a {
 
 .table-of-contents {
     position: relative;
-    width: 1000px;
+    width: 100%;
     margin: 20px auto;
     
     .preface {
@@ -353,18 +376,18 @@ a {
 
 .appendix-preface {
     position: relative;
-    width: @page-width;
+    width: 100%;
     margin: 20px auto;
 
     #preface-authors {
         width: 90%;
         margin: 20px auto 20px 10%;
-        display: flex;
+        .flexbox();
         justify-content: space-between;
         line-height: 1.2em;
 
         .authors, .locations {
-            display: flex;
+            .flexbox();
             flex-direction: column;
         }
     }
@@ -379,12 +402,12 @@ a {
     
     .section-intro {
         margin-top: @page-height*.3;
-        width: @page-width;
+        width: 100%;
         margin: auto;
         counter-reset: chapters;
         
         .title {
-            font-size: 32px;
+            font-size: 2em;
             width: 100%;
             padding: 15px 0;
             border-top: 1px solid black;
@@ -397,18 +420,19 @@ a {
         text-align: justify;
         counter-reset: subChapters;
         position: relative;
-        width: @page-width;
+        width: 100%;
         margin: auto;
 
         .chapter-title-container {
-            width: @page-width;
+            width: 100%;
             border-top: @page-top-border solid black;
-            margin: 50px auto;
+            margin: 50px auto 0 auto;
 
             .title {
                 font-size: @chapter-title-font-size;
                 margin: 20px auto;
                 height: 250px;
+                text-align: left;
                 
                 &:before {
                     counter-increment: chapters;
@@ -427,14 +451,17 @@ a {
 
         .sub-chapter {
             position: relative;
-            width: @page-width;
+            width: 100%;
+            counter-reset: exercises;
+            margin-top: 50px;
+
             .sub-chapter-title {
-                width: @page-width;
+                width: 100%;
                 border-top: 1px solid black;
                 padding: 10px 0;
                 margin: auto;
                 margin-bottom: 30px;
-                font-size: 20px;
+                font-size: 1.1em;
 
                 &:before {
                     counter-increment: subChapters;
@@ -462,6 +489,186 @@ a {
                 margin: 20px 0;
                 margin-left: 10%;
                 width: 90%;
+            }
+
+            
+            .exercise:extend(.first-paragraph) {
+                &:not(:nth-child(2)) {
+                    margin: 10px 0 10px 10%;
+                }
+
+                &::before {
+                    counter-increment: exercises;
+                    content: counter(chapters)'.'counter(subChapters)"-"counter(exercises);
+                    display: block;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 1.1em;
+                }
+            }
+
+            .problems {
+                margin: 20px auto;
+                width: 100%;
+                counter-reset: problems;
+
+                .title {
+                    width: 100%;
+                    border-top: 1px solid black;
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    padding: 5px 0;
+                    margin-bottom: 15px;
+                }
+
+                .problem-title:extend(.first-paragraph) {
+                    font-weight: bold;
+                    font-style: italic;
+
+                    &::before {
+                        counter-increment: problems;
+                        content: counter(chapters)"-"counter(problems);
+                        display: inline-block;
+                        width: 5%;
+                    }
+                }
+
+                .problem:extend(.first-paragraph) {}
+
+                .table1 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 20px 0;
+                    width: 90%;
+                    position: relative;
+                    left: 10%;
+                    font-size: 1.2em;
+                    word-wrap: normal;
+                    text-align: center;
+                    line-height: 40px;
+
+                    .table1-cell {
+                        box-sizing: border-box;
+                        flex-grow: 1;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        height: 40px;
+                        width: 12.5%;
+
+                        & > span {
+                            position: relative;
+                        }
+
+                        .mjx-chtml, .MJXc-display {
+                            margin: 0;
+                            text-align: center;
+                            display: inline-block;
+                            position: relative;
+                            top: 25%;
+                        }
+                    }
+
+                }
+                
+            }
+
+            .chapter-notes {
+                
+                .chapter-notes-title {
+                    width: 100%;
+                    border-top: 1px solid black;
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    padding: 5px 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .title-container {
+        .author-list {
+            font-size: .7em;
+        }
+        .title {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.1em;
+            padding: 5px;
+
+            .sub-title {
+                font-size: .7em;
+                padding-top: 3px;
+            }
+        }
+        .intro-bottom-info {
+            font-size: .8em;
+        }
+    }
+
+    .copy-right-info {
+        .info {
+            width: 100%;
+            font-size: .6em;
+
+            .info-section {
+                margin: 4px;  
+            }
+        }
+    }
+
+    .table-of-contents {
+        .appendix-title {
+            height: 70px;
+            font-size: 1.3em;
+            text-align: center;
+        }
+        .preface {
+            text-align: right;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .appendix {
+        .appendix-title {
+            height: 70px;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        #preface-authors {
+            font-size: .7em;
+        }
+    }
+
+    .bulleted-list {
+        margin-left: 15.5%;
+        width: 84.5%;
+        li > .inner-bullet {
+            margin-left: 5px;
+        }
+    }
+    
+    .sections {
+        .section-title-page > .section-title, .section-intro > .title {
+            font-size: 1.1em;
+        }
+        
+        .chapter {
+            .chapter-title-container {
+                .title {
+                    left: 0;
+                    width: 100%;
+                    font-size: 1.1em;
+                    height: 50px;
+                }
+            }
+
+            .sub-chapter > .sub-chapter-title > b {
+                margin-left: 10px;
             }
         }
     }

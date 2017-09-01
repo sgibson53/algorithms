@@ -1286,7 +1286,7 @@ var CallbackQueue = __webpack_require__(61);
 var PooledClass = __webpack_require__(15);
 var ReactFeatureFlags = __webpack_require__(62);
 var ReactReconciler = __webpack_require__(18);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 
 var invariant = __webpack_require__(1);
 
@@ -2028,7 +2028,7 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(10);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(25);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(52);
@@ -2505,8 +2505,8 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(32);
-  var canDefineProperty = __webpack_require__(24);
+  var lowPriorityWarning = __webpack_require__(33);
+  var canDefineProperty = __webpack_require__(25);
   var ReactElementValidator = __webpack_require__(54);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -2842,10 +2842,10 @@ module.exports = ReactReconciler;
 
 
 
-var DOMNamespaces = __webpack_require__(39);
-var setInnerHTML = __webpack_require__(29);
+var DOMNamespaces = __webpack_require__(40);
+var setInnerHTML = __webpack_require__(30);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 var setTextContent = __webpack_require__(66);
 
 var ELEMENT_NODE_TYPE = 1;
@@ -2966,7 +2966,7 @@ module.exports = DOMLazyTree;
 
 
 var EventPluginHub = __webpack_require__(21);
-var EventPluginUtils = __webpack_require__(33);
+var EventPluginUtils = __webpack_require__(34);
 
 var accumulateInto = __webpack_require__(58);
 var forEachAccumulated = __webpack_require__(59);
@@ -3107,9 +3107,9 @@ module.exports = EventPropagators;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(26);
-var EventPluginUtils = __webpack_require__(33);
-var ReactErrorUtils = __webpack_require__(34);
+var EventPluginRegistry = __webpack_require__(27);
+var EventPluginUtils = __webpack_require__(34);
+var ReactErrorUtils = __webpack_require__(35);
 
 var accumulateInto = __webpack_require__(58);
 var forEachAccumulated = __webpack_require__(59);
@@ -3387,7 +3387,7 @@ module.exports = EventPluginHub;
 
 var SyntheticEvent = __webpack_require__(12);
 
-var getEventTarget = __webpack_require__(35);
+var getEventTarget = __webpack_require__(36);
 
 /**
  * @interface UIEvent
@@ -3488,6 +3488,16 @@ module.exports = ReactInstanceMap;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(16);
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -3516,7 +3526,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3542,7 +3552,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3801,7 +3811,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4035,7 +4045,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4054,7 +4064,7 @@ module.exports = TransactionImpl;
 var SyntheticUIEvent = __webpack_require__(22);
 var ViewportMetrics = __webpack_require__(65);
 
-var getEventModifierState = __webpack_require__(37);
+var getEventModifierState = __webpack_require__(38);
 
 /**
  * @interface MouseEvent
@@ -4112,7 +4122,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4129,12 +4139,12 @@ module.exports = SyntheticMouseEvent;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var DOMNamespaces = __webpack_require__(39);
+var DOMNamespaces = __webpack_require__(40);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -4215,7 +4225,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4342,7 +4352,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4360,12 +4370,12 @@ module.exports = escapeTextContentForBrowser;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactEventEmitterMixin = __webpack_require__(133);
 var ViewportMetrics = __webpack_require__(65);
 
 var getVendorPrefixedEventName = __webpack_require__(134);
-var isEventSupported = __webpack_require__(36);
+var isEventSupported = __webpack_require__(37);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4671,7 +4681,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4742,7 +4752,7 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4760,7 +4770,7 @@ module.exports = lowPriorityWarning;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(34);
+var ReactErrorUtils = __webpack_require__(35);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -4974,7 +4984,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5056,7 +5066,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5096,7 +5106,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5161,7 +5171,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5209,7 +5219,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5230,8 +5240,8 @@ var Danger = __webpack_require__(118);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(40);
-var setInnerHTML = __webpack_require__(29);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
+var setInnerHTML = __webpack_require__(30);
 var setTextContent = __webpack_require__(66);
 
 function getNodeAfter(parentNode, node) {
@@ -5441,7 +5451,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5466,7 +5476,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5503,7 +5513,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5647,7 +5657,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5697,7 +5707,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5770,7 +5780,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5817,7 +5827,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5881,7 +5891,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6121,7 +6131,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6498,7 +6508,7 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6553,16 +6563,6 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(16);
-
-
-/***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6584,10 +6584,10 @@ var _prodInvariant = __webpack_require__(17),
 
 var ReactNoopUpdateQueue = __webpack_require__(51);
 
-var canDefineProperty = __webpack_require__(24);
-var emptyObject = __webpack_require__(25);
+var canDefineProperty = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(32);
+var lowPriorityWarning = __webpack_require__(33);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -6913,10 +6913,10 @@ var ReactElement = __webpack_require__(14);
 
 var checkReactTypeSpec = __webpack_require__(88);
 
-var canDefineProperty = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(25);
 var getIteratorFn = __webpack_require__(53);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(32);
+var lowPriorityWarning = __webpack_require__(33);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -7738,8 +7738,8 @@ module.exports = ViewportMetrics;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(30);
-var setInnerHTML = __webpack_require__(29);
+var escapeTextContentForBrowser = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(30);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -8250,7 +8250,7 @@ module.exports = ReactPropTypesSecret;
 
 var _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(41);
+var LinkedValueUtils = __webpack_require__(42);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -8751,7 +8751,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(144);
 
 var getIteratorFn = __webpack_require__(145);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(45);
+var KeyEscapeUtils = __webpack_require__(46);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -9186,7 +9186,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(19);
 var DOMProperty = __webpack_require__(13);
 var React = __webpack_require__(16);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMContainerInfo = __webpack_require__(174);
@@ -9196,14 +9196,14 @@ var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactMarkupChecksum = __webpack_require__(176);
 var ReactReconciler = __webpack_require__(18);
-var ReactUpdateQueue = __webpack_require__(46);
+var ReactUpdateQueue = __webpack_require__(47);
 var ReactUpdates = __webpack_require__(11);
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var instantiateReactComponent = __webpack_require__(72);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(29);
-var shouldUpdateReactComponent = __webpack_require__(44);
+var setInnerHTML = __webpack_require__(30);
+var shouldUpdateReactComponent = __webpack_require__(45);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -9750,7 +9750,7 @@ module.exports = getHostComponentFromComposite;
 "use strict";
 
 
-var _react = __webpack_require__(49);
+var _react = __webpack_require__(24);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -11326,7 +11326,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _assign = __webpack_require__(4);
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var _invariant = __webpack_require__(1);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -13125,8 +13125,8 @@ var ReactUpdates = __webpack_require__(11);
 var SyntheticEvent = __webpack_require__(12);
 
 var inputValueTracking = __webpack_require__(63);
-var getEventTarget = __webpack_require__(35);
-var isEventSupported = __webpack_require__(36);
+var getEventTarget = __webpack_require__(36);
+var isEventSupported = __webpack_require__(37);
 var isTextInputElement = __webpack_require__(64);
 
 var eventTypes = {
@@ -14176,7 +14176,7 @@ module.exports = DefaultEventPluginOrder;
 
 var EventPropagators = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 var eventTypes = {
   mouseEnter: {
@@ -14518,7 +14518,7 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var DOMChildrenOperations = __webpack_require__(38);
+var DOMChildrenOperations = __webpack_require__(39);
 var ReactDOMIDOperations = __webpack_require__(122);
 
 /**
@@ -14927,7 +14927,7 @@ module.exports = getMarkupWrap;
 
 
 
-var DOMChildrenOperations = __webpack_require__(38);
+var DOMChildrenOperations = __webpack_require__(39);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 /**
@@ -14973,12 +14973,12 @@ var _prodInvariant = __webpack_require__(3),
 var AutoFocusUtils = __webpack_require__(124);
 var CSSPropertyOperations = __webpack_require__(125);
 var DOMLazyTree = __webpack_require__(19);
-var DOMNamespaces = __webpack_require__(39);
+var DOMNamespaces = __webpack_require__(40);
 var DOMProperty = __webpack_require__(13);
 var DOMPropertyOperations = __webpack_require__(69);
 var EventPluginHub = __webpack_require__(21);
-var EventPluginRegistry = __webpack_require__(26);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactDOMComponentFlags = __webpack_require__(57);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMInput = __webpack_require__(135);
@@ -14990,12 +14990,12 @@ var ReactMultiChild = __webpack_require__(138);
 var ReactServerRenderingTransaction = __webpack_require__(147);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(36);
-var shallowEqual = __webpack_require__(43);
+var isEventSupported = __webpack_require__(37);
+var shallowEqual = __webpack_require__(44);
 var inputValueTracking = __webpack_require__(63);
-var validateDOMNesting = __webpack_require__(47);
+var validateDOMNesting = __webpack_require__(48);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -16515,7 +16515,7 @@ module.exports = memoizeStringOnly;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -16693,7 +16693,7 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var DOMPropertyOperations = __webpack_require__(69);
-var LinkedValueUtils = __webpack_require__(41);
+var LinkedValueUtils = __webpack_require__(42);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -17113,7 +17113,7 @@ module.exports = ReactDOMOption;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(41);
+var LinkedValueUtils = __webpack_require__(42);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -17278,7 +17278,7 @@ module.exports = ReactDOMTextarea;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactComponentEnvironment = __webpack_require__(42);
+var ReactComponentEnvironment = __webpack_require__(43);
 var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
 
@@ -17731,8 +17731,8 @@ module.exports = ReactMultiChild;
 var ReactReconciler = __webpack_require__(18);
 
 var instantiateReactComponent = __webpack_require__(72);
-var KeyEscapeUtils = __webpack_require__(45);
-var shouldUpdateReactComponent = __webpack_require__(44);
+var KeyEscapeUtils = __webpack_require__(46);
+var shouldUpdateReactComponent = __webpack_require__(45);
 var traverseAllChildren = __webpack_require__(76);
 var warning = __webpack_require__(2);
 
@@ -17891,9 +17891,9 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var React = __webpack_require__(16);
-var ReactComponentEnvironment = __webpack_require__(42);
+var ReactComponentEnvironment = __webpack_require__(43);
 var ReactCurrentOwner = __webpack_require__(10);
-var ReactErrorUtils = __webpack_require__(34);
+var ReactErrorUtils = __webpack_require__(35);
 var ReactInstanceMap = __webpack_require__(23);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactNodeTypes = __webpack_require__(73);
@@ -17903,10 +17903,10 @@ if (process.env.NODE_ENV !== 'production') {
   var checkReactTypeSpec = __webpack_require__(141);
 }
 
-var emptyObject = __webpack_require__(25);
+var emptyObject = __webpack_require__(26);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(43);
-var shouldUpdateReactComponent = __webpack_require__(44);
+var shallowEqual = __webpack_require__(44);
+var shouldUpdateReactComponent = __webpack_require__(45);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -19015,7 +19015,7 @@ module.exports = getIteratorFn;
 
 
 
-var KeyEscapeUtils = __webpack_require__(45);
+var KeyEscapeUtils = __webpack_require__(46);
 var traverseAllChildren = __webpack_require__(76);
 var warning = __webpack_require__(2);
 
@@ -19099,7 +19099,7 @@ module.exports = flattenChildren;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactServerUpdateQueue = __webpack_require__(148);
 
@@ -19195,7 +19195,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(46);
+var ReactUpdateQueue = __webpack_require__(47);
 
 var warning = __webpack_require__(2);
 
@@ -19547,13 +19547,13 @@ module.exports = {
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMChildrenOperations = __webpack_require__(38);
+var DOMChildrenOperations = __webpack_require__(39);
 var DOMLazyTree = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(47);
+var validateDOMNesting = __webpack_require__(48);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -19715,7 +19715,7 @@ module.exports = ReactDOMTextComponent;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(11);
-var Transaction = __webpack_require__(27);
+var Transaction = __webpack_require__(28);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -19793,7 +19793,7 @@ var PooledClass = __webpack_require__(15);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
-var getEventTarget = __webpack_require__(35);
+var getEventTarget = __webpack_require__(36);
 var getUnboundedScrollPosition = __webpack_require__(154);
 
 /**
@@ -19991,10 +19991,10 @@ module.exports = getUnboundedScrollPosition;
 
 var DOMProperty = __webpack_require__(13);
 var EventPluginHub = __webpack_require__(21);
-var EventPluginUtils = __webpack_require__(33);
-var ReactComponentEnvironment = __webpack_require__(42);
+var EventPluginUtils = __webpack_require__(34);
+var ReactComponentEnvironment = __webpack_require__(43);
 var ReactEmptyComponent = __webpack_require__(74);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactHostComponent = __webpack_require__(75);
 var ReactUpdates = __webpack_require__(11);
 
@@ -20032,11 +20032,11 @@ var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(61);
 var PooledClass = __webpack_require__(15);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactInputSelection = __webpack_require__(78);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(27);
-var ReactUpdateQueue = __webpack_require__(46);
+var Transaction = __webpack_require__(28);
+var ReactUpdateQueue = __webpack_require__(47);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -20928,7 +20928,7 @@ var SyntheticEvent = __webpack_require__(12);
 
 var getActiveElement = __webpack_require__(79);
 var isTextInputElement = __webpack_require__(64);
-var shallowEqual = __webpack_require__(43);
+var shallowEqual = __webpack_require__(44);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -21124,7 +21124,7 @@ var SyntheticClipboardEvent = __webpack_require__(166);
 var SyntheticEvent = __webpack_require__(12);
 var SyntheticFocusEvent = __webpack_require__(167);
 var SyntheticKeyboardEvent = __webpack_require__(168);
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 var SyntheticDragEvent = __webpack_require__(170);
 var SyntheticTouchEvent = __webpack_require__(171);
 var SyntheticTransitionEvent = __webpack_require__(172);
@@ -21132,7 +21132,7 @@ var SyntheticUIEvent = __webpack_require__(22);
 var SyntheticWheelEvent = __webpack_require__(173);
 
 var emptyFunction = __webpack_require__(9);
-var getEventCharCode = __webpack_require__(48);
+var getEventCharCode = __webpack_require__(49);
 var invariant = __webpack_require__(1);
 
 /**
@@ -21475,9 +21475,9 @@ module.exports = SyntheticFocusEvent;
 
 var SyntheticUIEvent = __webpack_require__(22);
 
-var getEventCharCode = __webpack_require__(48);
+var getEventCharCode = __webpack_require__(49);
 var getEventKey = __webpack_require__(169);
-var getEventModifierState = __webpack_require__(37);
+var getEventModifierState = __webpack_require__(38);
 
 /**
  * @interface KeyboardEvent
@@ -21562,7 +21562,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var getEventCharCode = __webpack_require__(48);
+var getEventCharCode = __webpack_require__(49);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -21679,7 +21679,7 @@ module.exports = getEventKey;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface DragEvent
@@ -21722,7 +21722,7 @@ module.exports = SyntheticDragEvent;
 
 var SyntheticUIEvent = __webpack_require__(22);
 
-var getEventModifierState = __webpack_require__(37);
+var getEventModifierState = __webpack_require__(38);
 
 /**
  * @interface TouchEvent
@@ -21814,7 +21814,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface WheelEvent
@@ -21870,7 +21870,7 @@ module.exports = SyntheticWheelEvent;
 
 
 
-var validateDOMNesting = __webpack_require__(47);
+var validateDOMNesting = __webpack_require__(48);
 
 var DOC_NODE_TYPE = 9;
 
@@ -22144,7 +22144,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -22407,15 +22407,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 __webpack_require__(185);
 
-var _react = __webpack_require__(49);
+var _react = __webpack_require__(24);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _global = __webpack_require__(191);
+var _reactMathjax = __webpack_require__(191);
+
+var _reactMathjax2 = _interopRequireDefault(_reactMathjax);
+
+var _global = __webpack_require__(196);
 
 var _global2 = _interopRequireDefault(_global);
 
-var _textbook = __webpack_require__(192);
+var _textbook = __webpack_require__(197);
 
 var _textbook2 = _interopRequireDefault(_textbook);
 
@@ -22426,6 +22430,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+console.log(_reactMathjax2.default);
 
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
@@ -22561,7 +22567,7 @@ var App = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                null,
+                { id: 'wrapper' },
                 _react2.default.createElement(
                     'a',
                     { href: '#table-of-contents', className: 'contents-tab' },
@@ -23291,8 +23297,12 @@ var App = function (_React$Component) {
                             { className: 'chapter-title-container' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'title bold' },
-                                'The Role of Algorithms in Computing'
+                                { className: 'title' },
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'The Role of Algorithms in Computing'
+                                )
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -23305,8 +23315,12 @@ var App = function (_React$Component) {
                             { className: 'sub-chapter' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'sub-chapter-title bold' },
-                                'Algorithms'
+                                { className: 'sub-chapter-title' },
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'Algorithms'
+                                )
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -23905,8 +23919,825 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
+                                { className: 'exercises' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'bold-sub-header' },
+                                    'Exercises'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph exercise' },
+                                    'Give a real-world example that requires sorting or a real-world example that requires computing a convex hull.'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph exercise' },
+                                    'Other than speed, what other measures of efficiency might one use in a real-world setting?'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph exercise' },
+                                    'Select a data structure that you have seen previously, and discuss its strengths and limitations.'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph exercise' },
+                                    'How are the shortest-path and traveling-salesman problems given above similar? How are they different?'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph exercise' },
+                                    'Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is \u201Capproximately\u201D the best is good enough.'
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'sub-chapter' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'sub-chapter-title' },
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'Algorithms as a technology'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'Suppose computers were infinitely fast and computer memory was free. Would you have any reason to study algorithms? The answer is yes, if for no other reason than that you would still like to demonstrate that your solution method terminates and does so with the correct answer.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'If computers were infinitely fast, any correct method for solving a problem would do. You would probably want your implementation to be within the bounds of good software engineering practice (for example, your implementation should be well designed and documented), but you would most often use whichever method was the easiest to implement.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Of course, computers may be fast, but they are not infinitely fast. And memory may be inexpensive, but it is not free. Computing time is therefore a bounded resource, and so is space in memory. You should use these resources wisely, and algorithms that are efficient in terms of time or space will help you do so.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
                                 { className: 'bold-sub-header' },
-                                'Exercises'
+                                'Efficiency'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'Different algorithms devised to solve the same problem often differ dramatically in their efficiency. These differences can be much more significant than differences due to hardware and software.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'As an example, in Chapter 2, we will see two algorithms for sorting. The first, known as ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'insertion sort'
+                                    )
+                                ),
+                                ', takes time roughly equal to ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                _react2.default.createElement(
+                                    'sup',
+                                    null,
+                                    '2'
+                                ),
+                                ' to sort ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' items, where ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ' is a constant that does not depend on ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                '. That is, it takes time roughly proportional to ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                _react2.default.createElement(
+                                    'sup',
+                                    null,
+                                    '2'
+                                ),
+                                '. The second, ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'merge sort'
+                                    )
+                                ),
+                                ', takes time roughly equal to ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ', where lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' stands for log',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ' ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' and ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ' is another constant that also does not depend on ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                '. Insertion sort typically has a smaller constant factor than merge sort, so that ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ' < ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                '. We shall see that the constant factors can have far less of an impact on the running time than the dependence on the input size ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                '. Let\u2019s write insertion sort\u2019s running time as ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' \u2022 ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' and merge sort\u2019s running time as ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                '. Then we see that where insertion sort has a factor of ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' in its running time, merge sort has a factor of lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ', which is much smaller. (For example, when ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' = 1000, lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' is approximately 10, and when ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' equals one million, lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' is approximately only 20.) Although insertion sort usually runs faster than merge sort for small input sizes, once the input size ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' becomes large enough, merge sort\u2019s advantage of lg ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' vs. ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' will more than compensate for the difference in constant factors. No matter how much smaller ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ' is than ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'c'
+                                ),
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ', there will always be a crossover point beyond which merge sort is faster.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                _react2.default.createElement(
+                                    _reactMathjax2.default.Context,
+                                    { options: { 'displayAlign': 'left',
+                                            CommonHTML: { linebreaks: { automatic: true } },
+                                            "HTML-CSS": { linebreaks: { automatic: true } },
+                                            SVG: { linebreaks: { automatic: true } } } },
+                                    _react2.default.createElement(
+                                        _reactMathjax2.default.Node,
+                                        null,
+                                        '{2\\cdot(10^7)^2 \\mathrm{ \\;instructions} \\over 10^{10} \\mathrm{ \\;instructions/second}}=20,000 \\mathrm{ \\;seconds\\;(more \\;than \\;5.5 \\;hours)} \\;,'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'while computer B takes'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                _react2.default.createElement(
+                                    _reactMathjax2.default.Context,
+                                    { options: { 'displayAlign': 'left' } },
+                                    _react2.default.createElement(
+                                        _reactMathjax2.default.Node,
+                                        null,
+                                        '{50\\cdot10^7\\;\\mathrm{lg}\\;10^7\\mathrm{ \\;instructions} \\over 10^7 \\mathrm{ \\;instructions/second}}\\approx1163 \\mathrm{ \\;seconds\\;(less \\;than \\;20 \\;minutes)}'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'By using an algorithm whose running time grows more slowly, even with a poor compiler, computer B runs more than 17 times faster than computer A! The advantage of merge sort is even more pronounced when we sort 100 million numbers: where insertion sort takes more than 23 days, merge sort takes under four hours. In general, as the problem size increases, so does the relative advantage of merge sort.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'bold-sub-header' },
+                                'Algorithms and other technologies'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'The example above shows that we should consider algorithms, like computer hardware, as a ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'technology'
+                                    )
+                                ),
+                                '. Total system performance depends on choosing efficient algorithms as much as on choosing fast hardware. Just as rapid advances are being made in other computer technologies, they are being made in algorithms as well.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'You might wonder whether algorithms are truly that important on contemporary computers in light of other advanced technologies, such as'
+                            ),
+                            _react2.default.createElement(
+                                'ul',
+                                { className: 'bulleted-list' },
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'advanced computer architectures and fabrication technologies,'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'easy-to-use, intuitive, graphical user interfaces (GUIs),'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'object-oriented systems,'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'integrated Web technologies, and'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    null,
+                                    _react2.default.createElement(
+                                        'span',
+                                        { className: 'inner-bullet' },
+                                        'fast networking, both wired and wireless.'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'The answer is yes. Although some applications do not explicitly require algorithmic content at the application level (such as some simple, Web-based applications), many do. For example, consider a Web-based service that determines how to travel from one location to another. Its implementation would rely on fast hardware, a graphical user interface, wide-area networking, and also possibly on object orientation. However, it would also require algorithms for certain operations, such as finding routes (probably using a shortest-path algorithm), rendering maps, and interpolating addresses.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Moreover, even an application that does not require algorithmic content at the application level relies heavily upon algorithms. Does the application rely on fast hardware? The hardware design used algorithms. Does the application rely on graphical user interfaces? The design of any GUI relies on algorithms. Does the application rely on networking? Routing in networks relies heavily on algorithms. Was the application written in a language other than machine code? Then it was processed by a compiler, interpreter, or assembler, all of which make extensive use of algorithms. Algorithms are at the core of most technologies used in contemporary computers.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Furthermore, with the ever-increasing capacities of computers, we use them to solve larger problems than ever before. As we saw in the above comparison between insertion sort and merge sort, it is at larger problem sizes that the differences in efficiency between algorithms become particularly prominent.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'Having a solid base of algorithmic knowledge and technique is one characteristic that separates the truly skilled programmers from the novices. With modern computing technology, you can accomplish some tasks without knowing much about algorithms, but with a good background in algorithms, you can do much, much more.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'exercises' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'bold-sub-header' },
+                                    'Exercises'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'exercise' },
+                                    'Give an example of an application that requires algorithmic content at the application level, and discuss the function of the algorithms involved.'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'exercise' },
+                                    'Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    ),
+                                    ', insertion sort runs in 8',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n',
+                                        _react2.default.createElement(
+                                            'sup',
+                                            null,
+                                            '2'
+                                        )
+                                    ),
+                                    ' steps, while merge sort runs in 64',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    ),
+                                    ' lg ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    ),
+                                    ' steps. For which values of ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    ),
+                                    ' does insertion sort beat merge sort?'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'exercise' },
+                                    'Select a data structure that you have seen previously, and discuss its strengths and limitations.'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'exercise' },
+                                    'How are the shortest-path and traveling-salesman problems given above similar? How are they different?'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'exercise' },
+                                    'Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is \u201Capproximately\u201D the best is good enough.'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'problems' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'title' },
+                                    'Problems'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'problem-title' },
+                                    'Comparison of running times'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'problem' },
+                                    'For each function ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'f(n)'
+                                    ),
+                                    ' and time t in the following table, determine the largest size ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    ),
+                                    ' of a problem that can be solved in time ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        't'
+                                    ),
+                                    ', assuming that the algorithm to solve the problem takes ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'f(n)'
+                                    ),
+                                    ' microseconds.'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'table1' },
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 second'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 minute'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 hour'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 day'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 month'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 year'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        '1 century'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        'lg ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            _reactMathjax2.default.Context,
+                                            { options: { 'displayAlign': 'center' } },
+                                            _react2.default.createElement(
+                                                _reactMathjax2.default.Node,
+                                                null,
+                                                '{\\sqrt{n}}'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        ),
+                                        ' lg ',
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n'
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                '2'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                '3'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            '2',
+                                            _react2.default.createElement(
+                                                'sup',
+                                                null,
+                                                'n'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'table1-cell' },
+                                        _react2.default.createElement(
+                                            'i',
+                                            null,
+                                            'n!'
+                                        )
+                                    ),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' }),
+                                    _react2.default.createElement('div', { className: 'table1-cell' })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'chapter-notes' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'chapter-notes-title' },
+                                    'Chapter Notes'
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'first-paragraph' },
+                                    'There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Pur- dom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'Handbook of Theoretical Computer Science'
+                                    ),
+                                    ', Volume A [342] and the CRC ',
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'Algorithms and Theory of Computation Handbook'
+                                    ),
+                                    ' [25]. Overviews of the algorithms used in computational biology can be found in textbooks by Gusfield [156], Pevzner [275], Setubal and Meidanis [310], and Waterman [350].'
+                                )
                             )
                         )
                     )
@@ -23960,7 +24791,7 @@ exports = module.exports = __webpack_require__(187)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nul,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.section-title-page {\n  position: relative;\n  width: 1000px;\n  height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 36;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 90%;\n  margin: auto auto auto 10%;\n}\n.citations .citation {\n  margin: 0 0 0 10%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  width: 90%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\nsub {\n  vertical-align: bottom;\n  position: relative;\n  bottom: -0.5ex;\n  font-size: 0.7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n}\n.italic {\n  font-style: italic;\n}\n.bold {\n  font-weight: bold;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.numbered-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n}\n.numbered-list li {\n  margin: 10px auto;\n}\n.numbered-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.bulleted-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n  list-style-type: disc;\n}\n.bulleted-list li {\n  margin: 10px auto;\n}\n.bulleted-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 30px;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 1000px;\n  height: 1130px;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 20px;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 36px;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: 24px;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 1000px;\n  height: 1350px;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: 90%;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 1000px;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 90%;\n  margin: 20px auto 20px 10%;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 90%;\n  margin: 30px auto 30px 10%;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 1000px;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 32px;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 1000px;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 1000px;\n  border-top: 12px solid black;\n  margin: 50px auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 30px;\n  margin: 20px auto;\n  height: 250px;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .chapter-title-container .title-paragraph {\n  margin-left: 10%;\n  padding: 20px 0;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 1000px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 1000px;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 20px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-first-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nul,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.section-title-page {\n  position: relative;\n  height: 1130px;\n  width: 100%;\n  max-width: 1000px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 2em;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 90%;\n  margin: auto auto auto 10%;\n}\n.citations .citation {\n  margin: 0 0 0 10%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  width: 90%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\nsub {\n  vertical-align: bottom;\n  position: relative;\n  bottom: -0.5ex;\n  font-size: 0.7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph,\n.sections .chapter .sub-chapter .exercise,\n.sections .chapter .sub-chapter .problems .problem-title,\n.sections .chapter .sub-chapter .problems .problem {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.numbered-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n}\n.numbered-list li {\n  margin: 10px auto;\n}\n.numbered-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.bulleted-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n  list-style-type: disc;\n}\n.bulleted-list li {\n  margin: 10px auto;\n}\n.bulleted-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n#wrapper {\n  width: 100%;\n  max-width: 1000px;\n  margin: auto;\n  padding: 0 20px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 1.8em;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 1.1em;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: .8em;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: .9em;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 90%;\n  margin: 20px auto 20px 10%;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 90%;\n  margin: 30px auto 30px 10%;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 100%;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 2em;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 100%;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 100%;\n  border-top: 12px solid black;\n  margin: 50px auto 0 auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 1.8em;\n  margin: 20px auto;\n  height: 250px;\n  text-align: left;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .chapter-title-container .title-paragraph {\n  margin-left: 10%;\n  padding: 20px 0;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 100%;\n  counter-reset: exercises;\n  margin-top: 50px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 100%;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-first-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .exercise:not(:nth-child(2)) {\n  margin: 10px 0 10px 10%;\n}\n.sections .chapter .sub-chapter .exercise::before {\n  counter-increment: exercises;\n  content: counter(chapters) '.' counter(subChapters) \"-\" counter(exercises);\n  display: block;\n  font-weight: bold;\n  font-style: italic;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .problems {\n  margin: 20px auto;\n  width: 100%;\n  counter-reset: problems;\n}\n.sections .chapter .sub-chapter .problems .title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n.sections .chapter .sub-chapter .problems .problem-title {\n  font-weight: bold;\n  font-style: italic;\n}\n.sections .chapter .sub-chapter .problems .problem-title::before {\n  counter-increment: problems;\n  content: counter(chapters) \"-\" counter(problems);\n  display: inline-block;\n  width: 5%;\n}\n.sections .chapter .sub-chapter .problems .table1 {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 20px 0;\n  width: 90%;\n  position: relative;\n  left: 10%;\n  font-size: 1.2em;\n  word-wrap: normal;\n  text-align: center;\n  line-height: 40px;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell {\n  box-sizing: border-box;\n  flex-grow: 1;\n  border-right: 1px solid black;\n  border-bottom: 1px solid black;\n  height: 40px;\n  width: 12.5%;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell > span {\n  position: relative;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .mjx-chtml,\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .MJXc-display {\n  margin: 0;\n  text-align: center;\n  display: inline-block;\n  position: relative;\n  top: 25%;\n}\n.sections .chapter .sub-chapter .chapter-notes .chapter-notes-title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n@media screen and (max-width: 375px) {\n  .title-container .author-list {\n    font-size: .7em;\n  }\n  .title-container .title {\n    left: 0;\n    width: 100%;\n    text-align: center;\n    font-size: 1.1em;\n    padding: 5px;\n  }\n  .title-container .title .sub-title {\n    font-size: .7em;\n    padding-top: 3px;\n  }\n  .title-container .intro-bottom-info {\n    font-size: .8em;\n  }\n  .copy-right-info .info {\n    width: 100%;\n    font-size: .6em;\n  }\n  .copy-right-info .info .info-section {\n    margin: 4px;\n  }\n  .table-of-contents .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .table-of-contents .preface {\n    text-align: right;\n    margin: 0 0 10px 0;\n  }\n  .appendix .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .appendix #preface-authors {\n    font-size: .7em;\n  }\n  .bulleted-list {\n    margin-left: 15.5%;\n    width: 84.5%;\n  }\n  .bulleted-list li > .inner-bullet {\n    margin-left: 5px;\n  }\n  .sections .section-title-page > .section-title,\n  .sections .section-intro > .title {\n    font-size: 1.1em;\n  }\n  .sections .chapter .chapter-title-container .title {\n    left: 0;\n    width: 100%;\n    font-size: 1.1em;\n    height: 50px;\n  }\n  .sections .chapter .sub-chapter > .sub-chapter-title > b {\n    margin-left: 10px;\n  }\n}\n", ""]);
 
 // exports
 
@@ -24514,6 +25345,409 @@ module.exports = function (css) {
 "use strict";
 
 
+var MathJaxNode = __webpack_require__(192);
+var MathJaxContext = __webpack_require__(194);
+
+module.exports = {
+    Node: MathJaxNode,
+    Context: MathJaxContext
+};
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var React = __webpack_require__(24);
+var process = __webpack_require__(193);
+
+/**
+ * React component to render maths using mathjax
+ * @type {ReactClass}
+ */
+var MathJaxNode = React.createClass({
+    displayName: 'MathJaxNode',
+
+    propTypes: {
+        inline: React.PropTypes.bool,
+        children: React.PropTypes.node.isRequired,
+        onRender: React.PropTypes.func
+    },
+
+    contextTypes: {
+        MathJax: React.PropTypes.object
+    },
+
+    getDefaultProps: function getDefaultProps() {
+        return {
+            inline: false,
+            onRender: function onRender() {}
+        };
+    },
+
+
+    /**
+     * Render the math once the node is mounted
+     */
+    componentDidMount: function componentDidMount() {
+        this.typeset();
+    },
+
+
+    /**
+     * Update the jax, force update if the display mode changed
+     */
+    componentDidUpdate: function componentDidUpdate(prevProps) {
+        var forceUpdate = prevProps.inline != this.props.inline;
+        this.typeset(forceUpdate);
+    },
+
+
+    /**
+     * Prevent update when the tex has not changed
+     */
+    shouldComponentUpdate: function shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return nextProps.children != this.props.children || nextProps.inline != this.props.inline || nextContext.MathJax != this.context.MathJax;
+    },
+
+
+    /**
+     * Clear the math when unmounting the node
+     */
+    componentWillUnmount: function componentWillUnmount() {
+        this.clear();
+    },
+
+
+    /**
+     * Clear the jax
+     */
+    clear: function clear() {
+        var MathJax = this.context.MathJax;
+
+
+        if (!this.script || !MathJax) {
+            return;
+        }
+
+        var jax = MathJax.Hub.getJaxFor(this.script);
+        if (jax) {
+            jax.Remove();
+        }
+    },
+
+
+    /**
+     * Update math in the node.
+     * @param {Boolean} forceUpdate
+     */
+    typeset: function typeset(forceUpdate) {
+        var _this = this;
+
+        var MathJax = this.context.MathJax;
+        var _props = this.props,
+            children = _props.children,
+            onRender = _props.onRender;
+
+
+        if (!MathJax) {
+            return;
+        }
+
+        var text = children;
+
+        if (forceUpdate) {
+            this.clear();
+        }
+
+        if (!forceUpdate && this.script) {
+            MathJax.Hub.Queue(function () {
+                var jax = MathJax.Hub.getJaxFor(_this.script);
+
+                if (jax) jax.Text(text, onRender);else {
+                    var script = _this.setScriptText(text);
+                    process(MathJax, script, onRender);
+                }
+            });
+        } else {
+            var script = this.setScriptText(text);
+            process(MathJax, script, onRender);
+        }
+    },
+
+
+    /**
+     * Create a script
+     * @param  {String} text
+     * @return {DOMNode} script
+     */
+    setScriptText: function setScriptText(text) {
+        var inline = this.props.inline;
+
+
+        if (!this.script) {
+            this.script = document.createElement('script');
+            this.script.type = 'math/tex; ' + (inline ? '' : 'mode=display');
+            this.refs.node.appendChild(this.script);
+        }
+
+        if ('text' in this.script) {
+            // IE8, etc
+            this.script.text = text;
+        } else {
+            this.script.textContent = text;
+        }
+
+        return this.script;
+    },
+    render: function render() {
+        return React.createElement('span', { ref: 'node' });
+    }
+});
+
+module.exports = MathJaxNode;
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var pendingScripts = [];
+var pendingCallbacks = [];
+var needsProcess = false;
+
+/**
+ * Process math in a script node using MathJax
+ * @param {MathJax}  MathJax
+ * @param {DOMNode}  script
+ * @param {Function} callback
+ */
+function process(MathJax, script, callback) {
+    pendingScripts.push(script);
+    pendingCallbacks.push(callback);
+    if (!needsProcess) {
+        needsProcess = true;
+        setTimeout(function () {
+            return doProcess(MathJax);
+        }, 0);
+    }
+}
+
+function doProcess(MathJax) {
+    MathJax.Hub.Queue(function () {
+        var oldElementScripts = MathJax.Hub.elementScripts;
+        MathJax.Hub.elementScripts = function (element) {
+            return pendingScripts;
+        };
+
+        try {
+            return MathJax.Hub.Process(null, function () {
+                // Trigger all of the pending callbacks before clearing them
+                // out.
+                var _iteratorNormalCompletion = true;
+                var _didIteratorError = false;
+                var _iteratorError = undefined;
+
+                try {
+                    for (var _iterator = pendingCallbacks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                        var callback = _step.value;
+
+                        callback();
+                    }
+                } catch (err) {
+                    _didIteratorError = true;
+                    _iteratorError = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion && _iterator.return) {
+                            _iterator.return();
+                        }
+                    } finally {
+                        if (_didIteratorError) {
+                            throw _iteratorError;
+                        }
+                    }
+                }
+
+                pendingScripts = [];
+                pendingCallbacks = [];
+                needsProcess = false;
+            });
+        } catch (e) {
+            // IE8 requires `catch` in order to use `finally`
+            throw e;
+        } finally {
+            MathJax.Hub.elementScripts = oldElementScripts;
+        }
+    });
+}
+
+module.exports = process;
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global MathJax */
+var React = __webpack_require__(24);
+var loadScript = __webpack_require__(195);
+
+var DEFAULT_SCRIPT = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+
+var DEFAULT_OPTIONS = {
+    tex2jax: {
+        inlineMath: []
+    },
+    showMathMenu: false,
+    showMathMenuMSIE: false
+};
+
+/**
+ * Context for loading mathjax
+ * @type {[type]}
+ */
+var MathJaxContext = React.createClass({
+    displayName: 'MathJaxContext',
+
+    propTypes: {
+        children: React.PropTypes.node.isRequired,
+        script: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.oneOf([false])]),
+        options: React.PropTypes.object
+    },
+
+    childContextTypes: {
+        MathJax: React.PropTypes.object
+    },
+
+    getDefaultProps: function getDefaultProps() {
+        return {
+            script: DEFAULT_SCRIPT,
+            options: DEFAULT_OPTIONS
+        };
+    },
+    getInitialState: function getInitialState() {
+        return {
+            loaded: false
+        };
+    },
+    getChildContext: function getChildContext() {
+        return {
+            MathJax: typeof MathJax == 'undefined' ? undefined : MathJax
+        };
+    },
+    componentDidMount: function componentDidMount() {
+        var script = this.props.script;
+
+
+        if (!script) {
+            return this.onLoad();
+        }
+
+        loadScript(script, this.onLoad);
+    },
+    onLoad: function onLoad(err) {
+        var options = this.props.options;
+
+        MathJax.Hub.Config(options);
+
+        this.setState({
+            loaded: true
+        });
+    },
+    render: function render() {
+        var children = this.props.children;
+
+        return React.Children.only(children);
+    }
+});
+
+module.exports = MathJaxContext;
+
+/***/ }),
+/* 195 */
+/***/ (function(module, exports) {
+
+
+module.exports = function load (src, opts, cb) {
+  var head = document.head || document.getElementsByTagName('head')[0]
+  var script = document.createElement('script')
+
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+
+  opts = opts || {}
+  cb = cb || function() {}
+
+  script.type = opts.type || 'text/javascript'
+  script.charset = opts.charset || 'utf8';
+  script.async = 'async' in opts ? !!opts.async : true
+  script.src = src
+
+  if (opts.attrs) {
+    setAttributes(script, opts.attrs)
+  }
+
+  if (opts.text) {
+    script.text = '' + opts.text
+  }
+
+  var onend = 'onload' in script ? stdOnEnd : ieOnEnd
+  onend(script, cb)
+
+  // some good legacy browsers (firefox) fail the 'in' detection above
+  // so as a fallback we always set onload
+  // old IE will ignore this and new IE will set onload
+  if (!script.onload) {
+    stdOnEnd(script, cb);
+  }
+
+  head.appendChild(script)
+}
+
+function setAttributes(script, attrs) {
+  for (var attr in attrs) {
+    script.setAttribute(attr, attrs[attr]);
+  }
+}
+
+function stdOnEnd (script, cb) {
+  script.onload = function () {
+    this.onerror = this.onload = null
+    cb(null, script)
+  }
+  script.onerror = function () {
+    // this.onload = null here is necessary
+    // because even IE9 works not like others
+    this.onerror = this.onload = null
+    cb(new Error('Failed to load ' + this.src), script)
+  }
+}
+
+function ieOnEnd (script, cb) {
+  script.onreadystatechange = function () {
+    if (this.readyState != 'complete' && this.readyState != 'loaded') return
+    this.onreadystatechange = null
+    cb(null, script) // there is no way to catch loading errors in IE8
+  }
+}
+
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var global = {
     romanize: function romanize(num) {
         if (!+num) return false;
@@ -24532,7 +25766,7 @@ for (var func in global) {
 }
 
 /***/ }),
-/* 192 */
+/* 197 */
 /***/ (function(module, exports) {
 
 module.exports = {"table_of_contents":[{"section_title":"Foundations","chapters":[{"chapter_title":"The Role of Algorithms in Computing","sub_chapters":[{"sub_chapter_title":"Algorithms","starred":false},{"sub_chapter_title":"Algorithms as a technology","starred":false}]},{"chapter_title":"Getting Started","sub_chapters":[{"sub_chapter_title":"Insertion sort","starred":false},{"sub_chapter_title":"Analyzing algorithms","starred":false},{"sub_chapter_title":"Designing algorithms","starred":false}]},{"chapter_title":"Growth of Functions","sub_chapters":[{"sub_chapter_title":"Asymptotic notation","starred":false},{"sub_chapter_title":"Standard notations and common functions","starred":false}]},{"chapter_title":"Divide-and-Conquer","sub_chapters":[{"sub_chapter_title":"The maximum-subarray problem","starred":false},{"sub_chapter_title":"Strassen's algorithm for matrix multiplication","starred":false},{"sub_chapter_title":"The substitution method for solving recurrences","starred":false},{"sub_chapter_title":"The recursion-tree method for solving recurrences","starred":false},{"sub_chapter_title":"The master method for solving recurrences","starred":false},{"sub_chapter_title":"Proof of the master theorem","starred":true}]},{"chapter_title":"Probabilistic Analysis and Randomized Algorithms","sub_chapters":[{"sub_chapter_title":"The hiring problem","starred":false},{"sub_chapter_title":"Indicator random variables","starred":false},{"sub_chapter_title":"Randomized algorithms","starred":false},{"sub_chapter_title":"Probabilistic analysis and further uses of indicator random variables","starred":true}]}]},{"section_title":"Sorting and Order Statistics","chapters":[{"chapter_title":"Heapsort","sub_chapters":[{"sub_chapter_title":"Heaps","starred":false},{"sub_chapter_title":"Maintaining the heap property","starred":false},{"sub_chapter_title":"Building a heap","starred":false},{"sub_chapter_title":"The heapsort algorithm","starred":false},{"sub_chapter_title":"Priority queues","starred":false}]},{"chapter_title":"Quicksort","sub_chapters":[{"sub_chapter_title":"Description of quicksort","starred":false},{"sub_chapter_title":"Performance of quicksort","starred":false},{"sub_chapter_title":"A randomized version of quicksort","starred":false},{"sub_chapter_title":"Analysis of quicksort","starred":false}]},{"chapter_title":"Sorting in Linear Time","sub_chapters":[{"sub_chapter_title":"Lower bounds for sorting","starred":false},{"sub_chapter_title":"Counting sort","starred":false},{"sub_chapter_title":"Radix sort","starred":false},{"sub_chapter_title":"Bucket sort","starred":false}]},{"chapter_title":"Medians and Order Statistics","sub_chapters":[{"sub_chapter_title":"Minimum and maximum","starred":false},{"sub_chapter_title":"Selection in expected linear time","starred":false},{"sub_chapter_title":"Selection in worst-case linear time","starred":false}]}]},{"section_title":"Data Structures","chapters":[{"chapter_title":"Elementary Data Structures","sub_chapters":[{"sub_chapter_title":"Stacks and queues","starred":false},{"sub_chapter_title":"Linked lists","starred":false},{"sub_chapter_title":"Implementing pointers and objects","starred":false},{"sub_chapter_title":"Representing rooted trees","starred":false}]},{"chapter_title":"Hash Tables","sub_chapters":[{"sub_chapter_title":"Direct-address tables","starred":false},{"sub_chapter_title":"Hash tables","starred":false},{"sub_chapter_title":"Hash functions","starred":false},{"sub_chapter_title":"Open addressing","starred":false},{"sub_chapter_title":"Perfect hashing","starred":true}]},{"chapter_title":"Binary Search Trees","sub_chapters":[{"sub_chapter_title":"What is a binary search tree?","starred":false},{"sub_chapter_title":"Querying a binary search tree","starred":false},{"sub_chapter_title":"Insertion and deletion","starred":false},{"sub_chapter_title":"Randomly built binary search trees","starred":true}]},{"chapter_title":"Red-Black Trees","sub_chapters":[{"sub_chapter_title":"Properties of red-black trees?","starred":false},{"sub_chapter_title":"Rotations","starred":false},{"sub_chapter_title":"Insertion","starred":false},{"sub_chapter_title":"Deletion","starred":false}]},{"chapter_title":"Augmenting Data Structures","sub_chapters":[{"sub_chapter_title":"Dynamic order statistics","starred":false},{"sub_chapter_title":"How to augment a data structure","starred":false},{"sub_chapter_title":"Interval trees","starred":false}]}]},{"section_title":"Advanced Design and Analysis Techniques","chapters":[{"chapter_title":"Dynamic Programming","sub_chapters":[{"sub_chapter_title":"Rod cutting","starred":false},{"sub_chapter_title":"Matrix-chain multiplication","starred":false},{"sub_chapter_title":"Elements of dynamic programming","starred":false},{"sub_chapter_title":"Longest common subsequence","starred":false},{"sub_chapter_title":"Optimal binary search trees","starred":false}]},{"chapter_title":"Greedy Algorithms","sub_chapters":[{"sub_chapter_title":"An Activity-Selection Problem","starred":false},{"sub_chapter_title":"Elements of the Greedy Strategy","starred":false},{"sub_chapter_title":"Huffman Codes","starred":false},{"sub_chapter_title":"Matroids and greedy methods","starred":true},{"sub_chapter_title":"A task-scheduling problem as a matroid","starred":true}]},{"chapter_title":"Greedy Algorithms","sub_chapters":[{"sub_chapter_title":"Aggregate analysis","starred":false},{"sub_chapter_title":"The accounting method","starred":false},{"sub_chapter_title":"The potential method","starred":false},{"sub_chapter_title":"Dynamic tables","starred":false}]}]},{"section_title":"Advanced Data Structures","chapters":[{"chapter_title":"B-Trees","sub_chapters":[{"sub_chapter_title":"Definition of B-trees","starred":false},{"sub_chapter_title":"Basic operations on B-trees","starred":false},{"sub_chapter_title":"Deleting a key from a B-tree","starred":false}]},{"chapter_title":"Fibonacci Heaps","sub_chapters":[{"sub_chapter_title":"Structure of Fibonacci heaps","starred":false},{"sub_chapter_title":"Mergeable-heap operations","starred":false},{"sub_chapter_title":"Decreasing a key and deleting a node","starred":false},{"sub_chapter_title":"Bounding the maximum degree","starred":false}]},{"chapter_title":"van Emde Boas Trees","sub_chapters":[{"sub_chapter_title":"Preliminary approaches","starred":false},{"sub_chapter_title":"A recursive structure","starred":false},{"sub_chapter_title":"The van Emde Boas tree","starred":false}]},{"chapter_title":"Data Structures for Disjoint Sets","sub_chapters":[{"sub_chapter_title":"Disjoint-set operations","starred":false},{"sub_chapter_title":"Linked-list representation of disjoint sets","starred":false},{"sub_chapter_title":"Disjoint-set forests","starred":false},{"sub_chapter_title":"Analysis of union by rank with path compression","starred":true}]}]},{"section_title":"Graph Algorithms","chapters":[{"chapter_title":"Elementary Graph Algorithms","sub_chapters":[{"sub_chapter_title":"Representations of graphs","starred":false},{"sub_chapter_title":"Breadth-first search","starred":false},{"sub_chapter_title":"Depth-first search","starred":false},{"sub_chapter_title":"Topological sort","starred":false},{"sub_chapter_title":"Strongly connected components","starred":false}]},{"chapter_title":"Minimum Spanning Trees","sub_chapters":[{"sub_chapter_title":"Growing a minimum spanning tree","starred":false},{"sub_chapter_title":"The algorithms of Kruskal and Prim","starred":false}]},{"chapter_title":"Single-Source Shortest Paths","sub_chapters":[{"sub_chapter_title":"The Bellman-Ford algorithm","starred":false},{"sub_chapter_title":"Single-source shortest paths in directed acyclic graphs","starred":false},{"sub_chapter_title":"Dijkstra’s algorithm","starred":false},{"sub_chapter_title":"Difference constraints and shortest paths","starred":false},{"sub_chapter_title":"Proofs of shortest-paths properties","starred":false}]},{"chapter_title":"All-Pairs Shortest Paths","sub_chapters":[{"sub_chapter_title":"Shortest paths and matrix multiplication","starred":false},{"sub_chapter_title":"The Floyd-Warshall algorithm","starred":false},{"sub_chapter_title":"Johnson’s algorithm for sparse graphs","starred":false}]},{"chapter_title":"Maximum Flow","sub_chapters":[{"sub_chapter_title":"Flow networks","starred":false},{"sub_chapter_title":"The Ford-Fulkerson method","starred":false},{"sub_chapter_title":"Maximum bipartite matching","starred":false},{"sub_chapter_title":"Push-relabel algorithms","starred":true},{"sub_chapter_title":"The relabel-to-front algorithm","starred":true}]}]}]}
