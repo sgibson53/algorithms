@@ -180,12 +180,12 @@ or mathematical rigor.
                         </div>
                         <ul className="bulleted-list">
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     You should have some programming experience. In particular, you should understand recursive procedures and simple data structures such as arrays and linked lists.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     You should have some facility with mathematical proofs, and especially proofs by mathematical induction. A few portions of the book rely on some knowledge of elementary calculus. Beyond that, Parts I and VIII of this book teach you all the mathematical techniques you will need.
                                 </span>
                             </li>
@@ -236,62 +236,62 @@ or mathematical rigor.
                         </div>
                         <ul className="bulleted-list">
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We added new chapters on van Emde Boas trees and multithreaded algorithms, and we have broken out material on matrix basics into its own appendix chapter.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We revised the chapter on recurrences to more broadly cover the divide-and-conquer technique, and its first two sections apply divide-and-conquer to solve two problems. The second section of this chapter presents Strassen’s algorithm for matrix multiplication, which we have moved from the chapter on matrix operations.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We removed two chapters that were rarely taught: binomial heaps and sorting networks. One key idea in the sorting networks chapter, the 0-1 principle, appears in this edition within Problem 8-7 as the 0-1 sorting lemma for compareexchange algorithms. The treatment of Fibonacci heaps no longer relies on binomial heaps as a precursor.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We revised our treatment of dynamic programming and greedy algorithms. Dynamic programming now leads off with a more interesting problem, rod cutting, than the assembly-line scheduling problem from the second edition. Furthermore, we emphasize memoization a bit more than we did in the second edition, and we introduce the notion of the subproblem graph as a way to understand the running time of a dynamic-programming algorithm. In our opening example of greedy algorithms, the activity-selection problem, we get to the greedy algorithm more directly than we did in the second edition.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     The way we delete a node from binary search trees (which includes red-black trees) now guarantees that the node requested for deletion is the node that is actually deleted. In the first two editions, in certain cases, some other node would be deleted, with its contents moving into the node passed to the deletion procedure. With our new way to delete nodes, if other components of a program maintain pointers to nodes in the tree, they will not mistakenly end up with stale pointers to nodes that have been deleted.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     The material on flow networks now bases flows entirely on edges. This approach is more intuitive than the net flow used in the first two editions.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     With the material on matrix basics and Strassen’s algorithm moved to other chapters, the chapter on matrix operations is smaller than in the second edition.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We have modified our treatment of the Knuth-Morris-Pratt string-matching algorithm.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We corrected several errors. Most of these errors were posted on our Web site of second-edition errata, but a few were not.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     Based on many requests, we changed the syntax (as it were) of our pseudocode. We now use “D” to indicate assignment and “==” to test for equality, just as C, C++, Java, and Python do. Likewise, we have eliminated the keywords <b>do</b> and <b>then</b> and adopted “//” as our comment-to-end-of-line symbol. We also now use dot-notation to indicate object attributes. Our pseudocode remains procedural, rather than object-oriented. In other words, rather than running methods on objects, we simply call procedures, passing objects as parameters.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     We added 100 new exercises and 28 new problems. We also updated many bibliography entries and added several new ones.
                                 </span>
                             </li>
                             <li>
-                                <span className="inner-bullet">
+                                <span className="list-item">
                                     Finally, we went through the entire book and rewrote sentences, paragraphs, and sections to make the writing clearer and more active.
                                 </span>
                             </li>
@@ -400,7 +400,7 @@ or mathematical rigor.
                             <div className="title">
                                 <b>The Role of Algorithms in Computing</b>
                             </div>
-                            <div className="title-paragraph">
+                            <div className="first-paragraph">
                                 What are algorithms? Why is the study of algorithms worthwhile? What is the role of algorithms relative to other technologies used in computers? In this chapter, we will answer these questions.
                             </div>
                         </div>
@@ -420,10 +420,10 @@ or mathematical rigor.
                             </div>
 
                             <div className="input">
-                                A sequence of <i>n</i> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub className="italic">n</sub>〉.
+                                A sequence of <i>n</i> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub><i>n</i></sub>〉.
                             </div> 
                             <div className="output">
-                                A permutation (re-ordering) 〈a&prime;<sub>1</sub>, a&prime;<sub>2</sub>, ..., a&prime;<sub>n</sub>〉 of the input sequence such that a&prime;<sub>1</sub> &le; a&prime;<sub>2</sub> &le; &middot;&middot;&middot; &le; a&prime;<sub className="italic">n</sub>
+                                A permutation (re-ordering) 〈a&prime;<sub>1</sub>, a&prime;<sub>2</sub>, ..., a&prime;<sub><i>n</i></sub>〉 of the input sequence such that a&prime;<sub>1</sub> &le; a&prime;<sub>2</sub> &le; &middot;&middot;&middot; &le; a&prime;<sub><i>n</i></sub>
                             </div>
                             <div className="paragraph">
                                 For example, given the input sequence (31, 41, 59, 26, 41, 58), a sorting algorithm returns as output the sequence (26, 31, 41, 41, 58, 59). Such an input sequence is called an <b>instance</b> of the sorting problem. In general, an <b>instance of a problem</b> consists of the input (satisfying whatever constraints are imposed in the problem statement) needed to compute a solution to the problem.
@@ -446,22 +446,22 @@ or mathematical rigor.
 
                             <ul className="bulleted-list">
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         The Human Genome Project has made great progress toward the goals of identifying all the 100,000 genes in human DNA, determining the sequences of the 3 billion chemical base pairs that make up human DNA, storing this information in databases, and developing tools for data analysis. Each of these steps requires sophisticated algorithms. Although the solutions to the various problems involved are beyond the scope of this book, many methods to solve these biological problems use ideas from several of the chapters in this book, thereby enabling scientists to accomplish tasks while using resources efficiently. The savings are in time, both human and machine, and in money, as more information can be extracted from laboratory techniques.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         The Internet enables people all around the world to quickly access and retrieve large amounts of information. With the aid of clever algorithms, sites on the Internet are able to manage and manipulate this large volume of data. Examples of problems that make essential use of algorithms include finding good routes on which the data will travel (techniques for solving such problems appear in Chapter 24), and using a search engine to quickly find pages on which particular information resides (related techniques are in Chapters 11 and 32).
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         Electronic commerce enables goods and services to be negotiated and exchanged electronically, and it depends on the privacy of personal information such as credit card numbers, passwords, and bank statements. The core technologies used in electronic commerce include public-key cryptography and digital signatures (covered in Chapter 31), which are based on numerical algorithms and number theory.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         Manufacturing and other commercial enterprises often need to allocate scarce resources in the most beneficial way. An oil company may wish to know where to place its wells in order to maximize its expected profit. A political candidate may want to determine where to spend money buying campaign advertising in order to maximize the chances of winning an election. An airline may wish to assign crews to flights in the least expensive way possible, making sure that each flight is covered and that government regulations regarding crew scheduling are met. An Internet service provider may wish to determine where to place additional resources in order to serve its customers more effectively. All of these are examples of problems that can be solved using linear programming, which we shall study in Chapter 29.
                                     </span>
                                 </li>
@@ -473,22 +473,22 @@ or mathematical rigor.
 
                             <ul className="bulleted-list">
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         We are given a road map on which the distance between each pair of adjacent intersections is marked, and we wish to determine the shortest route from one intersection to another. The number of possible routes can be huge, even if we disallow routes that cross over themselves. How do we choose which of all possible routes is the shortest? Here, we model the road map (which is itself a model of the actual roads) as a graph (which we will meet in Part VI and Appendix B), and we wish to find the shortest path from one vertex to another in the graph. We shall see how to solve this problem efficiently in Chapter 24.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         We are given two ordered sequences of symbols, <i>X</i> = 〈x<sub>1</sub>, x<sub>2</sub>, ..., a<sub><i>m</i></sub>〉 and <i>Y</i> = 〈y<sub>1</sub>, y<sub>2</sub>, ..., a<sub><i>n</i></sub>〉, and we wish to find a longest common subsequence of <i>X</i> and <i>Y</i>. A subsequence of <i>X</i> is just <i>X</i> with some (or possibly all or none) of its elements removed. For example, one subsequence of 〈<i>A, B, C, D, E, F, G</i>〉 would be 〈<i>B, C, E, G</i>〉. The length of a longest common subsequence of <i>X</i> and <i>Y</i> gives one measure of how similar these two sequences are. For example, if the two sequences are base pairs in DNA strands, then we might consider them similar if they have a long common subsequence. If <i>X</i> has <i>m</i> symbols and <i>Y</i> has <i>n</i> symbols, then <i>X</i> and <i>Y</i> have <i>2<sup>m</sup></i> and <i>2<sup>n</sup></i> possible subsequences, respectively. Selecting all possible subsequences of <i>X</i> and <i>Y</i> and matching them up could take a prohibitively long time unless <i>m</i> and <i>n</i> are very small. We shall see in Chapter 15 how to use a general technique known as dynamic programming to solve this problem much more efficiently.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         We are given a mechanical design in terms of a library of parts, where each part may include instances of other parts, and we need to list the parts in order so that each part appears before any part that uses it. If the design comprises <i>n</i> parts, then there are <i>n!</i> possible orders, where <i>n!</i> denotes the factorial function. Because the factorial function grows faster than even an exponential function, we cannot feasibly generate each possible order and then verify that, within that order, each part appears before the parts using it (unless we have only a few parts). This problem is an instance of topological sorting, and we shall see in Chapter 22 how to solve this problem efficiently.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         We are given <i>n</i> points in the plane, and we wish to find the convex hull of these points. The convex hull is the smallest convex polygon containing the points. Intuitively, we can think of each point as being represented by a nail sticking out from a board. The convex hull would be represented by a tight rubber band that surrounds all the nails. Each nail around which the rubber band makes a turn is a vertex of the convex hull. (See Figure 33.6 on page 1029 for an example.) Any of the <i>2<sup>n</sup></i> subsets of the points might be the vertices of the convex hull. Knowing which points are vertices of the convex hull is not quite enough, either, since we also need to know the order in which they appear. There are many choices, therefore, for the vertices of the convex hull. Chapter 33 gives two good methods for finding the convex hull.
                                     </span>
                                 </li>
@@ -500,12 +500,12 @@ or mathematical rigor.
 
                             <ol className="numbered-list" type="1">
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         They have many candidate solutions, the overwhelming majority of which do not solve the problem at hand. Finding one that does, or one that is “best,” can present quite a challenge.
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         They have practical applications. Of the problems in the above list, finding the shortest path provides the easiest examples. A transportation firm, such as a trucking or railroad company, has a financial interest in finding shortest paths through a road or rail network because taking shorter paths results in lower labor and fuel costs. Or a routing node on the Internet may need to find the shortest path through the network in order to route a message quickly. Or a person wishing to drive from New York to Boston may want to find driving directions from an appropriate Web site, or she may use her GPS while driving.
                                     </span>
                                 </li>
@@ -627,27 +627,27 @@ CommonHTML: { linebreaks: { automatic: true } },
 
                             <ul className="bulleted-list">
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         advanced computer architectures and fabrication technologies,
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         easy-to-use, intuitive, graphical user interfaces (GUIs),
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         object-oriented systems,
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         integrated Web technologies, and
                                     </span>
                                 </li>
                                 <li>
-                                    <span className="inner-bullet">
+                                    <span className="list-item">
                                         fast networking, both wired and wireless.
                                     </span>
                                 </li>
@@ -781,11 +781,53 @@ CommonHTML: { linebreaks: { automatic: true } },
                             <div className="chapter-notes">
                                 <div className="chapter-notes-title">Chapter Notes</div>
                                 <div className="first-paragraph">
-                                    There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Pur- dom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the <i>Handbook of Theoretical Computer Science</i>, Volume A [342] and the CRC <i>Algorithms and Theory of Computation Handbook</i> [25]. Overviews of the algorithms used in computational biology can be found in textbooks by Gusfield [156], Pevzner [275], Setubal and Meidanis [310], and Waterman [350].
+                                    There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Purdom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the <i>Handbook of Theoretical Computer Science</i>, Volume A [342] and the CRC <i>Algorithms and Theory of Computation Handbook</i> [25]. Overviews of the algorithms used in computational biology can be found in textbooks by Gusfield [156], Pevzner [275], Setubal and Meidanis [310], and Waterman [350].
                                 </div>
                             </div>
                             
                         </div>
+                    </div>
+
+                    <div className="chapter">
+                        <div className="chapter-title-container">
+                            <div className="title"><b>Getting Started</b></div>
+                            <div className="first-paragraph">
+                                This chapter will familiarize you with the framework we shall use throughout the book to think about the design and analysis of algorithms. It is self-contained, but it does include several references to material that we introduce in Chapters 3 and 4. (It also contains several summations, which Appendix A shows how to solve.)This chapter will familiarize you with the framework we shall use throughout the book to think about the design and analysis of algorithms. It is self-contained, but it does include several references to material that we introduce in Chapters 3 and 4. (It also contains several summations, which Appendix A shows how to solve.)
+                            </div>
+                            <div className="paragraph">
+                                We begin by examining the insertion sort algorithm to solve the sorting problem introduced in Chapter 1. We define a “pseudocode” that should be familiar to you if you have done computer programming, and we use it to show how we shall specify our algorithms. Having specified the insertion sort algorithm, we then argue that it correctly sorts, and we analyze its running time. The analysis introduces a notation that focuses on how that time increases with the number of items to be sorted. Following our discussion of insertion sort, we introduce the divide-and-conquer approach to the design of algorithms and use it to develop an algorithm called merge sort. We end with an analysis of merge sort’s running time.
+                            </div>
+                        </div>
+
+                        <div className="sub-chapter">
+                            <div className="sub-chapter-title"><b>Insertion sort</b></div>
+
+                            <div className="first-paragraph">
+                                Our first algorithm, insertion sort, solves the <b><i>sorting problem</i></b> introduced in Chapter 1:
+                            </div>
+
+                            <div className="input">
+                                A sequence of <i>n</i> numbers 〈a<sub>1</sub>, a<sub>2</sub>, ..., a<sub><i>n</i></sub>〉.
+                            </div> 
+                            <div className="output">
+                                A permutation (re-ordering) 〈a&prime;<sub>1</sub>, a&prime;<sub>2</sub>, ..., a&prime;<sub><i>n</i></sub>〉 of the input sequence such that a&prime;<sub>1</sub> &le; a&prime;<sub>2</sub> &le; &middot;&middot;&middot; &le; a&prime;<sub><i>n</i></sub>
+                            </div>
+
+                            <div className="first-paragraph">
+                                The numbers that we wish to sort are also known as the <b><i>keys</i></b>. Although conceptually we are sorting a sequence, the input comes to us in the form of an array with <i>n</i> elements.
+                            </div>
+                            <div className="paragraph">
+                                In this book, we shall typically describe algorithms as programs written in a <b><i>pseudocode</i></b> that is similar in many respects to C, C++, Java, Python, or Pascal. If you have been introduced to any of these languages, you should have little trouble reading our algorithms. What separates pseudocode from “real” code is that in pseudocode, we employ whatever expressive method is most clear and concise to specify a given algorithm. Sometimes, the clearest method is English, so do not be surprised if you come across an English phrase or sentence embedded within a section of “real” code. Another difference between pseudocode and real code is that pseudocode is not typically concerned with issues of software engineering. Issues of data abstraction, modularity, and error handling are often ignored in order to convey the essence of the algorithm more concisely.
+                            </div>
+                            <div className="figure">
+                                <img src="./assets/figure_2-1.png" alt=""/>
+                                <div className="figure-caption"><span>Sorting a hand of cards using insertion sort.</span></div>
+                            </div>
+
+                            <div className="paragraph">
+                                We start with <b><i>insertion sort</i></b>, which is an efficient algorithm for sorting a small number of elements. Insertion sort works the way many people sort a hand of playing cards. We start with an empty left hand and the cards face down on the table. We then remove one card at a time from the table and insert it into the correct position in the left hand. To find the correct position for a card, we compare it with each of the cards already in the hand, from right to left, as illustrated in Figure 2.1. At all times, the cards held in the left hand are sorted, and these cards were originally the top cards of the pile on the table.
+                            </div>
+                        </div>  
                     </div>
 
                 </div>

@@ -153,7 +153,7 @@ a {
     li {
         margin: 10px auto;
 
-        .inner-bullet {
+        .list-item {
             display: block;
             margin-left: 10px;
         }
@@ -443,16 +443,13 @@ a {
                 
             }
 
-            .title-paragraph {
-                margin-left:10%;
-                padding: 20px 0;
-            }
         }
 
         .sub-chapter {
             position: relative;
             width: 100%;
             counter-reset: exercises;
+            counter-reset: figures;
             margin-top: 50px;
 
             .sub-chapter-title {
@@ -572,6 +569,23 @@ a {
                 
             }
 
+            .figure {
+                margin: 10px 0 10px 10%;
+                width: 90%;
+                .figure-caption {
+                    padding: 30px 0 5px 0;
+                    &::before {
+                        counter-increment: figures;
+                        content: 'Figure 'counter(chapters)'.'counter(figures);
+                        font-weight: bold;
+                    }
+
+                    & > span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
             .chapter-notes {
                 
                 .chapter-notes-title {
@@ -647,7 +661,7 @@ a {
     .bulleted-list {
         margin-left: 15.5%;
         width: 84.5%;
-        li > .inner-bullet {
+        li > .list-item {
             margin-left: 5px;
         }
     }

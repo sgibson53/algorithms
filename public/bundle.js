@@ -22808,7 +22808,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'You should have some programming experience. In particular, you should understand recursive procedures and simple data structures such as arrays and linked lists.'
                             )
                         ),
@@ -22817,7 +22817,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'You should have some facility with mathematical proofs, and especially proofs by mathematical induction. A few portions of the book rely on some knowledge of elementary calculus. Beyond that, Parts I and VIII of this book teach you all the mathematical techniques you will need.'
                             )
                         )
@@ -22900,7 +22900,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We added new chapters on van Emde Boas trees and multithreaded algorithms, and we have broken out material on matrix basics into its own appendix chapter.'
                             )
                         ),
@@ -22909,7 +22909,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We revised the chapter on recurrences to more broadly cover the divide-and-conquer technique, and its first two sections apply divide-and-conquer to solve two problems. The second section of this chapter presents Strassen\u2019s algorithm for matrix multiplication, which we have moved from the chapter on matrix operations.'
                             )
                         ),
@@ -22918,7 +22918,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We removed two chapters that were rarely taught: binomial heaps and sorting networks. One key idea in the sorting networks chapter, the 0-1 principle, appears in this edition within Problem 8-7 as the 0-1 sorting lemma for compareexchange algorithms. The treatment of Fibonacci heaps no longer relies on binomial heaps as a precursor.'
                             )
                         ),
@@ -22927,7 +22927,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We revised our treatment of dynamic programming and greedy algorithms. Dynamic programming now leads off with a more interesting problem, rod cutting, than the assembly-line scheduling problem from the second edition. Furthermore, we emphasize memoization a bit more than we did in the second edition, and we introduce the notion of the subproblem graph as a way to understand the running time of a dynamic-programming algorithm. In our opening example of greedy algorithms, the activity-selection problem, we get to the greedy algorithm more directly than we did in the second edition.'
                             )
                         ),
@@ -22936,7 +22936,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'The way we delete a node from binary search trees (which includes red-black trees) now guarantees that the node requested for deletion is the node that is actually deleted. In the first two editions, in certain cases, some other node would be deleted, with its contents moving into the node passed to the deletion procedure. With our new way to delete nodes, if other components of a program maintain pointers to nodes in the tree, they will not mistakenly end up with stale pointers to nodes that have been deleted.'
                             )
                         ),
@@ -22945,7 +22945,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'The material on flow networks now bases flows entirely on edges. This approach is more intuitive than the net flow used in the first two editions.'
                             )
                         ),
@@ -22954,7 +22954,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'With the material on matrix basics and Strassen\u2019s algorithm moved to other chapters, the chapter on matrix operations is smaller than in the second edition.'
                             )
                         ),
@@ -22963,7 +22963,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We have modified our treatment of the Knuth-Morris-Pratt string-matching algorithm.'
                             )
                         ),
@@ -22972,7 +22972,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We corrected several errors. Most of these errors were posted on our Web site of second-edition errata, but a few were not.'
                             )
                         ),
@@ -22981,7 +22981,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'Based on many requests, we changed the syntax (as it were) of our pseudocode. We now use \u201CD\u201D to indicate assignment and \u201C==\u201D to test for equality, just as C, C++, Java, and Python do. Likewise, we have eliminated the keywords ',
                                 _react2.default.createElement(
                                     'b',
@@ -23002,7 +23002,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'We added 100 new exercises and 28 new problems. We also updated many bibliography entries and added several new ones.'
                             )
                         ),
@@ -23011,7 +23011,7 @@ var App = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'span',
-                                { className: 'inner-bullet' },
+                                { className: 'list-item' },
                                 'Finally, we went through the entire book and rewrote sentences, paragraphs, and sections to make the writing clearer and more active.'
                             )
                         )
@@ -23306,7 +23306,7 @@ var App = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'title-paragraph' },
+                                { className: 'first-paragraph' },
                                 'What are algorithms? Why is the study of algorithms worthwhile? What is the role of algorithms relative to other technologies used in computers? In this chapter, we will answer these questions.'
                             )
                         ),
@@ -23411,8 +23411,12 @@ var App = function (_React$Component) {
                                 ', ..., a',
                                 _react2.default.createElement(
                                     'sub',
-                                    { className: 'italic' },
-                                    'n'
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
                                 ),
                                 '\u3009.'
                             ),
@@ -23435,7 +23439,11 @@ var App = function (_React$Component) {
                                 _react2.default.createElement(
                                     'sub',
                                     null,
-                                    'n'
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
                                 ),
                                 '\u3009 of the input sequence such that a\u2032',
                                 _react2.default.createElement(
@@ -23452,8 +23460,12 @@ var App = function (_React$Component) {
                                 ' \u2264 \xB7\xB7\xB7 \u2264 a\u2032',
                                 _react2.default.createElement(
                                     'sub',
-                                    { className: 'italic' },
-                                    'n'
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
                                 )
                             ),
                             _react2.default.createElement(
@@ -23526,7 +23538,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'The Human Genome Project has made great progress toward the goals of identifying all the 100,000 genes in human DNA, determining the sequences of the 3 billion chemical base pairs that make up human DNA, storing this information in databases, and developing tools for data analysis. Each of these steps requires sophisticated algorithms. Although the solutions to the various problems involved are beyond the scope of this book, many methods to solve these biological problems use ideas from several of the chapters in this book, thereby enabling scientists to accomplish tasks while using resources efficiently. The savings are in time, both human and machine, and in money, as more information can be extracted from laboratory techniques.'
                                     )
                                 ),
@@ -23535,7 +23547,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'The Internet enables people all around the world to quickly access and retrieve large amounts of information. With the aid of clever algorithms, sites on the Internet are able to manage and manipulate this large volume of data. Examples of problems that make essential use of algorithms include finding good routes on which the data will travel (techniques for solving such problems appear in Chapter 24), and using a search engine to quickly find pages on which particular information resides (related techniques are in Chapters 11 and 32).'
                                     )
                                 ),
@@ -23544,7 +23556,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'Electronic commerce enables goods and services to be negotiated and exchanged electronically, and it depends on the privacy of personal information such as credit card numbers, passwords, and bank statements. The core technologies used in electronic commerce include public-key cryptography and digital signatures (covered in Chapter 31), which are based on numerical algorithms and number theory.'
                                     )
                                 ),
@@ -23553,7 +23565,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'Manufacturing and other commercial enterprises often need to allocate scarce resources in the most beneficial way. An oil company may wish to know where to place its wells in order to maximize its expected profit. A political candidate may want to determine where to spend money buying campaign advertising in order to maximize the chances of winning an election. An airline may wish to assign crews to flights in the least expensive way possible, making sure that each flight is covered and that government regulations regarding crew scheduling are met. An Internet service provider may wish to determine where to place additional resources in order to serve its customers more effectively. All of these are examples of problems that can be solved using linear programming, which we shall study in Chapter 29.'
                                     )
                                 )
@@ -23571,7 +23583,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'We are given a road map on which the distance between each pair of adjacent intersections is marked, and we wish to determine the shortest route from one intersection to another. The number of possible routes can be huge, even if we disallow routes that cross over themselves. How do we choose which of all possible routes is the shortest? Here, we model the road map (which is itself a model of the actual roads) as a graph (which we will meet in Part VI and Appendix B), and we wish to find the shortest path from one vertex to another in the graph. We shall see how to solve this problem efficiently in Chapter 24.'
                                     )
                                 ),
@@ -23580,7 +23592,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'We are given two ordered sequences of symbols, ',
                                         _react2.default.createElement(
                                             'i',
@@ -23775,7 +23787,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'We are given a mechanical design in terms of a library of parts, where each part may include instances of other parts, and we need to list the parts in order so that each part appears before any part that uses it. If the design comprises ',
                                         _react2.default.createElement(
                                             'i',
@@ -23802,7 +23814,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'We are given ',
                                         _react2.default.createElement(
                                             'i',
@@ -23837,7 +23849,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'They have many candidate solutions, the overwhelming majority of which do not solve the problem at hand. Finding one that does, or one that is \u201Cbest,\u201D can present quite a challenge.'
                                     )
                                 ),
@@ -23846,7 +23858,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'They have practical applications. Of the problems in the above list, finding the shortest path provides the easiest examples. A transportation firm, such as a trucking or railroad company, has a financial interest in finding shortest paths through a road or rail network because taking shorter paths results in lower labor and fuel costs. Or a routing node on the Internet may need to find the shortest path through the network in order to route a message quickly. Or a person wishing to drive from New York to Boston may want to find driving directions from an appropriate Web site, or she may use her GPS while driving.'
                                     )
                                 )
@@ -24346,7 +24358,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'advanced computer architectures and fabrication technologies,'
                                     )
                                 ),
@@ -24355,7 +24367,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'easy-to-use, intuitive, graphical user interfaces (GUIs),'
                                     )
                                 ),
@@ -24364,7 +24376,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'object-oriented systems,'
                                     )
                                 ),
@@ -24373,7 +24385,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'integrated Web technologies, and'
                                     )
                                 ),
@@ -24382,7 +24394,7 @@ var App = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         'span',
-                                        { className: 'inner-bullet' },
+                                        { className: 'list-item' },
                                         'fast networking, both wired and wireless.'
                                     )
                                 )
@@ -24724,7 +24736,7 @@ var App = function (_React$Component) {
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'first-paragraph' },
-                                    'There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Pur- dom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the ',
+                                    'There are many excellent texts on the general topic of algorithms, including those by Aho, Hopcroft, and Ullman [5, 6]; Baase and Van Gelder [28]; Brassard and Bratley [54]; Dasgupta, Papadimitriou, and Vazirani [82]; Goodrich and Tamassia [148]; Hofri [175]; Horowitz, Sahni, and Rajasekaran [181]; Johnsonbaugh and Schaefer [193]; Kingston [205]; Kleinberg and Tardos [208]; Knuth [209, 210, 211]; Kozen [220]; Levitin [235]; Manber [242]; Mehlhorn [249, 250, 251]; Purdom and Brown [287]; Reingold, Nievergelt, and Deo [293]; Sedgewick [306]; Sedgewick and Flajolet [307]; Skiena [318]; and Wilf [356]. Some of the more practical aspects of algorithm design are discussed by Bentley [42, 43] and Gonnet [145]. Surveys of the field of algorithms can also be found in the ',
                                     _react2.default.createElement(
                                         'i',
                                         null,
@@ -24738,6 +24750,207 @@ var App = function (_React$Component) {
                                     ),
                                     ' [25]. Overviews of the algorithms used in computational biology can be found in textbooks by Gusfield [156], Pevzner [275], Setubal and Meidanis [310], and Waterman [350].'
                                 )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'chapter' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'chapter-title-container' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'title' },
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'Getting Started'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'This chapter will familiarize you with the framework we shall use throughout the book to think about the design and analysis of algorithms. It is self-contained, but it does include several references to material that we introduce in Chapters 3 and 4. (It also contains several summations, which Appendix A shows how to solve.)This chapter will familiarize you with the framework we shall use throughout the book to think about the design and analysis of algorithms. It is self-contained, but it does include several references to material that we introduce in Chapters 3 and 4. (It also contains several summations, which Appendix A shows how to solve.)'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'We begin by examining the insertion sort algorithm to solve the sorting problem introduced in Chapter 1. We define a \u201Cpseudocode\u201D that should be familiar to you if you have done computer programming, and we use it to show how we shall specify our algorithms. Having specified the insertion sort algorithm, we then argue that it correctly sorts, and we analyze its running time. The analysis introduces a notation that focuses on how that time increases with the number of items to be sorted. Following our discussion of insertion sort, we introduce the divide-and-conquer approach to the design of algorithms and use it to develop an algorithm called merge sort. We end with an analysis of merge sort\u2019s running time.'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'sub-chapter' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'sub-chapter-title' },
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    'Insertion sort'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'Our first algorithm, insertion sort, solves the ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'sorting problem'
+                                    )
+                                ),
+                                ' introduced in Chapter 1:'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'input' },
+                                'A sequence of ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' numbers \u3008a',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ', a',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ', ..., a',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
+                                ),
+                                '\u3009.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'output' },
+                                'A permutation (re-ordering) \u3008a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ', a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ', ..., a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
+                                ),
+                                '\u3009 of the input sequence such that a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '1'
+                                ),
+                                ' \u2264 a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    '2'
+                                ),
+                                ' \u2264 \xB7\xB7\xB7 \u2264 a\u2032',
+                                _react2.default.createElement(
+                                    'sub',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'n'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'first-paragraph' },
+                                'The numbers that we wish to sort are also known as the ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'keys'
+                                    )
+                                ),
+                                '. Although conceptually we are sorting a sequence, the input comes to us in the form of an array with ',
+                                _react2.default.createElement(
+                                    'i',
+                                    null,
+                                    'n'
+                                ),
+                                ' elements.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'In this book, we shall typically describe algorithms as programs written in a ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'pseudocode'
+                                    )
+                                ),
+                                ' that is similar in many respects to C, C++, Java, Python, or Pascal. If you have been introduced to any of these languages, you should have little trouble reading our algorithms. What separates pseudocode from \u201Creal\u201D code is that in pseudocode, we employ whatever expressive method is most clear and concise to specify a given algorithm. Sometimes, the clearest method is English, so do not be surprised if you come across an English phrase or sentence embedded within a section of \u201Creal\u201D code. Another difference between pseudocode and real code is that pseudocode is not typically concerned with issues of software engineering. Issues of data abstraction, modularity, and error handling are often ignored in order to convey the essence of the algorithm more concisely.'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'figure' },
+                                _react2.default.createElement('img', { src: './assets/figure_2-1.png', alt: '' }),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'figure-caption' },
+                                    _react2.default.createElement(
+                                        'span',
+                                        null,
+                                        'Sorting a hand of cards using insertion sort.'
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'paragraph' },
+                                'We start with ',
+                                _react2.default.createElement(
+                                    'b',
+                                    null,
+                                    _react2.default.createElement(
+                                        'i',
+                                        null,
+                                        'insertion sort'
+                                    )
+                                ),
+                                ', which is an efficient algorithm for sorting a small number of elements. Insertion sort works the way many people sort a hand of playing cards. We start with an empty left hand and the cards face down on the table. We then remove one card at a time from the table and insert it into the correct position in the left hand. To find the correct position for a card, we compare it with each of the cards already in the hand, from right to left, as illustrated in Figure 2.1. At all times, the cards held in the left hand are sorted, and these cards were originally the top cards of the pile on the table.'
                             )
                         )
                     )
@@ -24791,7 +25004,7 @@ exports = module.exports = __webpack_require__(187)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nul,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.section-title-page {\n  position: relative;\n  height: 1130px;\n  width: 100%;\n  max-width: 1000px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 2em;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 90%;\n  margin: auto auto auto 10%;\n}\n.citations .citation {\n  margin: 0 0 0 10%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  width: 90%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\nsub {\n  vertical-align: bottom;\n  position: relative;\n  bottom: -0.5ex;\n  font-size: 0.7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph,\n.sections .chapter .sub-chapter .exercise,\n.sections .chapter .sub-chapter .problems .problem-title,\n.sections .chapter .sub-chapter .problems .problem {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.numbered-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n}\n.numbered-list li {\n  margin: 10px auto;\n}\n.numbered-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n.bulleted-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n  list-style-type: disc;\n}\n.bulleted-list li {\n  margin: 10px auto;\n}\n.bulleted-list li .inner-bullet {\n  display: block;\n  margin-left: 10px;\n}\n#wrapper {\n  width: 100%;\n  max-width: 1000px;\n  margin: auto;\n  padding: 0 20px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 1.8em;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 1.1em;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: .8em;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: .9em;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 90%;\n  margin: 20px auto 20px 10%;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 90%;\n  margin: 30px auto 30px 10%;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 100%;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 2em;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 100%;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 100%;\n  border-top: 12px solid black;\n  margin: 50px auto 0 auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 1.8em;\n  margin: 20px auto;\n  height: 250px;\n  text-align: left;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .chapter-title-container .title-paragraph {\n  margin-left: 10%;\n  padding: 20px 0;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 100%;\n  counter-reset: exercises;\n  margin-top: 50px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 100%;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-first-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .exercise:not(:nth-child(2)) {\n  margin: 10px 0 10px 10%;\n}\n.sections .chapter .sub-chapter .exercise::before {\n  counter-increment: exercises;\n  content: counter(chapters) '.' counter(subChapters) \"-\" counter(exercises);\n  display: block;\n  font-weight: bold;\n  font-style: italic;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .problems {\n  margin: 20px auto;\n  width: 100%;\n  counter-reset: problems;\n}\n.sections .chapter .sub-chapter .problems .title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n.sections .chapter .sub-chapter .problems .problem-title {\n  font-weight: bold;\n  font-style: italic;\n}\n.sections .chapter .sub-chapter .problems .problem-title::before {\n  counter-increment: problems;\n  content: counter(chapters) \"-\" counter(problems);\n  display: inline-block;\n  width: 5%;\n}\n.sections .chapter .sub-chapter .problems .table1 {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 20px 0;\n  width: 90%;\n  position: relative;\n  left: 10%;\n  font-size: 1.2em;\n  word-wrap: normal;\n  text-align: center;\n  line-height: 40px;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell {\n  box-sizing: border-box;\n  flex-grow: 1;\n  border-right: 1px solid black;\n  border-bottom: 1px solid black;\n  height: 40px;\n  width: 12.5%;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell > span {\n  position: relative;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .mjx-chtml,\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .MJXc-display {\n  margin: 0;\n  text-align: center;\n  display: inline-block;\n  position: relative;\n  top: 25%;\n}\n.sections .chapter .sub-chapter .chapter-notes .chapter-notes-title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n@media screen and (max-width: 375px) {\n  .title-container .author-list {\n    font-size: .7em;\n  }\n  .title-container .title {\n    left: 0;\n    width: 100%;\n    text-align: center;\n    font-size: 1.1em;\n    padding: 5px;\n  }\n  .title-container .title .sub-title {\n    font-size: .7em;\n    padding-top: 3px;\n  }\n  .title-container .intro-bottom-info {\n    font-size: .8em;\n  }\n  .copy-right-info .info {\n    width: 100%;\n    font-size: .6em;\n  }\n  .copy-right-info .info .info-section {\n    margin: 4px;\n  }\n  .table-of-contents .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .table-of-contents .preface {\n    text-align: right;\n    margin: 0 0 10px 0;\n  }\n  .appendix .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .appendix #preface-authors {\n    font-size: .7em;\n  }\n  .bulleted-list {\n    margin-left: 15.5%;\n    width: 84.5%;\n  }\n  .bulleted-list li > .inner-bullet {\n    margin-left: 5px;\n  }\n  .sections .section-title-page > .section-title,\n  .sections .section-intro > .title {\n    font-size: 1.1em;\n  }\n  .sections .chapter .chapter-title-container .title {\n    left: 0;\n    width: 100%;\n    font-size: 1.1em;\n    height: 50px;\n  }\n  .sections .chapter .sub-chapter > .sub-chapter-title > b {\n    margin-left: 10px;\n  }\n}\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nu,\ncenter,\ndl,\ndt,\ndd,\nul,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\n.input {\n  margin: 10px 0 0 10%;\n}\n.input:before {\n  content: \"Input:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.output {\n  margin: 10px 0 10px 10%;\n}\n.output:before {\n  content: \"Output:\";\n  font-weight: bold;\n  margin-right: 5px;\n}\n.section-title-page {\n  position: relative;\n  height: 1130px;\n  width: 100%;\n  max-width: 1000px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.section-title-page .section-title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.appendix-title {\n  width: 100%;\n  height: 300px;\n  font-size: 2em;\n}\n.citations {\n  border-top: 1px solid black;\n  padding: 20px 0;\n  width: 90%;\n  margin: auto auto auto 10%;\n}\n.citations .citation {\n  margin: 0 0 0 10%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  width: 90%;\n  margin: auto;\n}\nsup {\n  vertical-align: top;\n  position: relative;\n  top: -0.34em;\n  font-size: .7em;\n}\nsub {\n  vertical-align: bottom;\n  position: relative;\n  bottom: -0.5ex;\n  font-size: 0.7em;\n}\n.tex sub,\n.latex sub,\n.latex sup {\n  text-transform: uppercase;\n}\n.tex sub,\n.latex sub {\n  margin-left: -0.1667em;\n  margin-right: -0.125em;\n}\n.epsilon {\n  position: relative;\n  vertical-align: bottom;\n  bottom: -0.5ex;\n}\n.tex,\n.latex,\n.tex sub,\n.latex sub {\n  font-size: 1em;\n}\n.latex sup {\n  font-size: 0.85em;\n  vertical-align: top;\n  top: -0.15em;\n  margin-left: -0.36em;\n  margin-right: -0.15em;\n}\na {\n  display: block;\n  text-decoration: none;\n  color: black;\n  cursor: pointer;\n}\n.paragraph {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n}\n.first-paragraph,\n.sections .chapter .sub-chapter .exercise,\n.sections .chapter .sub-chapter .problems .problem-title,\n.sections .chapter .sub-chapter .problems .problem {\n  margin: 0 0 0 10%;\n  width: 90%;\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n}\n.bold-sub-header {\n  font-weight: bold;\n  margin: 20px auto;\n  width: 80%;\n}\n.numbered-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n}\n.numbered-list li {\n  margin: 10px auto;\n}\n.numbered-list li .list-item {\n  display: block;\n  margin-left: 10px;\n}\n.bulleted-list {\n  text-align: justify;\n  width: 88.5%;\n  padding: 0;\n  margin: 10px auto 10px 11.5%;\n  line-height: 1.2em;\n  list-style-type: disc;\n}\n.bulleted-list li {\n  margin: 10px auto;\n}\n.bulleted-list li .list-item {\n  display: block;\n  margin-left: 10px;\n}\n#wrapper {\n  width: 100%;\n  max-width: 1000px;\n  margin: auto;\n  padding: 0 20px;\n}\n.contents-tab {\n  position: absolute;\n  top: 50px;\n  right: 0;\n  width: 250px;\n  height: 60px;\n  font-size: 1.8em;\n  background: rgba(0, 0, 0, 0.7);\n  color: white;\n  text-align: center;\n  line-height: 60px;\n  cursor: pointer;\n  border-radius: 15px 0 0 15px;\n}\n#cover-img {\n  background-repeat: no-repeat;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-position: 50% 50%;\n  background-size: contain;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 0 auto 20px auto;\n}\n.title-container {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130px;\n  border-top: 12px solid black;\n  margin: 20px auto;\n}\n.title-container .author-list {\n  font-size: 1.1em;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  margin-top: 15px;\n}\n.title-container .author-list .author {\n  margin-top: 5px;\n}\n.title-container .title {\n  position: absolute;\n  font-size: 2em;\n  top: 30%;\n  left: 30%;\n  width: 70%;\n  padding: 15px 5px;\n  border-top: 1px solid black;\n  font-weight: bold;\n}\n.title-container .title .sub-title {\n  font-size: .8em;\n  padding: 10px 0 0 0;\n  font-style: italic;\n}\n.title-container .intro-bottom-info {\n  position: absolute;\n  left: 20%;\n  bottom: 50px;\n  line-height: 20px;\n}\n.copy-right-info {\n  position: relative;\n  width: 100%;\n  height: 87vw;\n  max-height: 1130;\n  margin: 20px auto;\n}\n.copy-right-info .info {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 70%;\n  font-size: .9em;\n}\n.copy-right-info .info .info-section {\n  margin: 8px;\n}\n.copy-right-info .info .left-indent {\n  margin: 0 0 0 5%;\n}\n.copy-right-info .info .one {\n  margin-top: 16px;\n  margin-bottom: 2px;\n}\n.copy-right-info .info .two {\n  margin-top: 2px;\n}\n.copy-right-info .info .three {\n  margin-left: 60%;\n}\n.copy-right-info .info .four {\n  letter-spacing: 3px;\n}\n.table-of-contents {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.table-of-contents .preface {\n  display: block;\n  margin: 0 0 20px 200px;\n  font-weight: bold;\n  counter-reset: sectionTitles;\n}\n.table-of-contents .chapter {\n  border-top: 3px solid black;\n  padding: 5px 0;\n}\n.table-of-contents .chapter .chapter-title {\n  font-weight: bold;\n  font-style: italic;\n  margin-bottom: 10px;\n  font-size: 1.1em;\n}\n.table-of-contents .chapter .chapter-interior {\n  border-top: 1px solid black;\n  padding: 5px 0;\n  width: 85%;\n  margin-left: 15%;\n}\n.table-of-contents .chapter .chapter-interior .intro {\n  margin-left: 10px;\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section-title {\n  font-weight: bold;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title {\n  counter-reset: sectionSubTitles;\n  margin-top: 10px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number {\n  margin-right: 20px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title .section-number:before {\n  counter-increment: sectionTitles;\n  content: counter(sectionTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-title:hover {\n  opacity: .6;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title {\n  margin: 3px 0 3px 33px;\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:before {\n  counter-increment: sectionSubTitles;\n  content: counter(sectionTitles) '.' counter(sectionSubTitles) ' ';\n}\n.table-of-contents .chapter .chapter-interior .chapter-section .chapter-section-sub-title:hover {\n  opacity: .8;\n}\n.appendix-preface {\n  position: relative;\n  width: 100%;\n  margin: 20px auto;\n}\n.appendix-preface #preface-authors {\n  width: 90%;\n  margin: 20px auto 20px 10%;\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  justify-content: space-between;\n  line-height: 1.2em;\n}\n.appendix-preface #preface-authors .authors,\n.appendix-preface #preface-authors .locations {\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n  flex-direction: column;\n}\n.appendix-preface #preface-date {\n  width: 90%;\n  margin: 30px auto 30px 10%;\n}\n.sections .section-intro {\n  margin-top: 1130px*0.3;\n  width: 100%;\n  margin: auto;\n  counter-reset: chapters;\n}\n.sections .section-intro .title {\n  font-size: 2em;\n  width: 100%;\n  padding: 15px 0;\n  border-top: 1px solid black;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.sections .chapter {\n  text-align: justify;\n  counter-reset: subChapters;\n  position: relative;\n  width: 100%;\n  margin: auto;\n}\n.sections .chapter .chapter-title-container {\n  width: 100%;\n  border-top: 12px solid black;\n  margin: 50px auto 0 auto;\n}\n.sections .chapter .chapter-title-container .title {\n  font-size: 1.8em;\n  margin: 20px auto;\n  height: 250px;\n  text-align: left;\n}\n.sections .chapter .chapter-title-container .title:before {\n  counter-increment: chapters;\n  content: counter(chapters);\n  width: 10%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter {\n  position: relative;\n  width: 100%;\n  counter-reset: exercises;\n  counter-reset: figures;\n  margin-top: 50px;\n}\n.sections .chapter .sub-chapter .sub-chapter-title {\n  width: 100%;\n  border-top: 1px solid black;\n  padding: 10px 0;\n  margin: auto;\n  margin-bottom: 30px;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .sub-chapter-title:before {\n  counter-increment: subChapters;\n  content: counter(chapters) '.' counter(subChapters);\n  width: 5%;\n  display: inline-block;\n}\n.sections .chapter .sub-chapter .chapter-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-first-paragraph {\n  line-height: 1.2em;\n  text-indent: 1.5em;\n  text-align: justify;\n  padding: 2px 0;\n  text-indent: 0;\n  margin: 0 0 0 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .chapter-sub-header {\n  font-weight: bold;\n  margin: 20px 0;\n  margin-left: 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .exercise:not(:nth-child(2)) {\n  margin: 10px 0 10px 10%;\n}\n.sections .chapter .sub-chapter .exercise::before {\n  counter-increment: exercises;\n  content: counter(chapters) '.' counter(subChapters) \"-\" counter(exercises);\n  display: block;\n  font-weight: bold;\n  font-style: italic;\n  font-size: 1.1em;\n}\n.sections .chapter .sub-chapter .problems {\n  margin: 20px auto;\n  width: 100%;\n  counter-reset: problems;\n}\n.sections .chapter .sub-chapter .problems .title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n.sections .chapter .sub-chapter .problems .problem-title {\n  font-weight: bold;\n  font-style: italic;\n}\n.sections .chapter .sub-chapter .problems .problem-title::before {\n  counter-increment: problems;\n  content: counter(chapters) \"-\" counter(problems);\n  display: inline-block;\n  width: 5%;\n}\n.sections .chapter .sub-chapter .problems .table1 {\n  display: flex;\n  flex-wrap: wrap;\n  margin: 20px 0;\n  width: 90%;\n  position: relative;\n  left: 10%;\n  font-size: 1.2em;\n  word-wrap: normal;\n  text-align: center;\n  line-height: 40px;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell {\n  box-sizing: border-box;\n  flex-grow: 1;\n  border-right: 1px solid black;\n  border-bottom: 1px solid black;\n  height: 40px;\n  width: 12.5%;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell > span {\n  position: relative;\n}\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .mjx-chtml,\n.sections .chapter .sub-chapter .problems .table1 .table1-cell .MJXc-display {\n  margin: 0;\n  text-align: center;\n  display: inline-block;\n  position: relative;\n  top: 25%;\n}\n.sections .chapter .sub-chapter .figure {\n  margin: 10px 0 10px 10%;\n  width: 90%;\n}\n.sections .chapter .sub-chapter .figure .figure-caption {\n  padding: 30px 0 5px 0;\n}\n.sections .chapter .sub-chapter .figure .figure-caption::before {\n  counter-increment: figures;\n  content: 'Figure ' counter(chapters) '.' counter(figures);\n  font-weight: bold;\n}\n.sections .chapter .sub-chapter .figure .figure-caption > span {\n  margin-left: 10px;\n}\n.sections .chapter .sub-chapter .chapter-notes .chapter-notes-title {\n  width: 100%;\n  border-top: 1px solid black;\n  font-size: 1.4em;\n  font-weight: bold;\n  padding: 5px 0;\n  margin-bottom: 15px;\n}\n@media screen and (max-width: 375px) {\n  .title-container .author-list {\n    font-size: .7em;\n  }\n  .title-container .title {\n    left: 0;\n    width: 100%;\n    text-align: center;\n    font-size: 1.1em;\n    padding: 5px;\n  }\n  .title-container .title .sub-title {\n    font-size: .7em;\n    padding-top: 3px;\n  }\n  .title-container .intro-bottom-info {\n    font-size: .8em;\n  }\n  .copy-right-info .info {\n    width: 100%;\n    font-size: .6em;\n  }\n  .copy-right-info .info .info-section {\n    margin: 4px;\n  }\n  .table-of-contents .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .table-of-contents .preface {\n    text-align: right;\n    margin: 0 0 10px 0;\n  }\n  .appendix .appendix-title {\n    height: 70px;\n    font-size: 1.3em;\n    text-align: center;\n  }\n  .appendix #preface-authors {\n    font-size: .7em;\n  }\n  .bulleted-list {\n    margin-left: 15.5%;\n    width: 84.5%;\n  }\n  .bulleted-list li > .list-item {\n    margin-left: 5px;\n  }\n  .sections .section-title-page > .section-title,\n  .sections .section-intro > .title {\n    font-size: 1.1em;\n  }\n  .sections .chapter .chapter-title-container .title {\n    left: 0;\n    width: 100%;\n    font-size: 1.1em;\n    height: 50px;\n  }\n  .sections .chapter .sub-chapter > .sub-chapter-title > b {\n    margin-left: 10px;\n  }\n}\n", ""]);
 
 // exports
 
