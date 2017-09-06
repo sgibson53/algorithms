@@ -19,6 +19,10 @@ export default class App extends React.Component {
         }
     }
 
+    componentWillMount() {
+        //var figures = document.getElementsByClassName('.')
+    }
+
 
     tableOfContents() {
         var self = this;
