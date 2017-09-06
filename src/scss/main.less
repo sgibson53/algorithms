@@ -1,7 +1,6 @@
 @import './reset.less';
 
 @images: "../assets";
-@page-width: 1000px;
 @page-height: 1130px;
 @chapter-title-font-size: 1.8em;
 
@@ -175,21 +174,6 @@ a {
     max-width: 1000px;
     margin: auto;
     padding: 0 20px;
-}
-
-.contents-tab {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 250px;
-    height: 60px;
-    font-size: 1.8em;
-    background: rgba(0,0,0,.7);
-    color: white;
-    text-align: center;
-    line-height: 60px;
-    cursor: pointer;
-    border-radius: 15px 0 0 15px;
 }
 
 #cover-img {
@@ -602,6 +586,8 @@ a {
 
 @media screen and (max-width: 375px) {
     .title-container {
+        border-top: 6px solid black;
+
         .author-list {
             font-size: .7em;
         }
@@ -666,12 +652,16 @@ a {
     }
     
     .sections {
+        .section-title-page {
+            border-top: 6px solid black;
+        }
         .section-title-page > .section-title, .section-intro > .title {
             font-size: 1.1em;
         }
         
         .chapter {
             .chapter-title-container {
+                border-top: 6px solid black;
                 .title {
                     left: 0;
                     width: 100%;

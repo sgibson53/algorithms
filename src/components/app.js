@@ -84,8 +84,6 @@ export default class App extends React.Component {
 
         return <div id="wrapper">
 
-                <a href="#table-of-contents" className="contents-tab">Table of Contents</a>
-
                 <div id="cover-img"></div>
                 {intro_page}
                 <div className="title-container">
