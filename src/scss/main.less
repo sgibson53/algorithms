@@ -323,8 +323,17 @@ a {
                     counter-reset: sectionSubTitles;
                     margin-top: 10px;
 
-                    .section-number {
+                    .chapter-number-single {
                         margin-right: 20px;
+                        &:before {
+                            counter-increment: sectionTitles;
+                            content: counter(sectionTitles) ' '
+                        }
+                    }
+
+                    .chapter-number-double {
+                        margin-right: 14px;
+
                         &:before {
                             counter-increment: sectionTitles;
                             content: counter(sectionTitles) ' '
@@ -476,9 +485,9 @@ a {
                 &:not(:nth-child(2)) {
                     margin: 10px 0 10px 10%;
                 }
+                counter-increment: exercises;
 
                 &::before {
-                    counter-increment: exercises;
                     content: counter(chapters)'.'counter(subChapters)"-"counter(exercises);
                     display: block;
                     font-weight: bold;

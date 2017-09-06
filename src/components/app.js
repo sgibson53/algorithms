@@ -3,9 +3,6 @@ import '../scss/main.less';
 import React from 'react';
 import MathJax from 'react-mathjax';
 
-console.log(MathJax)
-
-
 import global from '../core/global';
 import data from '../assets/textbook.json';
 
@@ -17,10 +14,8 @@ export default class App extends React.Component {
         this.state = {
             data: data
         }
-    }
 
-    componentWillMount() {
-        //var figures = document.getElementsByClassName('.')
+        this.currentChapter = 1;
     }
 
 
@@ -55,8 +50,11 @@ export default class App extends React.Component {
         var self = this;
 
         return section.chapters.map((chapter, i) => {
+
+            var chapter_margin_identifier = (self.currentChapter > 9) ? "double" : "single";
+            self.currentChapter++;
             return <div className="chapter-section" key={i}>
-                        <a href={"#section-"+section_number+"-chapter-"+(i+1)} className="chapter-section-title"><span className="section-number"></span>{chapter.chapter_title}</a>
+                        <a href={"#section-"+section_number+"-chapter-"+(i+1)} className="chapter-section-title"><span className={"chapter-number-"+chapter_margin_identifier}></span>{chapter.chapter_title}</a>
                         {self.build_TOC_SubChapters(chapter, i+1, section_number)}
                     </div>
         });
