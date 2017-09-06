@@ -1,4 +1,4 @@
-import '../scss/main.less';
+import '../less/main.less';
 
 import React from 'react';
 import MathJax from 'react-mathjax';
@@ -550,19 +550,19 @@ or mathematical rigor.
 
                             <div className="exercises">
                                 <div className="bold-sub-header">Exercises</div>
-                                <div className="first-paragraph exercise">
+                                <div className="exercise">
                                     Give a real-world example that requires sorting or a real-world example that requires computing a convex hull.
                                 </div>
-                                <div className="first-paragraph exercise">
+                                <div className="exercise">
                                     Other than speed, what other measures of efficiency might one use in a real-world setting?
                                 </div>
-                                <div className="first-paragraph exercise">
+                                <div className="exercise">
                                     Select a data structure that you have seen previously, and discuss its strengths and limitations.
                                 </div>
-                                <div className="first-paragraph exercise">
+                                <div className="exercise">
                                     How are the shortest-path and traveling-salesman problems given above similar? How are they different?
                                 </div>
-                                <div className="first-paragraph exercise">
+                                <div className="exercise">
                                     Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is “approximately” the best is good enough.
                                 </div>
                             </div>

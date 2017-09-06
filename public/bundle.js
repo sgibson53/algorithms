@@ -23937,27 +23937,27 @@ var App = function (_React$Component) {
                                 ),
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'first-paragraph exercise' },
+                                    { className: 'exercise' },
                                     'Give a real-world example that requires sorting or a real-world example that requires computing a convex hull.'
                                 ),
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'first-paragraph exercise' },
+                                    { className: 'exercise' },
                                     'Other than speed, what other measures of efficiency might one use in a real-world setting?'
                                 ),
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'first-paragraph exercise' },
+                                    { className: 'exercise' },
                                     'Select a data structure that you have seen previously, and discuss its strengths and limitations.'
                                 ),
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'first-paragraph exercise' },
+                                    { className: 'exercise' },
                                     'How are the shortest-path and traveling-salesman problems given above similar? How are they different?'
                                 ),
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'first-paragraph exercise' },
+                                    { className: 'exercise' },
                                     'Come up with a real-world problem in which only the best solution will do. Then come up with one in which a solution that is \u201Capproximately\u201D the best is good enough.'
                                 )
                             )
