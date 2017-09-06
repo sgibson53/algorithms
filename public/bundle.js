@@ -22489,13 +22489,13 @@ var App = function (_React$Component) {
                         { className: 'chapter-interior' },
                         _react2.default.createElement(
                             'a',
-                            { href: '#', className: 'intro' },
+                            { href: "#section-" + (i + 1) + "-intro", className: 'intro' },
                             'Introduction'
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'chapter-section' },
-                            self.build_TOC_Chapters(section)
+                            self.build_TOC_Chapters(section, i + 1)
                         )
                     )
                 );
@@ -22503,7 +22503,7 @@ var App = function (_React$Component) {
         }
     }, {
         key: 'build_TOC_Chapters',
-        value: function build_TOC_Chapters(section) {
+        value: function build_TOC_Chapters(section, section_number) {
             var self = this;
 
             return section.chapters.map(function (chapter, i) {
@@ -22512,21 +22512,21 @@ var App = function (_React$Component) {
                     { className: 'chapter-section', key: i },
                     _react2.default.createElement(
                         'a',
-                        { href: '#', className: 'chapter-section-title' },
+                        { href: "#section-" + section_number + "-chapter-" + (i + 1), className: 'chapter-section-title' },
                         _react2.default.createElement('span', { className: 'section-number' }),
                         chapter.chapter_title
                     ),
-                    self.build_TOC_SubChapters(chapter)
+                    self.build_TOC_SubChapters(chapter, i + 1, section_number)
                 );
             });
         }
     }, {
         key: 'build_TOC_SubChapters',
-        value: function build_TOC_SubChapters(chapter) {
+        value: function build_TOC_SubChapters(chapter, chapter_number, section_number) {
             return chapter.sub_chapters.map(function (sub_chapter, i) {
                 return _react2.default.createElement(
                     'a',
-                    { href: '#', className: 'chapter-section-sub-title', key: i },
+                    { href: "#section-" + section_number + "-chapter-" + chapter_number + "-sub-chapter-" + (i + 1), className: 'chapter-section-sub-title', key: i },
                     sub_chapter.sub_chapter_title
                 );
             });
@@ -23231,10 +23231,10 @@ var App = function (_React$Component) {
                     self.sectionTitlePage(self.state.data.table_of_contents[0].section_title, 0),
                     _react2.default.createElement(
                         'div',
-                        { className: 'section-intro' },
+                        { className: 'section-intro', id: 'section-1-intro' },
                         _react2.default.createElement(
                             'div',
-                            { className: 'title', id: 'section-intro-1' },
+                            { className: 'title' },
                             'Introduction'
                         ),
                         _react2.default.createElement(
@@ -23291,7 +23291,7 @@ var App = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'chapter' },
+                        { className: 'chapter', id: 'section-1-chapter-1' },
                         _react2.default.createElement(
                             'div',
                             { className: 'chapter-title-container' },
@@ -23312,7 +23312,7 @@ var App = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'div',
-                            { className: 'sub-chapter' },
+                            { className: 'sub-chapter', id: 'section-1-chapter-1-sub-chapter-1' },
                             _react2.default.createElement(
                                 'div',
                                 { className: 'sub-chapter-title' },
@@ -23966,7 +23966,7 @@ var App = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'div',
-                            { className: 'sub-chapter' },
+                            { className: 'sub-chapter', id: 'section-1-chapter-1-sub-chapter-2' },
                             _react2.default.createElement(
                                 'div',
                                 { className: 'sub-chapter-title' },
@@ -24755,7 +24755,7 @@ var App = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'chapter' },
+                        { className: 'chapter', id: 'section-1-chapter-2' },
                         _react2.default.createElement(
                             'div',
                             { className: 'chapter-title-container' },
@@ -24781,7 +24781,7 @@ var App = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'div',
-                            { className: 'sub-chapter' },
+                            { className: 'sub-chapter', id: 'section-1-chapter-2-sub-chapter-1' },
                             _react2.default.createElement(
                                 'div',
                                 { className: 'sub-chapter-title' },

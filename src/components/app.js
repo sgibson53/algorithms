@@ -38,29 +38,29 @@ export default class App extends React.Component {
             return <div className="chapter" key={i}>
                         <div className="chapter-title">{romanize(i+1)}  {section.section_title}</div>
                         <div className="chapter-interior">
-                            <a href="#" className="intro">Introduction</a>
+                            <a href={"#section-"+(i+1)+"-intro"} className="intro">Introduction</a>
                             <div className="chapter-section">
-                                {self.build_TOC_Chapters(section)}
+                                {self.build_TOC_Chapters(section, i+1)}
                             </div>
                         </div>
                     </div>
         });
     }
 
-    build_TOC_Chapters(section) {
+    build_TOC_Chapters(section, section_number) {
         var self = this;
 
         return section.chapters.map((chapter, i) => {
             return <div className="chapter-section" key={i}>
-                        <a href="#" className="chapter-section-title"><span className="section-number"></span>{chapter.chapter_title}</a>
-                        {self.build_TOC_SubChapters(chapter)}
+                        <a href={"#section-"+section_number+"-chapter-"+(i+1)} className="chapter-section-title"><span className="section-number"></span>{chapter.chapter_title}</a>
+                        {self.build_TOC_SubChapters(chapter, i+1, section_number)}
                     </div>
         });
     }
 
-    build_TOC_SubChapters(chapter) {
+    build_TOC_SubChapters(chapter, chapter_number, section_number) {
         return chapter.sub_chapters.map((sub_chapter, i) => {
-            return <a href="#" className="chapter-section-sub-title" key={i}>{sub_chapter.sub_chapter_title}</a>
+            return <a href={"#section-"+section_number+"-chapter-"+chapter_number+"-sub-chapter-"+(i+1)} className="chapter-section-sub-title" key={i}>{sub_chapter.sub_chapter_title}</a>
         });
     }
 
@@ -366,8 +366,8 @@ or mathematical rigor.
 
                     {self.sectionTitlePage(self.state.data.table_of_contents[0].section_title, 0)}
 
-                    <div className="section-intro">
-                        <div className="title" id="section-intro-1">Introduction</div>
+                    <div className="section-intro" id="section-1-intro">
+                        <div className="title">Introduction</div>
                         <div className="section-intro-content">
 
                             <div className="paragraph first-paragraph">
@@ -395,7 +395,7 @@ or mathematical rigor.
                         </div>
                     </div>
 
-                    <div className="chapter">
+                    <div className="chapter" id="section-1-chapter-1">
                         <div className="chapter-title-container">
                             <div className="title">
                                 <b>The Role of Algorithms in Computing</b>
@@ -404,7 +404,7 @@ or mathematical rigor.
                                 What are algorithms? Why is the study of algorithms worthwhile? What is the role of algorithms relative to other technologies used in computers? In this chapter, we will answer these questions.
                             </div>
                         </div>
-                        <div className="sub-chapter">
+                        <div className="sub-chapter" id="section-1-chapter-1-sub-chapter-1">
                             <div className="sub-chapter-title">
                                 <b>Algorithms</b>
                             </div>
@@ -569,7 +569,7 @@ or mathematical rigor.
                             
                         </div>
 
-                        <div className="sub-chapter">
+                        <div className="sub-chapter"id="section-1-chapter-1-sub-chapter-2">
                             <div className="sub-chapter-title">
                                 <b>Algorithms as a technology</b>
                             </div>
@@ -788,7 +788,7 @@ CommonHTML: { linebreaks: { automatic: true } },
                         </div>
                     </div>
 
-                    <div className="chapter">
+                    <div className="chapter" id="section-1-chapter-2">
                         <div className="chapter-title-container">
                             <div className="title"><b>Getting Started</b></div>
                             <div className="first-paragraph">
@@ -799,7 +799,7 @@ CommonHTML: { linebreaks: { automatic: true } },
                             </div>
                         </div>
 
-                        <div className="sub-chapter">
+                        <div className="sub-chapter" id="section-1-chapter-2-sub-chapter-1">
                             <div className="sub-chapter-title"><b>Insertion sort</b></div>
 
                             <div className="first-paragraph">
