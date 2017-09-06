@@ -589,7 +589,7 @@ a {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
     .title-container {
         border-top: 6px solid black;
 
@@ -675,13 +675,24 @@ a {
                 }
             }
 
-            .sub-chapter > img {
-                max-width: 375px;
-            }
+            .sub-chapter {
+                .problems {
+                    .table {
+                        font-size: .5em;
+                    }
+                }
 
-            .sub-chapter > .sub-chapter-title > b {
-                margin-left: 10px;
+                img {
+                    max-width: 414px;
+                }
+
+                .sub-chapter-title > b {
+                    margin-left: 10px;
+                }
             }
+            
         }
+
+        
     }
 }

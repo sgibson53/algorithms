@@ -691,7 +691,7 @@ CommonHTML: { linebreaks: { automatic: true } },
                                 <div className="title">Problems</div>
                                 <div className="problem-title">Comparison of running times</div>
                                 <div className="problem">For each function <i>f(n)</i> and time t in the following table, determine the largest size <i>n</i> of a problem that can be solved in time <i>t</i>, assuming that the algorithm to solve the problem takes <i>f(n)</i> microseconds.</div>
-                                <div className="table1">
+                                <div className="table table1">
                                     <div className="table1-cell"></div>
                                     <div className="table1-cell">1 second</div>
                                     <div className="table1-cell">1 minute</div>
